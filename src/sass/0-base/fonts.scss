@@ -63,8 +63,13 @@ p{
   .label-lilie{
     color: $color-lilie-vandalismus;
   }
-.button-special{
-  font-weight: 700;
-  font-size: 1.125rem;
+.link{
+  font-size: 1rem;
   line-height: 1.5rem;
+  color: $color-secondary;
+  text-decoration: underline;
+}
+.link:hover{
+  color: $color-secondary-dark;
+  text-decoration: underline;
 }

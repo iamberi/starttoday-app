@@ -4,14 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ButtonComponent } from './button/button.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ButtonComponent } from './buttons/button/button.component';
+import { ButtonIconComponent } from './buttons/button-icon/button-icon.component';
+import { InputTextComponent } from './input/input-text/input-text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
-    NavigationComponent
+    NavigationComponent,
+    ButtonIconComponent,
+    InputTextComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ButtonComponent } from './button/button.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent
+    ButtonComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

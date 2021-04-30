@@ -1,0 +1,38 @@
+@import "src/sass/0-base/colors.scss";
+
+.wrapper-nav{
+  background-color: $color-primary ;
+  height: 4.5em ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em;
+}
+.nav-item{
+  color: white;
+  text-decoration:none ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  svg{
+    height: 24px;
+    width: 24px;
+    stroke: white;
+  }
+
+}
+.nav-item-text{
+  display: none;
+}
+
+.nav-item-active{
+  svg{
+    stroke: $color-secondary;
+    fill: $color-secondary;
+  }
+  .nav-item-text{
+    display: inline;
+    color: $color-secondary;
+    margin: 0.25em 0 0 0;
+  }
+}

@@ -6,5 +6,13 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'starttoday-app'
+  title = 'starttoday-app';
+
+    constructor(swUpdate: SwUpdate) {
+    swUpdate.available.subscribe(() => {
+    if (confirm('Neue Version verfügbar. Neu laden?')) {
+    window.location.reload();
+    }
+    });
+    }
 }

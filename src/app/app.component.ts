@@ -6,13 +6,5 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'starttoday-app';
-
-  update: boolean = false;
-
-  contructor(updates: SwUpdate){
-    updates.available.subscribe(event=>{
-      this.update = true;
-    })
-  }
+  title = 'starttoday-app'
 }

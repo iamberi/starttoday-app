@@ -1,14 +1,5 @@
+<h1> App Component</h1>
+<p> Alles was hier geschrieben wird, wird auf allen Seiten gezeigt </p>
 
-<app-button
-  [btntext]="'publish new post'"
-  [btnlink]="'whupsi'"
-  [type]="'secondary'"
-></app-button>
-
-<app-button-icon [btntext]="'Buttontext 2'"></app-button-icon>
-
-
-<app-input-text
-[labeltext]="'Das ist der Labeltext'"
->
-</app-input-text>
+<app-navigation></app-navigation>
+<router-outlet></router-outlet>

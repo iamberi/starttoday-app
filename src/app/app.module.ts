@@ -37,7 +37,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     NavigationComponent,
     ButtonIconComponent,
     InputTextComponent,
-    FormDividerComponent
+    FormDividerComponent,
     ProblemeComponent,
     ChallengesComponent,
     ProfilComponent,

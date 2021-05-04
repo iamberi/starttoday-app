@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProblemeComponent } from './views/probleme/probleme.component';
 import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
+import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 
 //Liste aller Routes
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
     ProblemeComponent,
     ChallengesComponent,
     ProfilComponent,
+    CardProblemeComponent,
   ],
   imports: [
     BrowserModule,

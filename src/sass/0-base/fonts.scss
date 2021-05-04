@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Poppins:wght@700&display=swap');
+
+div{
+  font-family: 'Jost', sans-serif;
+  color: $color-black;
+}
+h1,h2,h3,h4,h5,p,button{
+  color: $color-black;
+  text-align: left;
+}
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+h3{
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+h4,p{
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  line-height: 1.438rem;
+}
+h4{
+  font-weight: 500;
+}
+p{
+  font-weight: 400;
+}
+
+.p-info{
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+.form-label{
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: $color-grey-2;
+}
+.form-input{
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: $color-grey-3;
+}
+.label{
+  font-weight: 700;
+}
+  .label-orange{
+    color: $color-orange-barrierefrei;
+  }
+  .label-minze{
+    color: $color-minze-umwelt;
+  }
+  .label-yellow{
+    color: $color-yellow-klima;
+  }
+  .label-lilie{
+    color: $color-lilie-vandalismus;
+  }
+.link{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $color-secondary;
+  text-decoration: underline;
+}
+.link:hover{
+  color: $color-secondary-dark;
+  text-decoration: underline;
+}

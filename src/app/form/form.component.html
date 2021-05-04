@@ -1,0 +1,31 @@
+{{diagnostic}}
+<form #heroForm="ngForm">
+    <div class="form-group">
+      <label for="vorname">Vorname</label>
+      <input type="text" class="form-control" id="vorname"
+          required
+          [(ngModel)]="model.vorname" name="vorname">
+    </div>
+    TODO: remove this: {{model.vorname}} || 
+    <!--This example has a temporary diagnostic interpolation after each input tag, {{model.name}}, to show the current data value of the corresponding property. The note reminds you to remove the diagnostic lines when you have finished observing the two-way data binding at work.-->
+
+    <div class="form-group">
+      <label for="nachname">Nachname</label>
+      <input type="text" class="form-control" id="nachname"
+          required
+          [(ngModel)]="model.nachname" name="nachname">
+    </div>
+
+    <div class="form-group">
+      <label for="mail">E-Mail Adresse</label>
+      <input type="text" class="form-control" id="mail"
+          required
+          [(ngModel)]="model.mail" name="mail">
+    </div>
+    <div class="form-group">
+      <label for="mail">Dein Passwort</label>
+      <input type="text" class="form-control" id="passwort"
+          required
+          [(ngModel)]="model.passwort" name="passwort">
+    </div>
+</form>

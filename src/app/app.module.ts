@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ButtonComponent } from './buttons/button/button.component';
 import { ButtonIconComponent } from './buttons/button-icon/button-icon.component';
 import { InputTextComponent } from './input/input-text/input-text.component';
+import { FormDividerComponent } from './input/form-divider/form-divider.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { ProblemeComponent } from './views/probleme/probleme.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
     NavigationComponent,
     ButtonIconComponent,
     InputTextComponent,
+    FormDividerComponent
     ProblemeComponent,
     ChallengesComponent,
     ProfilComponent,

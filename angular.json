@@ -31,7 +31,9 @@
             "styles": [
               "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/components/navigation.js"
+            ]
           },
           "configurations": {
             "production": {

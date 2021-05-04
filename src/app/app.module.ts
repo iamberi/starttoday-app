@@ -14,6 +14,7 @@ import { ProblemeComponent } from './views/probleme/probleme.component';
 import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
+import { CardChallengeComponent } from './card-challenge/card-challenge.component';
 
 //Liste aller Routes
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     ChallengesComponent,
     ProfilComponent,
     CardProblemeComponent,
+    CardChallengeComponent,
   ],
   imports: [
     BrowserModule,

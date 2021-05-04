@@ -21,12 +21,18 @@ const routes: Routes = [
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
+  { path: 'willkommen', component: WillkommenComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
 ]
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { WillkommenComponent } from './views/willkommen/willkommen.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ChallengesComponent,
     ProfilComponent,
     CardProblemeComponent,
+    WillkommenComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

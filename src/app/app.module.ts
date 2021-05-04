@@ -17,9 +17,11 @@ import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
+import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 
 //Liste aller Routes
 const routes: Routes = [
+  { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
@@ -29,7 +31,7 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
+
 
 @NgModule({
   declarations: [

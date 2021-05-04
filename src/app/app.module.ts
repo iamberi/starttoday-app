@@ -7,13 +7,15 @@ import { environment } from '../environments/environment';
 import { ButtonComponent } from './buttons/button/button.component';
 import { ButtonIconComponent } from './buttons/button-icon/button-icon.component';
 import { InputTextComponent } from './input/input-text/input-text.component';
+import { FormDividerComponent } from './input/form-divider/form-divider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     ButtonIconComponent,
-    InputTextComponent
+    InputTextComponent,
+    FormDividerComponent
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,7 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ProfilComponent,
     CardProblemeComponent,
     CardChallengeComponent,
+    ChallengesDetailComponent,
   ],
   imports: [
     BrowserModule,

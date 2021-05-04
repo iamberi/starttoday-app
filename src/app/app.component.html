@@ -2,6 +2,18 @@
 [labeltext] = "'Label'"
 ></app-input-text>
 <app-form-divider></app-form-divider>
+
+<!-- Tutorial -->
+<input class="form-control" type="text" [(ngModel)] ="item.name">
+<button (click)="save()">Save</button>
+
+<h2>List documents</h2>
+
+<div *ngFor="let document of list | async">
+  {{document.name}}
+</div>
+
+
 <h1> App Component</h1>
 <p> Alles was hier geschrieben wird, wird auf allen Seiten gezeigt </p>
 

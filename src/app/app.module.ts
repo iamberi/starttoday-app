@@ -17,7 +17,6 @@ import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
-import { FormComponent } from './form/form.component';
 import { RegisterComponent } from './views/register/register.component';
 
 
@@ -47,7 +46,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ProfilComponent,
     CardProblemeComponent,
     CardChallengeComponent,
-    FormComponent,
     RegisterComponent,
   ],
   imports: [

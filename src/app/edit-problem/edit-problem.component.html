@@ -1,0 +1,22 @@
+<p>edit-problem works!</p>
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label>Titel</label>
+    <input type="text" formControlName="title" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Beschreibung</label>
+    <input type="email" formControlName="description" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Kategirie</label>
+    <input type="text" formControlName="category" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>

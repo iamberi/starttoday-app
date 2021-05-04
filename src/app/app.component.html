@@ -1,5 +1,5 @@
 
-<!-- Tutorial -->
+<!-- Tutorial
 <input class="form-control" type="text" [(ngModel)] ="item.name">
 <button (click)="save()">Save</button>
 
@@ -7,7 +7,23 @@
 
 <div *ngFor="let document of list | async">
   {{document.name}}
-</div>
+</div>-->
+
+<!-- Tutorial https://www.remotestack.io/angular-firebase-firestore-real-time-crud-example-tutorial/ -->
+  <div>
+    <a href="#">RemoteStack</a>
+    <div id="navbarSupportedContent">
+      <ul>
+        <li>
+          <a routerLink="/create" routerLinkActive="active">Create</a>
+        </li>
+        <li>
+          <a routerLink="/list-problems" routerLinkActive="active">Show Problem</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
 
 <h1> App Component</h1>

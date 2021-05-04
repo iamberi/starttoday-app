@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProblemService } from '../../problem.service';
+import { Problem } from '../../problem.model';
 
 @Component({
   selector: 'app-probleme',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./probleme.component.scss']
 })
 export class ProblemeComponent implements OnInit {
+  Problems: Problem[];
 
-  constructor() { }
+  constructor(private problemService: ProblemService) { }
 
   ngOnInit(): void {
+    this.problemService.getProblemList().subscribe(res => {
+      this.Problems = res.map( e => {
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data() as object)
+        } as Problem;
+      });
+    });
   }
 
-}
+  removeProblem = problem => this.problemService.deleteProblem(problem);
+  }

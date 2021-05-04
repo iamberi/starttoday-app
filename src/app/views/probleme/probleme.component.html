@@ -15,7 +15,8 @@
 </app-button>
 
 
-<app-card-probleme></app-card-probleme>
-<app-card-probleme></app-card-probleme>
-<app-card-probleme></app-card-probleme>
-<app-card-probleme></app-card-probleme>
+<app-card-probleme *ngFor="let problem of Problems; let i=index"
+[titleProblem]="problem.title"
+[descriptionProblem]="problem.description"
+[categoryProblem]="problem.category"
+></app-card-probleme>

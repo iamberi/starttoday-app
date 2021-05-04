@@ -8,7 +8,7 @@ import { EditProblemComponent } from './edit-problem/edit-problem.component';
 
 
 const routes: Routes = [
- // { path: '', redirectTo: '/create', pathMatch: 'full' },
+  { path: '', redirectTo: '/create', pathMatch: 'full' },
   { path: 'create', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
   { path: 'update-problem/:id', component: EditProblemComponent }

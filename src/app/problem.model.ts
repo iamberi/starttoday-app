@@ -1,5 +1,6 @@
 export class Problem {
   id: string;
+  location: string;
   title: string;
   description: string;
   category: string;

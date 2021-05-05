@@ -33,17 +33,18 @@
     </div>
 
     <div class="form-group">
-      <label for="email">E-Mail Adresse</label>
-      <input type="text" class="form-control" id="email"
-          required ngModel [email]="true"
-          [(ngModel)]="model.mail" name="email"
-          #mail="ngModel">
+      <label for="mail">E-Mail Adresse</label>
+      <input type="email" class="form-control" id="email"
+          #mail="ngModel"
+          [class.is-invalid]="mail.invalid && mail.touched" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          [(ngModel)]="model.mail" name="mail"
+          >
     </div>
-    <!-- Zeigt Fehlermeldung an-->
-    <div [hidden]="mail.valid || mail.pristine"
-      class="alert alert-danger">
-      Um dich registrieren zu können, benötigen wir Deine Mail Adresse.
-    </div>
+  	<div [hidden]="mail.valid || mail.pristine" *ngIf="mail.errors && (mail.invalid || mail.touched)">
+    	<small class="text-danger" *ngIf="mail.errors.required">Um dich registrieren zu können, benötigen wir Deine Mail Adresse.</small>
+    	<small class="text-danger" *ngIf="mail.errors.pattern">Bitte überprüfe deine E-Mail Adresse</small>
+  	</div>
 
     <div class="form-group">
       <label for="mail">Dein Passwort</label>

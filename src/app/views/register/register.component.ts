@@ -9,12 +9,19 @@ import { User } from '../../user';
 })
 export class RegisterComponent implements OnInit {
   model = new User (24, '', '', '', '');
+  submitted = false;
 
   // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
+  //get diagnostic() { return JSON.stringify(this.model); }
 
-  newUser(){
+  newUser():void {
     this.model = new User(42, '', '', '', '');
+  }
+
+
+  onSubmit():void {
+    this.submitted = true;
+    return;
   }
 
   skyDog(): User {
@@ -22,9 +29,6 @@ export class RegisterComponent implements OnInit {
     console.log('My hero is called ' + myUser.vorname); // "My hero is called SkyDog"
     return myUser;
   }
-  submitted = false;
-
-  onSubmit() { this.submitted = true; }
 
   constructor() { }
 

@@ -18,6 +18,7 @@ import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
+import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 
 //Liste aller Routes
 const routes: Routes = [
@@ -33,7 +34,7 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
+
 
 
 @NgModule({

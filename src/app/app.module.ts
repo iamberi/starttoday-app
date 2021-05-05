@@ -1,20 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NavigationComponent } from './navigation/navigation.component';
-import { ButtonComponent } from './buttons/button/button.component';
-import { ButtonIconComponent } from './buttons/button-icon/button-icon.component';
-import { InputTextComponent } from './input/input-text/input-text.component';
-import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { ProblemeComponent } from './views/probleme/probleme.component';
-import { ChallengesComponent } from './views/challenges/challenges.component';
+
+import { NavigationComponent } from './navigation/navigation.component';
+//components
+import { ButtonComponent } from './components/buttons/button/button.component';
+import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
+import { InputTextComponent } from './components/input/input-text/input-text.component';
+import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
+//views
 import { ProfilComponent } from './views/profil/profil.component';
-import { CardProblemeComponent } from './card-probleme/card-probleme.component';
+import { ChallengesComponent } from './views/challenges/challenges.component';
+import { ProblemeComponent } from './views/probleme/probleme.component';
+//CRUD
+import { CreateProblemComponent } from './create-problem/create-problem.component';
+import { ListProblemComponent } from './list-problem/list-problem.component';
+import { EditProblemComponent } from './edit-problem/edit-problem.component';
+//Firebase imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 //Liste aller Routes
 const routes: Routes = [
@@ -22,14 +32,12 @@ const routes: Routes = [
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
+  { path: 'create', component: CreateProblemComponent },
+  { path: 'list-problems', component: ListProblemComponent },
+  { path: 'update-problem/:id', component: EditProblemComponent }
 ]
 
-//Firebase imports
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { CreateProblemComponent } from './create-problem/create-problem.component';
-import { ListProblemComponent } from './list-problem/list-problem.component';
-import { EditProblemComponent } from './edit-problem/edit-problem.component';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +56,7 @@ import { EditProblemComponent } from './edit-problem/edit-problem.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
@@ -59,7 +68,6 @@ import { EditProblemComponent } from './edit-problem/edit-problem.component';
     }),
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

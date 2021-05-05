@@ -1,6 +1,7 @@
 export class Problem {
-  id: string;
-  location: string;
+  id: string; //number?
+  longitude: number;
+  latitude: number;
   title: string;
   description: string;
   category: string;

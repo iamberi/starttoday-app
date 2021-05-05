@@ -24,12 +24,15 @@ const routes: Routes = [
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
+  { path: 'problemerstellen', component: ProblemErstellenComponent },
+
 ]
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
+import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,7 @@ import { ChallengesDetailComponent } from './challenges-detail/challenges-detail
     CardProblemeComponent,
     CardChallengeComponent,
     ChallengesDetailComponent,
+    ProblemErstellenComponent,
   ],
   imports: [
     BrowserModule,

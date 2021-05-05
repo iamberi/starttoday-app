@@ -1,8 +1,24 @@
-<p>register works!</p>
+
 <div *ngIf="!isSignedIn">
-  <h2>Sign up</h2>
+  <h2>Schön dich kennenzulernen.</h2>
+  <p>Vor und Nachname</p>
+  <br>
+  <input placeholder="Hier muss noch der Name als Datenfeld rein"/>
+  <p>E-Mail</p>
+  <br>
   <input type="text" #emailSignup/>
+  <br>
+  <p>Passwort</p>
+  <br>
   <input type="text" #passwordSignup/>
-  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button>
+  <br>
+  <p>Passwort bestätigen</p>
+  <br>
+  <input placeholder="Hier muss noch Passwort als Datenfeld und Validierung rein"/>
+  <br>
+  <p>Unternehmensprofile können nach der Registrierung im Profil beantragt werden.</p>
+  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Registrieren</button>
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
+
+<p>register works!</p>

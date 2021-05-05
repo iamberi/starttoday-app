@@ -10,7 +10,7 @@
   <input type="text" #password/>
   <br>
   <p>Noch keinen Account? <a routerLink="/register">Registrieren</a></p>
-  <button (click)="onSignin(email.value, password.value)">Sign in</button>
+  <button (click)="onSignin(email.value, password.value)">Einloggen</button>
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
 

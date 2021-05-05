@@ -7,23 +7,28 @@
   <h5>Barrierefreiheit</h5>
   <h1>Überschrift Projekt</h1>
   <div class="w-layout-grid grid">
-    <a href="#" class="button w-button">Anmelden</a>
-    <p>Platzhalter Symbol </p>
+    <table>
+      <tr>
+          <td style="padding-right:30px;"><app-button></app-button></td>
+          <td>Platzhalter Symbol</td>
+      </tr>
+    </table>
+    <br>
   </div>
 </div>
 <div class="section">
   <div class="text-block">Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser.</div>
+  <br>
   <div class="w-row">
+    <app-form-divider></app-form-divider>
     <table>
-      <colgroup>
-          <col width="80%">
-          <col width="50%">
-      </colgroup>
       <tr>
           <td>User</td>
-          <td style="text-align:right;">Datum</td>
+          <td style="width:100%;text-align:right;">Datum</td>
       </tr>
     </table>
+    <br>
+    <app-form-divider></app-form-divider>
   </div>
 </div>
 <div class="section-2">
@@ -42,6 +47,7 @@
   <div class="text-block-5">xx Personen nehmen teil.</div>
 </div>
 <div class="section-2">
+  <br><br><br><app-form-divider></app-form-divider>
   <h2 class="heading-3">Weitere Challenges</h2>
   <app-card-challenge></app-card-challenge>
   <br>

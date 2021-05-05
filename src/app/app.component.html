@@ -9,9 +9,23 @@
   {{document.name}}
 </div>
 
+<div *ngIf="!isSignedIn">
+  <h2>Sign up</h2>
+  <input type="text" #emailSignup/>
+  <input type="text" #passwordSignup/>
+  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button>
+</div>
+<hr>
+<div *ngIf="!isSignedIn">
+  <h2>Sign in</h2>
+  <input type="text" #email/>
+  <input type="text" #password/>
+  <button (click)="onSignin(email.value, password.value)">Sign in</button>
+</div>
 
 <h1> App Component</h1>
 <p> Alles was hier geschrieben wird, wird auf allen Seiten gezeigt </p>
 
 <app-navigation></app-navigation>
 <router-outlet></router-outlet>
+<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>

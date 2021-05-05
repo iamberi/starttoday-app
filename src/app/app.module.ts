@@ -35,6 +35,7 @@ import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { FirebaseService } from './services/firebase.service';
+import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FirebaseService } from './services/firebase.service';
     WillkommenComponent,
     LoginComponent,
     RegisterComponent,
+    LoggedInStartComponent,
   ],
   imports: [
     BrowserModule,

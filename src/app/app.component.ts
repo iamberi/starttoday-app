@@ -1,3 +1,4 @@
+import { FirebaseService } from './services/firebase.service';
 import { TestModel } from './test-model';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
@@ -11,13 +12,13 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   title = 'starttoday-app';
-
+  isSignedIn = false
   item: TestModel = {};
   testModelCollection: AngularFirestoreCollection<any>;
   list: Observable<TestModel[]>;
 
   constructor(
-    private afs: AngularFirestore) {
+    private afs: AngularFirestore, public FirebaseService : FirebaseService) {
       this.testModelCollection = afs.collection<TestModel>('TestModel');
     }
 
@@ -29,6 +30,26 @@ export class AppComponent implements OnInit {
           return { id, ...data };
         }))
       );
+      if(localStorage.getItem('user')!== null)
+      this.isSignedIn = true
+      else
+      this.isSignedIn = false
+    }
+
+    async onSignup(email:string, password:string){
+      await this.FirebaseService.signup(email,password)
+      if(this.FirebaseService.isLoggedIn)
+      this.isSignedIn = true
+    }
+
+    async onSignin(email:string, password:string){
+      await this.FirebaseService.signin(email,password)
+      if(this.FirebaseService.isLoggedIn)
+      this.isSignedIn = true
+    }
+
+    handleLogout(){
+      this.isSignedIn = false
     }
 
     public save() {

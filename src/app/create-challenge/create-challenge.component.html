@@ -1,0 +1,22 @@
+<p>create-challenge works!</p>
+
+<form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label>Titel</label>
+    <input type="text" formControlName="title" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Beschreibung</label>
+    <input type="text" formControlName="description" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Kategorie</label>
+    <input type="text" formControlName="category" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
+  </div>
+</form>

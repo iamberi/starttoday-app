@@ -1,53 +1,51 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Problem } from '../models/problem.model';
-
+import { Challenge } from '../models/challenge.model';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class ProblemService {
+export class ChallengeService {
 
   constructor(private angularFirestore: AngularFirestore) {}
 
-  getProblemDoc(id) {
+  getChallengeDoc(id) {
     return this.angularFirestore
-    .collection('problem-collection')
+    .collection('challenge-collection')
     .doc(id)
     .valueChanges();
   }
 
-  getProblemList() {
+  getChallengeList() {
     return this.angularFirestore
-    .collection('problem-collection')
+    .collection('challenge-collection')
     .snapshotChanges();
   }
 
-  createProblem(problem: Problem) {
+  createChallenge(challenge: Challenge) {
     return new Promise<any>((resolve, reject) =>{
       this.angularFirestore
-        .collection('problem-collection')
-        .add(problem)
+        .collection('challenge-collection')
+        .add(challenge)
         .then(response => { console.log(response); }, error => reject(error));
     });
   }
 
-  deleteProblem(problem) {
+  deleteChallenge(challenge) {
     return this.angularFirestore
-      .collection('problem-collection')
-      .doc(problem.id)
+      .collection('challenge-collection')
+      .doc(challenge.id)
       .delete();
   }
 
-  updateProblem(problem: Problem, id) {
+  updateChallenge(challenge: Challenge, id) {
     return this.angularFirestore
-      .collection('problem-collection')
+      .collection('challenge-collection')
       .doc(id)
       .update({
-        title: problem.title,
-        description: problem.description,
-        category: problem.category
+        title: challenge.title,
+        description: challenge.description,
+        category: challenge.category
       });
   }
 }

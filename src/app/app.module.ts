@@ -1,3 +1,4 @@
+import { Challenge } from './models/challenge.model';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -21,6 +22,9 @@ import { ProblemeComponent } from './views/probleme/probleme.component';
 import { CreateProblemComponent } from './create-problem/create-problem.component';
 import { ListProblemComponent } from './list-problem/list-problem.component';
 import { EditProblemComponent } from './edit-problem/edit-problem.component';
+import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
+import { ListChallengeComponent } from './list-challenge/list-challenge.component';
+import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -32,9 +36,13 @@ const routes: Routes = [
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
-  { path: 'create', component: CreateProblemComponent },
+  { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
-  { path: 'update-problem/:id', component: EditProblemComponent }
+  { path: 'update-problem/:id', component: EditProblemComponent },
+
+  { path: 'create-challenge', component: CreateChallengeComponent },
+  { path: 'list-challenges', component: ListChallengeComponent },
+  { path: 'update-challenge/:id', component: EditChallengeComponent }
 ]
 
 
@@ -53,6 +61,9 @@ const routes: Routes = [
     CreateProblemComponent,
     ListProblemComponent,
     EditProblemComponent,
+    CreateChallengeComponent,
+    ListChallengeComponent,
+    EditChallengeComponent,
   ],
   imports: [
     BrowserModule,

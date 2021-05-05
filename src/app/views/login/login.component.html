@@ -1,8 +1,17 @@
-<p>login works!</p>
+
 <div *ngIf="!isSignedIn">
-  <h2>Sign in</h2>
+  <h2>Willkommen zurück.</h2>
+  <p>E-Mail</p>
+  <br>
   <input type="text" #email/>
+  <br>
+  <p>Passwort</p>
+  <br>
   <input type="text" #password/>
+  <br>
+  <p>Noch keinen Account? <a routerLink="/register">Registrieren</a></p>
   <button (click)="onSignin(email.value, password.value)">Sign in</button>
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
+
+<p>login works!</p>

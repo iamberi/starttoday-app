@@ -28,8 +28,8 @@ const routes: Routes = [
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
-  { path: 'problemerstellen', component: ProblemErstellenComponent },
-  { path: 'problemdetail', component: ProblemDetailComponent },
+  { path: 'problem-erstellen', component: ProblemErstellenComponent },
+  { path: 'problem-detail', component: ProblemDetailComponent },
 ]
 
 //Firebase imports

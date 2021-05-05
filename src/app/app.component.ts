@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent implements OnInit {
   title = 'starttoday-app';
   isSignedIn = false
+
   item: TestModel = {};
   testModelCollection: AngularFirestoreCollection<any>;
   list: Observable<TestModel[]>;

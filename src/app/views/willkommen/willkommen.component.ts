@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./willkommen.component.scss']
 })
 export class WillkommenComponent implements OnInit {
+  title = 'starttoday-app';
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,1 +1,8 @@
 <p>register works!</p>
+<div *ngIf="!isSignedIn">
+  <h2>Sign up</h2>
+  <input type="text" #emailSignup/>
+  <input type="text" #passwordSignup/>
+  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button>
+</div>
+<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>

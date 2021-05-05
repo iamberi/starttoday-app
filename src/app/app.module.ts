@@ -19,15 +19,16 @@ import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 
 //Liste aller Routes
 const routes: Routes = [
+  { path: '', component: WillkommenComponent },
+  { path: 'willkommen', component: WillkommenComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
-  { path: 'willkommen', component: WillkommenComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logged-in-start', component: LoggedInStartComponent },
   { path: 'error', component: ErrorComponent },
-  { path: '', redirectTo: '/error', pathMatch: 'full'},
+  { path: '', redirectTo: '/willkommen', pathMatch: 'full'},
 ]
 
 //Firebase imports

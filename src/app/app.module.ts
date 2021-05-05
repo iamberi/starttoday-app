@@ -25,7 +25,9 @@ const routes: Routes = [
   { path: 'willkommen', component: WillkommenComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/probleme', pathMatch: 'full'},
+  { path: 'logged-in-start', component: LoggedInStartComponent },
+  { path: 'error', component: ErrorComponent },
+  { path: '', redirectTo: '/error', pathMatch: 'full'},
 ]
 
 //Firebase imports
@@ -36,6 +38,7 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { FirebaseService } from './services/firebase.service';
 import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.component';
+import { ErrorComponent } from './views/error/error.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.
     LoginComponent,
     RegisterComponent,
     LoggedInStartComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

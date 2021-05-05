@@ -22,11 +22,11 @@ import { RegisterComponent } from './views/register/register.component';
 
 //Liste aller Routes
 const routes: Routes = [
+  { path: 'register', component: RegisterComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/probleme', pathMatch: 'full'},
+  { path: '', redirectTo: '/register', pathMatch: 'full'},
 ]
 
 //Firebase imports

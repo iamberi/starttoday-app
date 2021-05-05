@@ -12,13 +12,14 @@ import { InputTextComponent } from './input/input-text/input-text.component';
 import { FormDividerComponent } from './input/form-divider/form-divider.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { ProblemeComponent } from './views/probleme/probleme.component';
+import { ProblemeComponent } from './views/problem/probleme/probleme.component';
 import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
+import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
 
 //Liste aller Routes
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
   { path: 'profil', component: ProfilComponent },
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
   { path: 'problemerstellen', component: ProblemErstellenComponent },
-
+  { path: 'problemdetail', component: ProblemDetailComponent },
 ]
 
 //Firebase imports
@@ -52,6 +53,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CardChallengeComponent,
     ChallengesDetailComponent,
     ProblemErstellenComponent,
+    ProblemDetailComponent,
   ],
   imports: [
     BrowserModule,

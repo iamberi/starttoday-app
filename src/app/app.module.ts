@@ -33,7 +33,6 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 
 

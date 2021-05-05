@@ -1,3 +1,4 @@
+import { FirebaseService } from './../../services/firebase.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  isSignedIn = false;
+  constructor(public FirebaseService: FirebaseService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('user')!== null)
+      this.isSignedIn = true
+      else
+      this.isSignedIn = false
   }
 
+  async onSignin(email:string, password:string){
+    await this.FirebaseService.signin(email,password)
+    if(this.FirebaseService.isLoggedIn)
+    this.isSignedIn = true
+  }
+
+  handleLogout(){
+    this.isSignedIn = false
+  }
 }

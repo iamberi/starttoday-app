@@ -4,10 +4,10 @@ import { User } from '../../user';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  templateUrl: './register-n.component.html',
+  styleUrls: ['./register-n.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterNComponent implements OnInit {
   model = new User (24, '', '', '', '','');
   submitted = false;
 

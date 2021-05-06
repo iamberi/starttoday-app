@@ -17,23 +17,25 @@ import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ProfilComponent } from './views/profil/profil.component';
 import { CardProblemeComponent } from './card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
-import { RegisterComponent } from './views/register/register.component';
+import { RegisterNComponent } from './views/register-n/register-n.component';
 
 
 //Liste aller Routes
 const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
+  { path: 'register-n', component: RegisterNComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
-  { path: '', redirectTo: '/register', pathMatch: 'full'},
+  { path: 'login-n', component: LoginNComponent},
+  { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 ]
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
+import { LoginNComponent } from './views/login-n/login-n.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +50,9 @@ import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.componen
     ProfilComponent,
     CardProblemeComponent,
     CardChallengeComponent,
-    RegisterComponent,
+    RegisterNComponent,
     WillkommenNComponent,
+    LoginNComponent,
   ],
   imports: [
     BrowserModule,

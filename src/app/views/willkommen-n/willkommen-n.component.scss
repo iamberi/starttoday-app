@@ -23,11 +23,8 @@
   width: 6em;
   margin: 0 auto;
 }
-.wrapper-buttons-login{
-  position: absolute;
-  bottom: $xs-spacing;
+.wrapper-buttons-welcome{
   :first-child{
-    margin-right: $xs-spacing;
-    width: 50%;
+    margin-right: $s-spacing;
   }
 }

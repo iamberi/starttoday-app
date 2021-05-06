@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent implements OnInit {
   title = 'starttoday-app';
   isSignedIn = false
-
+  
   item: TestModel = {};
   testModelCollection: AngularFirestoreCollection<any>;
   list: Observable<TestModel[]>;
@@ -37,11 +37,11 @@ export class AppComponent implements OnInit {
       this.isSignedIn = false
     }
 
-    /*async onSignup(email:string, password:string){
+    async onSignup(email:string, password:string){
       await this.FirebaseService.signup(email,password)
       if(this.FirebaseService.isLoggedIn)
       this.isSignedIn = true
-    }*/
+    }
 
     async onSignin(email:string, password:string){
       await this.FirebaseService.signin(email,password)

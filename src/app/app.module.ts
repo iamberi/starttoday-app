@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -33,7 +33,10 @@ import { EditChallengeComponent } from './edit-challenge/edit-challenge.componen
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { environment } from '../environments/environment';
+// Auth service
+import { AuthService } from "./shared/services/auth.service";
 
 //Liste aller Routes
 const routes: Routes = [
@@ -53,6 +56,8 @@ const routes: Routes = [
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
   { path: 'test', component: TestPasswortComponent},
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'verify-email-address', component: VerifyEmailComponent },
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -75,6 +80,8 @@ import { ErrorComponent } from './views/error/error.component';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
 import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -108,6 +115,8 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
     CreateChallengeComponent,
     ListChallengeComponent,
     EditChallengeComponent,
+    VerifyEmailComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,9 +131,10 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
+    AngularFireAuthModule,
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

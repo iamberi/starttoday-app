@@ -1,31 +1,26 @@
-@import "src/sass/0-base/colors.scss";
+@import "src/sass/styles.scss";
 
 .text-input-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .text-input-label {
   border: none;
+}
+
+.text-input-input {
+  box-shadow: none;
+  border: none;
   height: 1.5em;
 }
 
-
-
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: $color-lilie-vandalismus;
-  
+.text-input-input:focus {
+  color: $color-black;
+  outline-color: transparent;
+  outline-style: none;
 }
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: $color-lilie-vandalismus;
-}
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: $color-lilie-vandalismus;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: $color-lilie-vandalismus;
+.hr-form{
+  margin-top: $xs-spacing 0 $xs-spacing 0 !important;
 }

@@ -77,11 +77,27 @@
     <div class="form-group">
       <label class="text-input-label label" for="mail">Passwort</label>
       <input class="text-input-input form-input form-control" type="text" placeholder="Wähle weise" id="passwort"
-        required minlength="10"
+        required minlength="10" maxlength="32" pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
         [(ngModel)]="model.passwort" name="passwort"
         #passwort="ngModel">
     </div>
     <!-- Zeigt Fehlermeldung an-->
+    <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
+      <div *ngIf="passwort.errors.required">
+        Bitte gebe ein Passwort ein.
+      </div>
+      <div *ngIf="passwort.errors.minlength">
+        Name must be at least 10 characters long.
+      </div>
+      <div *ngIf="passwort.errors.maxlength">
+        Das Passwort darf nicht länger als 32 Zeichen sein
+      </div>
+      <div *ngIf="passwort.errors.pattern">
+        Verwende bitte mindestens eine Zahl, ein Sonderzeichen, sowie Groß- und Kleinbuchstaben
+      </div>
+    </div>
+
+
     <div [hidden]="passwort.valid || passwort.pristine"
       class="alert alert-danger">
       Bitte gebe ein Passwort ein.

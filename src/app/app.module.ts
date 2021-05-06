@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+//import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'profil', component: ProfilComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
+  { path: 'test', component: TestPasswortComponent},
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 ]
 
@@ -36,6 +38,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
 import { LoginNComponent } from './views/login-n/login-n.component';
+import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 
 @NgModule({
   declarations: [
@@ -53,10 +56,12 @@ import { LoginNComponent } from './views/login-n/login-n.component';
     RegisterNComponent,
     WillkommenNComponent,
     LoginNComponent,
+    TestPasswortComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    //ReactiveFormsModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

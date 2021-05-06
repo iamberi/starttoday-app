@@ -1,5 +1,5 @@
 
-<div *ngIf="!isSignedIn">
+<!-- <div *ngIf="!isSignedIn">
   <h2>Schön dich kennenzulernen.</h2>
   <p>Vor und Nachname</p>
   <br>
@@ -20,5 +20,148 @@
   <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Registrieren</button>
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
+-->
+<!--https://angular.io/api/forms/Validators#email-->
+<!--Formular-->
+<!--{{diagnostic}}-->
+<a href="/willkommen-n">
+  <svg class="icon-arrow-left" aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-arrow-left"/>
+  </svg>
+</a>
+<div *ngIf="!isSignedIn" [hidden]="submitted">
+  <h1>Schön dich kennenzulernen.</h1>
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-wrapper">
+
+    <div class="form-group">
+      <label class="text-input-label label" for="vorname">Vorname</label>
+      <input class="text-input-input form-input form-control" placeholder="Maria" type="text" id="vorname"
+          required
+          [(ngModel)]="model.vorname" name="vorname"
+          #vorname="ngModel">
+    </div>
+
+    <!-- Zeigt Fehlermeldung an-->
+    <div [hidden]="vorname.valid || vorname.pristine"
+      class="alert alert-danger">
+      Bitte gebe deinen Vornamen an.
+    </div>
+    <hr class="hr-form">
+
+    <!--This example has a temporary diagnostic interpolation after each input tag, {{model.name}}, to show the current data value of the corresponding property. The note reminds you to remove the diagnostic lines when you have finished observing the two-way data binding at work.-->
+
+    <div class="form-group">
+      <label class="text-input-label label" for="nachname">Nachname</label>
+      <input class="text-input-input form-input form-control" type="text" placeholder="Huber" id="nachname"
+          required
+          [(ngModel)]="model.nachname" name="nachname"
+          #nachname="ngModel">
+    </div>
+    <!-- Zeigt Fehlermeldung an-->
+    <div [hidden]="nachname.valid || nachname.pristine"
+      class="alert alert-danger">
+      Bitte gebe deinen Nachnamen an.
+    </div>
+    <hr class="hr-form">
+
+    <div class="form-group">
+      <label class="text-input-label label" for="mail">E-Mail Adresse</label>
+      <input class="text-input-input form-input form-control" type="text" #emailSignup placeholder="maria.huber@mail.de" id="email"
+          #mail="ngModel"
+          [class.is-invalid]="mail.invalid && mail.touched" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          [(ngModel)]="model.mail" name="mail"
+      >
+    </div>
+  	<div [hidden]="mail.valid || mail.pristine" *ngIf="mail.errors && (mail.invalid || mail.touched)">
+    	<small class="text-danger" *ngIf="mail.errors.required">Um dich registrieren zu können, benötigen wir Deine Mail Adresse.</small>
+    	<small class="text-danger" *ngIf="mail.errors.pattern">Bitte überprüfe deine E-Mail Adresse</small>
+  	</div>
+    <hr class="hr-form">
+
+    <!--
+    <div class="form-group">
+      <label class="text-input-label label" for="mail2">Gebe deine E-Mail Adresse erneut ein</label>
+      <input class="text-input-input form-input form-control" type="email" placeholder="test" id="email2"
+          #mail2="ngModel"
+          [class.is-invalid]="mail2.invalid && mail2.touched" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          [(ngModel)]="model.mail2" name="mail2"
+          ng-pattern="emailReg"
+      >
+    </div>
+    <div [hidden]="mail2.valid || mail2.pristine" *ngIf="mail2.errors && (mail2.invalid || mail2.touched) && (mail2.value != mail.value)">
+    	<small class="text-danger" *ngIf="mail2.value != mail.value">Die E-Mail Adressen stimmen nicht überein</small>
+    	<small class="text-danger" *ngIf="mail2.errors.pattern">Bitte überprüfe deine E-Mail Adresse</small>
+  	</div>
+    <hr class="hr-form">
+  -->
+
+    <div class="form-group">
+      <label class="text-input-label label" for="mail">Passwort</label>
+      <input class="text-input-input form-input form-control" type="text" #passwordSignup placeholder="Wähle weise" id="passwort"
+        required minlength="10" maxlength="32" pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
+        [(ngModel)]="model.passwort" name="passwort"
+        #passwort="ngModel">
+    </div>
+    <!-- Zeigt Fehlermeldung an-->
+    <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
+      <div *ngIf="passwort.errors.required">
+        Bitte gebe ein Passwort ein.
+      </div>
+      <div *ngIf="passwort.errors.minlength">
+        Name must be at least 10 characters long.
+      </div>
+      <div *ngIf="passwort.errors.maxlength">
+        Das Passwort darf nicht länger als 32 Zeichen sein
+      </div>
+      <div *ngIf="passwort.errors.pattern">
+        Verwende bitte mindestens eine Zahl, ein Sonderzeichen, sowie Groß- und Kleinbuchstaben
+      </div>
+    </div>
+
+
+    <div [hidden]="passwort.valid || passwort.pristine"
+      class="alert alert-danger">
+      Bitte gebe ein Passwort ein.
+    </div>
+    <hr class="hr-form">
+
+    <div class="form-group">
+      <label class="text-input-label label" for="mail">Passwort bestätigen</label>
+      <input class="text-input-input form-input form-control" type="text" placeholder="Wähle weise" id="passwort"
+        required minlength="10"
+        [(ngModel)]="model.passwort" name="passwort"
+        #passwort="ngModel">
+    </div>
+    <!-- Zeigt Fehlermeldung an-->
+    <div [hidden]="passwort.valid || passwort.pristine"
+      class="alert alert-danger">
+      Bitte gebe ein Passwort ein.
+    </div>
+    <hr class="hr-form">
+  </form>
+
+
+  <p class="p-center">Unternehmensprofile können nach der Registrierung im Profil beantragt werden</p>
+
+  <!--
+  <app-button
+    [btnlink] = '"https://angular.io/guide/forms#build-the-form"'
+    [type]='"button-primary button-fullwidth"'
+    [btntext] = '"Jetzt registrieren"'
+  ></app-button>-->
+  <button class="button-primary button-fullwidth" (click)="onSignup(emailSignup.value, passwordSignup.value); onSubmit(); userForm.reset()">Registrieren</button>
+  <!--<button type="submit" class="button-primary button-fullwidth" [disabled]="!userForm.form.valid" (click)="newUser(); onSubmit(); userForm.reset() ">Registrieren</button>-->
+</div>
+
+<!--Text nach Registrierung-->
+<div [hidden]="!submitted">
+  <h1> Wir haben Dir eine Mail geschickt</h1>
+  <h2>Klicke jetzt nur noch auf den Link in der Mail, die wir dir geschickt haben und schon kann es mit dem Welt verbessern losgehen.</h2>
+</div>
+
+<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
+
 
 <p>register works!</p>

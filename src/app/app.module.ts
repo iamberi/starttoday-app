@@ -20,6 +20,8 @@ import { CardChallengeComponent } from './card-challenge/card-challenge.componen
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
+import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
+import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
 
 //Liste aller Routes
 const routes: Routes = [
@@ -30,11 +32,14 @@ const routes: Routes = [
   { path: '', redirectTo: '/probleme', pathMatch: 'full'},
   { path: 'problem-erstellen', component: ProblemErstellenComponent },
   { path: 'problem-detail', component: ProblemDetailComponent },
+  { path: 'problem-delete', component: ProblemDeleteComponent },
+  { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
 ]
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 
 
@@ -54,6 +59,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ChallengesDetailComponent,
     ProblemErstellenComponent,
     ProblemDetailComponent,
+    ProblemDeleteComponent,
+    ProblemBearbeitenComponent,
   ],
   imports: [
     BrowserModule,

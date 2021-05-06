@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+//import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -22,23 +23,32 @@ import { ProblemErstellenComponent } from './views/problem/problem-erstellen/pro
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
 import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
 import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
+import { RegisterNComponent } from './views/register-n/register-n.component';
+
 
 //Liste aller Routes
 const routes: Routes = [
-  { path: 'challenges-detail', component: ChallengesDetailComponent },
+  { path: 'register-n', component: RegisterNComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
-  { path: '', redirectTo: '/probleme', pathMatch: 'full'},
+  { path: 'willkommen-n', component: WillkommenNComponent},
+  { path: 'login-n', component: LoginNComponent},
+  { path: 'test', component: TestPasswortComponent},
+  { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
   { path: 'problem-erstellen', component: ProblemErstellenComponent },
   { path: 'problem-detail', component: ProblemDetailComponent },
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
+  { path: 'challenges-detail', component: ChallengesDetailComponent },
 ]
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
+import { LoginNComponent } from './views/login-n/login-n.component';
+import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 
 
 
@@ -61,10 +71,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ProblemDetailComponent,
     ProblemDeleteComponent,
     ProblemBearbeitenComponent,
+    RegisterNComponent,
+    WillkommenNComponent,
+    LoginNComponent,
+    TestPasswortComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    //ReactiveFormsModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

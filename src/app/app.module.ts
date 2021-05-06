@@ -24,11 +24,13 @@ import { ProblemDetailComponent } from './views/problem/problem-detail/problem-d
 import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
 import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
-
+import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
 
 //Liste aller Routes
 const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
+  { path: 'gallery', component: GallerieSliderComponent },
+  { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
@@ -49,6 +51,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
 import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
+
 
 
 
@@ -75,6 +78,7 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
     WillkommenNComponent,
     LoginNComponent,
     TestPasswortComponent,
+    GallerieSliderComponent,
   ],
   imports: [
     BrowserModule,

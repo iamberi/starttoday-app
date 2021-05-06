@@ -17,11 +17,19 @@ import { InputTextComponent } from './components/input/input-text/input-text.com
 import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
+import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
 //views
 import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
+  //challenges
 import { ChallengesComponent } from './views/challenges/challenges.component';
-import { ProblemeComponent } from './views/probleme/probleme.component';
+import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
+  //probleme
+import { ProblemeComponent } from './views/problem/probleme/probleme.component';
+import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
+import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
+import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
+import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
 //CRUD
 import { CreateProblemComponent } from './create-problem/create-problem.component';
 import { ListProblemComponent } from './list-problem/list-problem.component';
@@ -34,11 +42,27 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
+
+
+import { WillkommenComponent } from './views/willkommen/willkommen.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+import { FirebaseService } from './services/firebase.service';
+import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.component';
+import { ErrorComponent } from './views/error/error.component';
+
+import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
+import { LoginNComponent } from './views/login-n/login-n.component';
+import { TestPasswortComponent } from './test-passwort/test-passwort.component';
+
+
 //Liste aller Routes
 const routes: Routes = [
-
   { path: '', component: WillkommenNComponent },
   { path: 'willkommen', component: WillkommenComponent },
+  { path: 'register-n', component: RegisterNComponent },
+  { path: 'gallery', component: GallerieSliderComponent },
+  { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
@@ -59,21 +83,16 @@ const routes: Routes = [
 
   { path: 'create-challenge', component: CreateChallengeComponent },
   { path: 'list-challenges', component: ListChallengeComponent },
-  { path: 'update-challenge/:id', component: EditChallengeComponent }
-]
+  { path: 'update-challenge/:id', component: EditChallengeComponent },
+  { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
+  { path: 'problem-erstellen', component: ProblemErstellenComponent },
+  { path: 'problem-detail', component: ProblemDetailComponent },
+  { path: 'problem-delete', component: ProblemDeleteComponent },
+  { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
+  { path: 'challenges-detail', component: ChallengesDetailComponent },
+];
 
 
-
-import { WillkommenComponent } from './views/willkommen/willkommen.component';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
-import { FirebaseService } from './services/firebase.service';
-import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.component';
-import { ErrorComponent } from './views/error/error.component';
-
-import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
-import { LoginNComponent } from './views/login-n/login-n.component';
-import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 
 
 @NgModule({
@@ -88,27 +107,31 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
     ChallengesComponent,
     ProfilComponent,
     CardProblemeComponent,
-
     WillkommenComponent,
     LoginComponent,
     RegisterComponent,
     LoggedInStartComponent,
     ErrorComponent,
-
     CardChallengeComponent,
+    ChallengesDetailComponent,
+    ProblemErstellenComponent,
+    ProblemDetailComponent,
+    ProblemDeleteComponent,
+    ProblemBearbeitenComponent,
     RegisterNComponent,
     WillkommenNComponent,
     LoginNComponent,
     TestPasswortComponent,
-
     CreateProblemComponent,
     ListProblemComponent,
     EditProblemComponent,
     CreateChallengeComponent,
     ListChallengeComponent,
     EditChallengeComponent,
+    GallerieSliderComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     CommonModule,
     FormsModule,

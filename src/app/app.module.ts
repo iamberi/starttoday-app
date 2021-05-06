@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -16,8 +15,8 @@ import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
 import { InputTextComponent } from './components/input/input-text/input-text.component';
 import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
-import { CardChallengeComponent } from './card-challenge/card-challenge.component';
-import { FormDividerComponent } from './input/form-divider/form-divider.component';
+import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
+import { FormDividerComponent } from './components/form-divider/form-divider.component';
 //views
 import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';

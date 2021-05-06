@@ -20,9 +20,11 @@ import { CardChallengeComponent } from './card-challenge/card-challenge.componen
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
 import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
+import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
 
 //Liste aller Routes
 const routes: Routes = [
+  { path: 'gallery', component: GallerieSliderComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
@@ -35,7 +37,7 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
+
 
 
 

@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ProblemService } from '../../services/problem.service';
-import { Problem } from '../../models/problem.model';
+import { ProblemService } from '../services/problem.service';
+import { Problem } from '../models/problem.model';
 
 @Component({
-  selector: 'app-probleme',
-  templateUrl: './probleme.component.html',
-  styleUrls: ['./probleme.component.scss']
+  selector: 'app-list-problem',
+  templateUrl: './list-problem.component.html',
+  styleUrls: ['./list-problem.component.scss']
 })
-export class ProblemeComponent implements OnInit {
+export class ListProblemComponent implements OnInit {
   Problems: Problem[];
+
 
   constructor(private problemService: ProblemService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.problemService.getProblemList().subscribe(res => {
       this.Problems = res.map( e => {
         return {

@@ -2,7 +2,6 @@ import { FirebaseService } from './services/firebase.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

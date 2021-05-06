@@ -1,25 +1,38 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-//import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NavigationComponent } from './navigation/navigation.component';
-import { ButtonComponent } from './buttons/button/button.component';
-import { ButtonIconComponent } from './buttons/button-icon/button-icon.component';
-import { InputTextComponent } from './input/input-text/input-text.component';
-import { FormDividerComponent } from './input/form-divider/form-divider.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { ProblemeComponent } from './views/probleme/probleme.component';
-import { ChallengesComponent } from './views/challenges/challenges.component';
-import { ProfilComponent } from './views/profil/profil.component';
-import { CardProblemeComponent } from './card-probleme/card-probleme.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+//models
+import { Challenge } from './models/challenge.model';
+//components
+import { ButtonComponent } from './components/buttons/button/button.component';
+import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
+import { InputTextComponent } from './components/input/input-text/input-text.component';
+import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './card-challenge/card-challenge.component';
+import { FormDividerComponent } from './input/form-divider/form-divider.component';
+//views
+import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
+import { ChallengesComponent } from './views/challenges/challenges.component';
+import { ProblemeComponent } from './views/probleme/probleme.component';
+//CRUD
+import { CreateProblemComponent } from './create-problem/create-problem.component';
+import { ListProblemComponent } from './list-problem/list-problem.component';
+import { EditProblemComponent } from './edit-problem/edit-problem.component';
+import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
+import { ListChallengeComponent } from './list-challenge/list-challenge.component';
+import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
+//Firebase imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 //Liste aller Routes
@@ -41,11 +54,16 @@ const routes: Routes = [
   { path: 'login-n', component: LoginNComponent},
   { path: 'test', component: TestPasswortComponent},
 
+  { path: 'create-problem', component: CreateProblemComponent },
+  { path: 'list-problems', component: ListProblemComponent },
+  { path: 'update-problem/:id', component: EditProblemComponent },
+
+  { path: 'create-challenge', component: CreateChallengeComponent },
+  { path: 'list-challenges', component: ListChallengeComponent },
+  { path: 'update-challenge/:id', component: EditChallengeComponent }
 ]
 
-//Firebase imports
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
@@ -84,11 +102,18 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
     LoginNComponent,
     TestPasswortComponent,
 
+    CreateProblemComponent,
+    ListProblemComponent,
+    EditProblemComponent,
+    CreateChallengeComponent,
+    ListChallengeComponent,
+    EditChallengeComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -98,7 +123,6 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
     }),
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
-    AppRoutingModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

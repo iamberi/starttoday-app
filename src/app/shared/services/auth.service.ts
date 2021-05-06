@@ -45,7 +45,7 @@ export class AuthService {
 
   //Registrieren
   SignUp(email, password) {
-    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+    return this.afAuth.createUserWithEmailAndPassword(email, password)
     .then((result) => {
       // Call the SendVerificaitonMail() function when new user sign up and returns promise
       this.SendVerificationMail();
@@ -57,7 +57,7 @@ export class AuthService {
 
    // E-Mail Verifizierung schicken bei neuen Anmelden
    SendVerificationMail() {
-    return this.afAuth.auth.currentUser.sendEmailVerification()
+    return this.afAuth.currentUser.sendEmailVerification()
     .then(() => {
       this.router.navigate(['verify-email-address']);
     })
@@ -65,7 +65,7 @@ export class AuthService {
 
   //Passwort zurücksetzen
   ForgotPassword(passwordResetEmail) {
-    return this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
+    return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
     .then(() => {
       window.alert('Wir haben dir eine E-Mail zum Zurücksetzen deines Passworts geschickt. Schau doch gleich mal nach.');
     }).catch((error) => {
@@ -81,7 +81,7 @@ export class AuthService {
 
   // Auth Logik für Auth Provider
   AuthLogin(provider) {
-    return this.afAuth.auth.signInWithPopup(provider)
+    return this.afAuth.signInWithPopup(provider)
     .then((result) => {
        this.ngZone.run(() => {
           this.router.navigate(['logged-in-start']);
@@ -111,7 +111,7 @@ export class AuthService {
 
    //Logout
    SignOut() {
-    return this.afAuth.auth.signOut().then(() => {
+    return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
     })

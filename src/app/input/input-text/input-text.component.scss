@@ -1,5 +1,4 @@
-@import "src/sass/0-base/colors.scss";
-@import "src/sass/0-base/fonts.scss";
+@import "src/sass/styles.scss";
 
 .text-input-wrapper {
   display: flex;
@@ -21,4 +20,7 @@
   color: $color-black;
   outline-color: transparent;
   outline-style: none;
+}
+.hr-form{
+  margin-top: $xs-spacing 0 $xs-spacing 0 !important;
 }

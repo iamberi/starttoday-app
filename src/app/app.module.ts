@@ -35,6 +35,7 @@ const routes: Routes = [
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
 
 
 
@@ -54,6 +55,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ChallengesDetailComponent,
     ProblemErstellenComponent,
     ProblemDetailComponent,
+    GallerieSliderComponent,
   ],
   imports: [
     BrowserModule,

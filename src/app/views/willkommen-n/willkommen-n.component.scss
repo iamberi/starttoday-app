@@ -1,0 +1,33 @@
+@import "src/sass/styles.scss";
+
+:host{
+  max-width: 26em;
+  display: block;
+  margin: $xxl-spacing auto $xl-spacing auto;
+  padding: 0 1.25em;
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+.headline-intro{
+  font-size: 2.375em;
+  font-weight: 700;
+  margin-bottom: $xs-spacing;
+  text-align: center;
+  span{
+    color: $color-secondary;
+  }
+}
+.icon-logo-start{
+  height: 6em;
+  width: 6em;
+  margin: 0 auto;
+}
+.wrapper-buttons-login{
+  position: absolute;
+  bottom: $xs-spacing;
+  :first-child{
+    margin-right: $xs-spacing;
+    width: 50%;
+  }
+}

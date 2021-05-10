@@ -1,0 +1,33 @@
+@import "src/sass/styles.scss";
+
+label {
+  font: jost;
+}
+
+select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: white;
+  overflow: hidden;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25em;
+  
+  
+  //Remove Default Active Styling 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+}
+
+option {
+    margin-left: 50px;
+}
+
+

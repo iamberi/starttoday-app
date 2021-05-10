@@ -55,6 +55,8 @@ import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.componen
 import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
+import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 
 //Liste aller Routes
@@ -134,6 +136,8 @@ const routes: Routes = [
     EditChallengeComponent,
     GallerieSliderComponent,
     OverviewComponent,
+    RegularButtonComponent,
+    DropdownComponent,
   ],
   imports: [
     AppRoutingModule,

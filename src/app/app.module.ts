@@ -54,6 +54,7 @@ import { ErrorComponent } from './views/error/error.component';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
 import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
+import { OverviewComponent } from './views/overview/overview.component';
 
 
 //Liste aller Routes
@@ -90,6 +91,9 @@ const routes: Routes = [
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
+
+  { path: 'overview', component: OverviewComponent },
+
 ];
 
 
@@ -129,6 +133,7 @@ const routes: Routes = [
     ListChallengeComponent,
     EditChallengeComponent,
     GallerieSliderComponent,
+    OverviewComponent,
   ],
   imports: [
     AppRoutingModule,

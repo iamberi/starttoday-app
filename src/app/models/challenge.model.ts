@@ -4,6 +4,7 @@ export class Challenge {
   latitude: number;
   title: string;
   description: string;
+
   tools: string;
   participants: string;
   category: string;
@@ -11,4 +12,5 @@ export class Challenge {
   status: boolean;
   votes: number;
   socialpoints: number;
+ // challenge-setter: string;
 }

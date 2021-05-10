@@ -16,6 +16,18 @@
     <input type="text" formControlName="category" class="form-control" required>
   </div>
 
+  <!--Tutorial https://dottedsquirrel.com/angular/how-to-crud-in-angular-firebase-firestore/ -->
+  <form [formGroup]="this.ordersService.form">
+    <input placeholder="Order Number"
+           formControlName="orderNumber"
+           type="text"
+           class="input-field col s12">
+    <input placeholder="Customer Name"
+           formControlName="customerName"
+           type="text"
+           class="input-field col s12"></form>
+<!--Tutorial Ende-->
+
   <div class="mb-3">
     <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
   </div>

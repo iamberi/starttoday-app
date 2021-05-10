@@ -6,6 +6,7 @@
       <th scope="col">Titel</th>
       <th scope="col">Beschreibung</th>
       <th scope="col">Kategorie</th>
+      <th scope="col">Status</th>
       <th scope="col">Action </th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <td>{{ challenge.title }}</td>
       <td>{{ challenge.description }}</td>
       <td>{{ challenge.category }}</td>
+      <td>{{ challenge.status ? "Ungelöst" : "Gelöst" }}</td>
       <td>
         <span (click)="removeChallenge(challenge)" class="text-danger">Delete</span> &nbsp;
         <span routerLink="/update-challenge/{{challenge.id}}" class="text-primary">Edit</span>

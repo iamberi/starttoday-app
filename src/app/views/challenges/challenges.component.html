@@ -6,9 +6,16 @@
   </svg>
 </div>
 <p class="open-problems"> 423 Challenges</p>
-<app-card-challenge></app-card-challenge>
-<app-card-challenge></app-card-challenge>
-<app-card-challenge></app-card-challenge>
-<app-card-challenge></app-card-challenge>
-<app-card-challenge></app-card-challenge>
 
+<app-button
+[btntext]="'Challenge hinzufügen'"
+[btnlink]="'/create-challenge'"
+[type]="'primary'"
+>
+</app-button>
+
+<app-card-challenge *ngFor="let challenge of Challenges; let i=index"
+[titleChallenge]="challenge.title"
+[descriptionChallenge]="challenge.description"
+[categoryChallenge]="challenge.category"
+></app-card-challenge>

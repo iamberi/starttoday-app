@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-challenge',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CardChallengeComponent implements OnInit {
 
   constructor() { }
+  @Input() titleChallenge: string;
+  @Input() descriptionChallenge: string;
+  @Input() categoryChallenge: string;
 
   ngOnInit(): void {
   }

@@ -1,3 +1,4 @@
+import { FormGroup, FormControl } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Challenge } from '../models/challenge.model';
@@ -8,6 +9,15 @@ import { Challenge } from '../models/challenge.model';
 export class ChallengeService {
 
   constructor(private angularFirestore: AngularFirestore) {}
+
+    //Tutorial https://dottedsquirrel.com/angular/how-to-crud-in-angular-firebase-firestore/
+
+    form = new FormGroup({
+      challengeName: new FormControl(''),
+      challengeNumber: new FormControl(''),
+      category: new FormControl(''),
+      completed: new FormControl(false)
+    })
 
   getChallengeDoc(id) {
     return this.angularFirestore

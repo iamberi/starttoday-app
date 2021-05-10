@@ -12,19 +12,19 @@ h1,h2,h3,h4,h5,p,button, label{
 h2{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-size: 1.25em;
+  line-height: 1.875em;
 }
 h3{
   font-family: 'Jost', sans-serif;
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1.125em;
+  line-height: 1.625em;
 }
 h4,p{
   font-family: 'Jost', sans-serif;
-  font-size: 1rem;
-  line-height: 1.438rem;
+  font-size: 1em;
+  line-height: 1.438em;
 }
 h4{
   font-weight: 500;
@@ -33,21 +33,21 @@ p{
   font-weight: 400;
 }
 .p-info{
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.875em;
+  line-height: 1.125em;
 }
 .p-center{
   text-align: center;
 }
 .form-label{
   font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.875em;
+  line-height: 1.125em;
   color: $color-grey-2;
 }
 .form-input{
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1.125em;
+  line-height: 1.5em;
   color: $color-grey-3;
 }
 .label{
@@ -66,8 +66,8 @@ p{
     color: $color-lilie-vandalismus;
   }
 .link{
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1em;
+  line-height: 1.5em;
   color: $color-secondary;
   text-decoration: underline;
 }

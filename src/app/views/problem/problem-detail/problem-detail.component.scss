@@ -80,6 +80,21 @@
     height: 26px;
     padding-left: 5%;
   }
+
+   .border-frame {
+     border:1px solid #ccc!important;
+     padding: 5px 16px;
+     padding-top: 3%;
+     border-style: double;
+   }
+
+  .border-frame-round {
+    border:1px solid #ccc!important;
+    padding: 5px 16px;
+    border-radius: 16px;
+    margin-top: 6%;
+    margin-bottom: 3%;
+  }
   // COLORS
   $white: #FFFFFF;
   $blue: #337ab7;

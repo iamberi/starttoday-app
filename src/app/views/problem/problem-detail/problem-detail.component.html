@@ -45,8 +45,20 @@
 <div class="section-2">
   <h2 class="heading-3">Andere Meinungen</h2>
   <div>
-    <p style="border:1px solid #ccc!important; padding: 5px 16px; border-style: double;">Meinung</p>
-    <p style="border:1px solid #ccc!important; padding: 5px 16px;border-radius: 16px;"><app-input-text></app-input-text></p>
+    <div class="border-frame">
+      <p>Text steht hier</p>
+      <app-form-divider></app-form-divider>
+      <table style="margin-bottom:3%;">
+        <tr>
+            <td>User</td>
+            <td style="width:100%;text-align:right;">Datum</td>
+        </tr>
+      </table>
+  </div>
+  <div class="border-frame-round">
+    <app-input-text></app-input-text>
+  </div>
+
     <p style="text-align:right;"><svg aria-hidden="true" focusable="false" class="check" style="z-index: 10;">
   <use xlink:href="#check"/>
 </svg><app-button [btntext]="'Speichern'"></app-button></p>

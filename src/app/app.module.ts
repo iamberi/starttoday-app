@@ -77,7 +77,7 @@ const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
-  { path: 'test', component: TestPasswortComponent},
+  //{ path: 'test', component: TestPasswortComponent},
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -94,6 +94,8 @@ const routes: Routes = [
   { path: 'challenges-detail', component: ChallengesDetailComponent },
 
   { path: 'overview', component: OverviewComponent },
+  { path: 'test', component: UpvoteButtonComponent },
+
 
 ];
 

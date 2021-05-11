@@ -10,15 +10,6 @@ export class ChallengeService {
 
   constructor(private angularFirestore: AngularFirestore) {}
 
-    //Tutorial https://dottedsquirrel.com/angular/how-to-crud-in-angular-firebase-firestore/
-
-    form = new FormGroup({
-      challengeName: new FormControl(''),
-      challengeNumber: new FormControl(''),
-      category: new FormControl(''),
-      completed: new FormControl(false)
-    })
-
   getChallengeDoc(id) {
     return this.angularFirestore
     .collection('challenge-collection')
@@ -36,7 +27,7 @@ export class ChallengeService {
     return new Promise<any>((resolve, reject) =>{
       this.angularFirestore
         .collection('challenge-collection')
-        .add(challenge)
+        .add({challenge})
         .then(response => { console.log(response); }, error => reject(error));
     });
   }

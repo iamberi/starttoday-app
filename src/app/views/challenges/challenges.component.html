@@ -15,7 +15,8 @@
 </app-button>
 
 <app-card-challenge *ngFor="let challenge of Challenges; let i=index"
-[titleChallenge]="challenge.title"
-[descriptionChallenge]="challenge.description"
-[categoryChallenge]="challenge.category"
+[titleChallenge]="challenge.challenge.title"
+[descriptionChallenge]="challenge.challenge.description"
+[categoryChallenge]="challenge.challenge.category"
+[dateChallenge]="challenge.challenge.date"
 ></app-card-challenge>

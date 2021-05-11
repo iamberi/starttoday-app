@@ -1,5 +1,5 @@
-function upvoteUp(){
-  var element = document.getElementById("upvote-button");
+function upvoteUp(element){
+  //element = document.getElementByClass("upvote-button-wrapper-button");
   element.classList.toggle("upvote-button-wrapper-clicked");
 
 }

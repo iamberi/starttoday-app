@@ -1,6 +1,19 @@
-<div id="upvote-button" class="upvote-button-wrapper" onclick="upvoteUp()">
+<button id="upvote-button" class="upvote-button-wrapper" onclick="upvoteUp()">
+
+  <!--onclick="classList.toggle+='upvote-button-wrapper-clicked'">
+  this.classList.toggle("upvote-button-wrapper-clicked")-->
+  <!--onclick="this.className+=' upvote-button-wrapper upvote-button-wrapper-clicked'"-->
+  <!--onclick="upvote(); {
+  if (this.className='upvote-button-wrapper'){
+    this.className+='upvote-button-wrapper upvote-button-wrapper-clicked';
+  }
+  else {
+    this.className+='upvote-button-wrapper';
+  }
+}">-->
+
   <p class="text-upvote">936</p>
   <svg class="icon-upvote" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-upvote"/>
   </svg>
-</div>
+</button>

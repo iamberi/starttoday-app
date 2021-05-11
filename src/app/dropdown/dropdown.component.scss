@@ -1,20 +1,20 @@
 @import "src/sass/styles.scss";
 
-label {
-  font: jost;
-}
-
-select {
+.dropdown {
+  //Position
   position: relative;
   display: flex;
+
+  //Size
   width: 20em;
-  height: 3em;
-  line-height: 3;
-  background: white;
-  overflow: hidden;
-  border: 1px solid #bdbdbd;
+  height: 2.625;
   border-radius: 0.25em;
-  
+  padding:  0.875em;
+
+  //Color
+  background: $color-white;
+  border: 1px solid $color-grey-4;
+  color: $color-primary;
   
   //Remove Default Active Styling 
   -webkit-appearance: none;
@@ -24,10 +24,17 @@ select {
   outline: 0;
   box-shadow: none;
   background-image: none;
+  overflow: hidden;
+
+  //Icon
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  
+  //Icon Positionierung
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 10px;
 }
 
-option {
-    margin-left: 50px;
-}
+
 
 

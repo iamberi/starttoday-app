@@ -1,77 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Poppins:wght@700&display=swap");
 
-div option{
-  font-family: 'Jost', sans-serif;
+div,
+option,
+select {
+  font-family: "Jost", sans-serif;
   color: $color-black;
 }
-h1,h2,h3,h4,h5,p,button, label, option{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+label,
+option {
   color: $color-black;
   text-align: left;
 }
-h2{
-  font-family: 'Poppins', sans-serif;
+h2 {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.875rem;
 }
-h3{
-  font-family: 'Jost', sans-serif;
+h3 {
+  font-family: "Jost", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.625rem;
 }
-h4,p, label{
-  font-family: 'Jost', sans-serif;
+h4,
+p,
+label {
+  font-family: "Jost", sans-serif;
   font-size: 1rem;
   line-height: 1.438rem;
 }
-h4{
+h4 {
   font-weight: 500;
 }
-p{
+p {
   font-weight: 400;
 }
-.p-info{
+.p-info {
   font-size: 0.875rem;
   line-height: 1.125rem;
 }
-.p-center{
+.p-center {
   text-align: center;
 }
-.form-label{
+.form-label {
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: $color-grey-2;
 }
-.form-input{
+.form-input {
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: $color-grey-3;
 }
-.label{
+.label {
   font-weight: 500;
 }
-  .label-orange{
-    color: $color-orange-barrierefrei;
-  }
-  .label-minze{
-    color: $color-minze-umwelt;
-  }
-  .label-yellow{
-    color: $color-yellow-klima;
-  }
-  .label-lilie{
-    color: $color-lilie-vandalismus;
-  }
-.link{
+.label-orange {
+  color: $color-orange-barrierefrei;
+}
+.label-minze {
+  color: $color-minze-umwelt;
+}
+.label-yellow {
+  color: $color-yellow-klima;
+}
+.label-lilie {
+  color: $color-lilie-vandalismus;
+}
+.link {
   font-size: 1rem;
   line-height: 1.5rem;
   color: $color-secondary;
   text-decoration: underline;
 }
-.link:hover{
+.link:hover {
   color: $color-secondary-dark;
   text-decoration: underline;
+}
+
+select {
+  font-style: normal;
+  font-weight: bold;
 }

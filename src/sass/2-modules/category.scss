@@ -1,5 +1,11 @@
 .category{
   display: flex;
+  align-items: center;
+  margin: $xs-spacing 0;
+  p{
+    font-weight: 600;
+    margin: 0;
+  }
   svg{
     margin-right: 0.5em ;
   }
@@ -10,20 +16,37 @@
   }
   svg{
     fill: $color-minze-umwelt;
+    stroke: $color-minze-umwelt ;
   }
 }
 .category-vandalismus{
-  .category-label{
+  p{
     color: $color-lilie-vandalismus;
+  }
+  svg{
+    width: 22px;
+    height: 22px;
+    fill: $color-lilie-vandalismus;
+    stroke: $color-lilie-vandalismus ;
   }
 }
 .category-barrierefrei{
-  .category-label{
+  p{
     color: $color-orange-barrierefrei;
+  }
+  svg{
+    width: 12px;
+    height: 18px;
+    fill: $color-orange-barrierefrei;
+    stroke: $color-orange-barrierefrei ;
   }
 }
 .category-klima{
-  .category-label{
+  p{
     color: $color-yellow-klima;
+  }
+  svg{
+    fill: $color-yellow-klima;
+    stroke: $color-yellow-klima ;
   }
 }

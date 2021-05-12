@@ -61,27 +61,18 @@
   width: 100%;
   height: 100%;
 }
-
-.wheelchair {
-  width: 12px;
-  height: 12px;
-}
-
 .ribbon {
   width: 18px;
   height: 26px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: -4px;
 }
 
 
-  .border-frame {
-    border:1px solid #ccc!important;
-    padding: 5px 16px;
-    padding-top: 3%;
-    border-style: double;
-  }
+.border-frame {
+  border:1px solid #ccc!important;
+  padding: 5px 16px;
+  padding-top: 3%;
+  border-style: double;
+}
 
 .border-frame-round {
   border:1px solid #ccc!important;
@@ -148,4 +139,38 @@ label{
 }
 .wrapper-problem-achievement{
   display: flex;
+  margin-top: 1em;
+}
+.headline-problem-detail{
+  margin: 0;
+}
+.detail-problem-description{
+  margin-top: $xs-spacing;
+}
+.wrapper-problemcreator{
+  display: flex;
+  justify-content: space-between;
+  p{
+    margin:0;
+  }
+}
+.problemcreator{
+  display: flex;
+}
+.profilepicture{
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5em;
+}
+.achievement{
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+.number-achievement{
+  font-weight: 700;
+  color: $color-primary;
+  margin: 0 0 0 0.25em;
 }

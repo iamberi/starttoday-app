@@ -26,6 +26,7 @@
 .edit-problem-legende {
   display: flex;
   align-items: center;
+  margin-bottom: 0.625em;
 }
 
 .icon-close-cross {
@@ -37,8 +38,7 @@
 .hr-head {
   border: 0, 5px solid #000;
   height: 2px;
-  margin-top: 0.625em;
-  margin-bottom: 0;
+  margin: 0;
 
   //das macht das es über die ganze Bildschirmbreite geht, i don't know if best practice
   width: 300%;
@@ -49,7 +49,6 @@
 .edit-problem-image-wrapper {
   height: 10em;
   display: flex;
-  margin-bottom: 1em;
   margin-left: -3em;
   justify-content: center;
 }
@@ -76,6 +75,7 @@
 
   flex-direction: column;
   margin-bottom: 20px;
+  margin-top: 1em;
 }
 
 .text-input-label {
@@ -89,6 +89,8 @@
   border: none;
   height: 1.5em;
   padding: 0;
+  resize: none;
+  overflow: auto;
 }
 
 .text-input-input:focus {
@@ -100,6 +102,10 @@
   border: 0, 5px solid #000;
   height: 2px;
   width: 100%;
+}
+
+#beschreibung {
+  height: 10em;
 }
 
 //Buttons

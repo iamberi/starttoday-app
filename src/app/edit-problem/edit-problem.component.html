@@ -47,30 +47,26 @@
         src="https://dummyimage.com/600x400/000/fff"
         class="edit-problem-image"
       />
-      <div class="edit-problem-image-gradient"></div>
+      <!-- <div class="edit-problem-image-gradient"></div> -->
     </div>
+    <hr class="hr-head" />
+
 
     <div class="text-input-wrapper">
       <label class="text-input-label label">Standort</label>
-      <textarea
-        class="text-input-input form-input"
-        type="text">
-      Neckarhalde 21, 74074 Heilbronn
+      <textarea class="text-input-input form-input" maxlength="200" type="text">
+Neckarhalde 21, 74074 Heilbronn
       </textarea>
       <hr class="hr-form" />
       <label class="text-input-label label">Titel</label>
-      <input
-        class="text-input-input form-input"
-        placeholder="Die Umkleide ist zu schmal für meinen Rollstuhl"
-        type="text"
-      />
+      <textarea class="text-input-input form-input" maxlength="200" type="text">
+Die Umkleide ist zu schmal für meinen Rollstuhl
+      </textarea>
       <hr class="hr-form" />
       <label class="text-input-label label">Beschreibung</label>
-      <input
-        class="text-input-input form-input"
-        placeholder="Beschreibung des Problems Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser. Gemeinsam sind wir stark. Nimm Teil an unseren Challenges. "
-        type="text"
-      />
+      <textarea id="beschreibung" class="text-input-input form-input" cols="50" rows="10" type="text">
+Beschreibung des Problems Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser. Gemeinsam sind wir stark. Nimm Teil an unseren Challenges.      </textarea
+      >
 
       <div class="edit-button-wrapper">
         <select class="dropdown button-left" name="category">

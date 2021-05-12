@@ -4,15 +4,15 @@
   margin-bottom: 1.5em;
 }
 .intro-wrapper{
-  svg{
-    width: 30px ;
-    height: 29px;
-    position: absolute;
-    z-index: 2;
-    top: 0.75em;
-    left:0.75em;
-  }
   position: relative;
+}
+.icon-star{
+  width: 30px ;
+  height: 29px;
+  position: absolute;
+  z-index: 2;
+  top: 0.75em;
+  left:0.75em;
 }
 .wrapper-detail-infos{
   justify-content: space-between;

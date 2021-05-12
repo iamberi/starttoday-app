@@ -55,7 +55,6 @@ import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.componen
 import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
-import { UpvoteButtonComponent } from './components/buttons/upvote-button/upvote-button.component';
 
 
 //Liste aller Routes
@@ -94,7 +93,6 @@ const routes: Routes = [
   { path: 'challenges-detail', component: ChallengesDetailComponent },
 
   { path: 'overview', component: OverviewComponent },
-  { path: 'test', component: UpvoteButtonComponent },
 
 
 ];
@@ -137,7 +135,6 @@ const routes: Routes = [
     EditChallengeComponent,
     GallerieSliderComponent,
     OverviewComponent,
-    UpvoteButtonComponent,
   ],
   imports: [
     AppRoutingModule,

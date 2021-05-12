@@ -1,22 +1,32 @@
-<p>create-problem works!</p>
+<p>Galarie</p>
+<h4>Standort</h4>
+
+<app-form-divider></app-form-divider>
 
 <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="mb-3">
     <label>Titel</label>
-    <input type="text" formControlName="title" class="form-control" required>
+    <input type="text" formControlName="title" placeholder="Gib deinem Problem ein Titel" class="form-control" required>
   </div>
+
+<app-form-divider></app-form-divider>
 
   <div class="mb-3">
     <label>Beschreibung</label>
-    <input type="text" formControlName="description" class="form-control" required>
+    <input type="text" formControlName="description" placeholder="Beschreibe dein Problem" class="form-control" required>
   </div>
 
-  <div class="mb-3">
-    <label>Kategorie</label>
-    <input type="text" formControlName="category" class="form-control" required>
-  </div>
+<app-form-divider></app-form-divider>
 
   <div class="mb-3">
-    <button type="submit" class="btn btn-primary" [disabled]="!problemForm.valid">Create</button>
+    <select class="dropdown button-left" formControlName="category" required>
+      <option selected disabled>Barrierefreiheit</option>
+      <option value="Barrierefreiheit">Barrierefreiheit</option>
+      <option value="Vandalismus">Vandalismus</option>
+      <option value="Umwelt">Umwelt</option>
+    </select>
+
+    <app-button-icon [btnlink]='"submit"' [btntext]="'Speichern'" [type]='"button-primary"'></app-button-icon>
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="!problemForm.valid">Speichern</button> -->
   </div>
 </form>

@@ -6,14 +6,13 @@
   display: flex;
 
   //Size
-  width: 20em;
   height: 2.625;
   border-radius: 0.25em;
-  padding:  0.875em;
+  padding: 0.875em 1.875em 0.875em 0.875em;
 
   //Color
   background: $color-white;
-  border: 1px solid $color-grey-4;
+  border: 1px solid $color-primary;
   color: $color-primary;
   
   //Remove Default Active Styling 

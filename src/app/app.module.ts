@@ -56,8 +56,9 @@ import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
 import { DeleteProblemComponent } from './views/delete-problem/delete-problem.component';
+import { DeleteChallengeComponent } from './views/delete-challenge/delete-challenge.component';
 
 
 //Liste aller Routes
@@ -97,6 +98,8 @@ const routes: Routes = [
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
+  { path: 'delete-challenge', component: DeleteChallengeComponent },
+
 
   { path: 'overview', component: OverviewComponent },
 
@@ -143,6 +146,7 @@ const routes: Routes = [
     RegularButtonComponent,
     DropdownComponent,
     DeleteProblemComponent,
+    DeleteChallengeComponent,
   ],
   imports: [
     AppRoutingModule,

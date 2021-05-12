@@ -40,6 +40,8 @@ import { EditChallengeComponent } from './edit-challenge/edit-challenge.componen
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+//Galerie
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -58,6 +60,7 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 //Liste aller Routes
@@ -65,7 +68,7 @@ const routes: Routes = [
   { path: '', component: WillkommenNComponent },
   { path: 'willkommen', component: WillkommenComponent },
   { path: 'register-n', component: RegisterNComponent },
-  { path: 'gallery', component: GallerieSliderComponent },
+  { path: 'gallery', component: GalleryComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
@@ -79,7 +82,7 @@ const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
-  //{ path: 'test', component: TestPasswortComponent},
+  { path: 'galerie', component: GalleryComponent},
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -141,6 +144,7 @@ const routes: Routes = [
     RegularButtonComponent,
     DropdownComponent,
     CommentsComponent,
+    GalleryComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -148,6 +152,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

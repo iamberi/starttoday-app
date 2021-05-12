@@ -1,0 +1,38 @@
+<p>gallery works!</p>
+<div class="wrapper-galerie container mt-3">
+  <ngb-carousel #carousel>
+    <ng-template ngbSlide>
+      <div class="img-block">
+        <img src="https://loremflickr.com/g/1200/800/paris" alt="Img 1">
+      </div>
+      <div class="carousel-caption">
+        <h3>Li Europan lingues</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="img-block">
+        <img src="https://loremflickr.com/1200/800/brazil,rio" alt="Img 2">
+      </div>
+      <div class="carousel-caption">
+        <h3>On refusa continuar</h3>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="img-block">
+        <img src="https://loremflickr.com/1200/800/paris,girl/all" alt="Img 3">
+      </div>
+      <div class="carousel-caption">
+        <h3>Plu sommun paroles</h3>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <div class="text-center">
+    <button (click)="prevSlide()">Prev</button>
+    <button (click)="nextSlide()">Next</button>
+    <button (click)="stopSlider()">Stop</button>
+  </div>
+</div>

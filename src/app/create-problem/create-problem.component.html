@@ -1,7 +1,23 @@
-<p>Galarie</p>
-<h4>Standort</h4>
-
+<div class="create-problem-container">
+  <div class="create-problem-legende">
+    <svg aria-hidden="true" class="icon-close-cross" focusable="false">
+      <use xlink:href="#icon-close-cross" />
+    </svg>
+    <label class="create-problem-label">Problem hinzufügen</label>
+  </div>
+  <hr class="hr-head" />
 <app-form-divider></app-form-divider>
+
+<div class="edit-problem-content">
+  <div class="edit-problem-image-wrapper">
+    <img
+      src="https://dummyimage.com/600x400/000/fff"
+      class="edit-problem-image"
+    />
+    <div class="edit-problem-image-gradient"></div>
+  </div>
+
+  <!--Eingabe-->
 
 <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="mb-3">
@@ -18,15 +34,12 @@
 
 <app-form-divider></app-form-divider>
 
-  <div class="mb-3">
+  <div class="create-button-wrapper">
     <select class="dropdown button-left" formControlName="category" required>
-      <option selected disabled>Barrierefreiheit</option>
-      <option value="Barrierefreiheit">Barrierefreiheit</option>
+      <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
       <option value="Vandalismus">Vandalismus</option>
       <option value="Umwelt">Umwelt</option>
     </select>
-
-    <app-button-icon [btnlink]='"submit"' [btntext]="'Speichern'" [type]='"button-primary"'></app-button-icon>
-    <!-- <button type="submit" class="btn btn-primary" [disabled]="!problemForm.valid">Speichern</button> -->
+    <button class="button-primary">Speichern</button>
   </div>
 </form>

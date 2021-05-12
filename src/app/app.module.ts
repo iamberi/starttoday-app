@@ -57,6 +57,7 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { UpvoteButtonComponent } from './components/buttons/upvote-button/upvote-button.component';
 
 
 //Liste aller Routes
@@ -78,7 +79,7 @@ const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
-  { path: 'test', component: TestPasswortComponent},
+  //{ path: 'test', component: TestPasswortComponent},
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -95,6 +96,8 @@ const routes: Routes = [
   { path: 'challenges-detail', component: ChallengesDetailComponent },
 
   { path: 'overview', component: OverviewComponent },
+  { path: 'test', component: UpvoteButtonComponent },
+
 
 ];
 
@@ -138,6 +141,7 @@ const routes: Routes = [
     OverviewComponent,
     RegularButtonComponent,
     DropdownComponent,
+    UpvoteButtonComponent,
   ],
   imports: [
     AppRoutingModule,

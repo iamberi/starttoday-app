@@ -1,5 +1,4 @@
-import { FormGroup, FormControl } from '@angular/forms';
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Challenge } from '../models/challenge.model';
 

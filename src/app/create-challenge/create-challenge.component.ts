@@ -1,4 +1,4 @@
-import { AngularFirestore } from '@angular/fire/firestore';
+
 import { Component, OnInit } from '@angular/core';
 import { ChallengeService } from '../services/challenge.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
@@ -24,7 +24,8 @@ export class CreateChallengeComponent implements OnInit {
       category: [''],
       date: new Date(),
       votes: 0,
-      status: new FormControl(false)
+      status: new FormControl(false),
+      socialpoints: 5,
     });
   }
 

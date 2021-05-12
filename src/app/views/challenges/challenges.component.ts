@@ -1,5 +1,5 @@
+import { ChallengeService } from './../../services/challenge.service';
 import { Component, OnInit } from '@angular/core';
-import { ChallengeService } from '../../services/challenge.service';
 import { Challenge } from '../../models/challenge.model';
 
 @Component({

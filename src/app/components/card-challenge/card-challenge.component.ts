@@ -12,6 +12,7 @@ export class CardChallengeComponent implements OnInit {
   @Input() descriptionChallenge: string;
   @Input() categoryChallenge: string;
   @Input() dateChallenge: string;
+  @Input() socialpointsChallenge: string;
 
   ngOnInit(): void {
   }

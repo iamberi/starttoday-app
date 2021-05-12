@@ -58,6 +58,7 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { UpvoteButtonComponent } from './components/buttons/upvote-button/upvote-button.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 //Liste aller Routes
@@ -142,6 +143,7 @@ const routes: Routes = [
     RegularButtonComponent,
     DropdownComponent,
     UpvoteButtonComponent,
+    CommentsComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -37,3 +37,21 @@
   color: white;
   cursor: pointer;
 }
+/*
+.close-container{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}*/
+
+.icon-close-circle{
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  z-index: 2;
+  top: 0.75em;
+  left: 0.75em;
+}

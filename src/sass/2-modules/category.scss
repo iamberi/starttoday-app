@@ -1,0 +1,29 @@
+.category{
+  display: flex;
+  svg{
+    margin-right: 0.5em ;
+  }
+}
+.category-umwelt{
+  p{
+    color: $color-minze-umwelt;
+  }
+  svg{
+    fill: $color-minze-umwelt;
+  }
+}
+.category-vandalismus{
+  .category-label{
+    color: $color-lilie-vandalismus;
+  }
+}
+.category-barrierefrei{
+  .category-label{
+    color: $color-orange-barrierefrei;
+  }
+}
+.category-klima{
+  .category-label{
+    color: $color-yellow-klima;
+  }
+}

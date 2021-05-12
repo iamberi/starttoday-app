@@ -35,8 +35,8 @@ h4,
 p,
 label {
   font-family: "Jost", sans-serif;
-  font-size: 1rem;
-  line-height: 1.438rem;
+  font-size: 1em;
+  line-height: 1.438em;
 }
 h4 {
   font-weight: 500;
@@ -53,13 +53,14 @@ p {
 }
 .form-label {
   font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.875em;
+  line-height: 1.125em;
   color: $color-grey-2;
 }
 .form-input {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1.125em;
+  font-weight: normal;
+  line-height: 1.5em;
   color: $color-grey-3;
 }
 .label {

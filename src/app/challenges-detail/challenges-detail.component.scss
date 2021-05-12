@@ -201,28 +201,6 @@
   body{
     background-color: $mediumblu;
   }
-  .leftright{
-    height: 4px;
-    width: 20px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: $white;
-    border-radius: 2px;
-    transform: rotate(45deg);
-    transition: all .3s ease-in;
-  }
-
-  .rightleft{
-    height: 4px;
-    width: 20px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: $white;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-    transition: all .3s ease-in;
-  }
-
   label{
     color: white;
     font-family: Helvetica, Arial, sans-serif;

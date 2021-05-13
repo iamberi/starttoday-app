@@ -61,6 +61,7 @@ import { RegularButtonComponent } from './components/buttons/regular-button/regu
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryNComponent } from './gallery-n/gallery-n.component';
 
 
 //Liste aller Routes
@@ -145,6 +146,7 @@ const routes: Routes = [
     DropdownComponent,
     CommentsComponent,
     GalleryComponent,
+    GalleryNComponent,
   ],
   imports: [
     AppRoutingModule,

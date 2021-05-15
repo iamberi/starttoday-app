@@ -1,4 +1,4 @@
-<p>create-challenge works!</p>
+<!--Formular -->
 
 <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="mb-3">
@@ -20,3 +20,59 @@
     <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
   </div>
 </form>
+
+<!--Design -->
+
+<div class="create-challange-container">
+  <div class="create-challange-legende">
+      <svg aria-hidden="true" class="icon-close-cross" focusable="false">
+        <use xlink:href="#icon-close-cross" />
+      </svg>
+      <label class="create-challange-label">Challange hinzufügen</label>
+    </div>
+  <hr class="hr-head" />
+
+    <div class="create-challange-content">
+      <div class="create-challange-image-wrapper">
+        <img
+          src="https://dummyimage.com/600x400/000/fff"
+          class="create-challange-image"
+        />
+      </div>
+  <hr class="hr-head" />
+
+      <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="text-input-wrapper">
+          <label class="text-input-label label">Standort</label>
+          <textarea class="text-input-input form-input" maxlength="200" type="text">
+            Neckarhalde 21, 74074 Heilbronn
+          </textarea>
+
+          <hr class="hr-form" />
+          <label class="text-input-label label">Titel</label>
+          <input type="text" formControlName="title" placeholder="Gib der Challange ein Titel" class="form-control" required>
+
+          <hr class="hr-form" />
+          <label class="text-input-label label">Beschreibung</label>
+          <input type="text" formControlName="description" placeholder="Beschreibe die Challange" class="form-control" required>
+
+          <hr class="hr-form" />
+          <label class="text-input-label label">Checkliste für Teilnehmer</label>
+          <input type="text" formControlName="description" placeholder="Was brauchen die Teilnehmer" class="form-control" required>
+
+          <hr class="hr-form" />
+          <label class="text-input-label label">Datum des Events</label>
+          <input type="text" formControlName="description" placeholder="Wann findet es statt" class="form-control" required>
+
+          <div class="create-button-wrapper">
+            <select class="dropdown button-left" Name="category" formControlName="category" required>
+              <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
+              <option value="Vandalismus">Vandalismus</option>
+              <option value="Umwelt">Umwelt</option>
+            </select>
+            <button class="button-primary">Speichern</button>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>

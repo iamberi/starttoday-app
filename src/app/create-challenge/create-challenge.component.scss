@@ -11,10 +11,12 @@
   flex-direction: column;
 }
 
-.mat-datepicker-toggle {
+.mat-form-field.input {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+
 }
 
 //Vollflächige mittige Ausrichtung

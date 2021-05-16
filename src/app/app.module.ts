@@ -41,6 +41,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -149,7 +150,7 @@ const routes: Routes = [
     DeleteProblemComponent,
   ],
   imports: [
-    MatDatepickerModule, MatInputModule, MatNativeDateModule,
+    MatDatepickerModule, MatInputModule, MatNativeDateModule, NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,

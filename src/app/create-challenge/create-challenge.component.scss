@@ -11,14 +11,6 @@
   flex-direction: column;
 }
 
-.mat-form-field.input {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
 //Vollflächige mittige Ausrichtung
 .create-challange-container {
   position: relative;
@@ -121,3 +113,15 @@
 .button-left {
   margin-right: 1.25em;
 }
+
+//Time & Date Picker
+
+
+
+.timepicker-overlay {
+  z-index: 10000000 !important;
+}
+.timepicker-backdrop-overlay {
+  z-index: 1000000 !important;
+}
+

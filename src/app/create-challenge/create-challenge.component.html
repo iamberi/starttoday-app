@@ -61,8 +61,17 @@
           <input type="text" formControlName="description" placeholder="Was brauchen die Teilnehmer" class="form-control" required>
 
           <hr class="hr-form" />
-          <label class="text-input-label label">Datum des Events</label>
-          <input type="text" formControlName="description" placeholder="Wann findet es statt" class="form-control" required>
+          <label class="text-input-label label">Eventtag</label>
+          <mat-form-field appearance="fill">
+            <!--mat-label>Choose a date</!--mat-label-->
+            <input matInput [matDatepicker]="picker" placeholder="Wähle den Tag des Events">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+
+          <!--label class="text-input-label label">Datum des Events</!--label>
+          <input type="text" formControlName="description" placeholder="Wann findet es statt" class="form-control" required-->
 
           <div class="create-button-wrapper">
             <select class="dropdown button-left" Name="category" formControlName="category" required>

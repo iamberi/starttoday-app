@@ -35,17 +35,19 @@
           <label class="text-input-label label">Checkliste für Teilnehmer</label>
           <input type="text" formControlName="description" placeholder="Was brauchen die Teilnehmer" class="form-control" required>
 
-          <!--hr class="hr-form" />
+          <hr class="hr-form" />
           <label class="text-input-label label">Eventtag</label>
-          <mat-form-field-- appearance="fill">
-            <input matInput [matDatepicker]="picker" placeholder="Wähle den Tag des Events">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field-->
+          <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="dpicker" placeholder="Wähle den Tag des Events">
+            <mat-datepicker-toggle matSuffix [for]="dpicker"></mat-datepicker-toggle>
+            <mat-datepicker #dpicker></mat-datepicker>
+          </mat-form-field>
 
           <hr class="hr-form" />
-          <input [ngxTimepicker]="picker">
-          <ngx-material-timepicker #picker></ngx-material-timepicker>
+          <label class="text-input-label label">Uhrzeit</label>
+          <div class="ngx-timepicker-field-example">
+            <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
+          </div>
 
           <div class="create-button-wrapper">
             <select class="dropdown button-left" Name="category" formControlName="category" required>

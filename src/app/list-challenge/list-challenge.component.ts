@@ -1,5 +1,5 @@
+import { ChallengeService } from './../services/challenge.service';
 import { Component, OnInit } from '@angular/core';
-import { ChallengeService } from '../services/challenge.service';
 import { Challenge } from '../models/challenge.model';
 
 @Component({
@@ -16,6 +16,7 @@ export class ListChallengeComponent implements OnInit {
   ngOnInit() {
     this.challengeService.getChallengeList().subscribe(res => {
       this.Challenges = res.map( e => {
+        console.log(e.payload.doc.data() as object);
         return {
           id: e.payload.doc.id,
           ...(e.payload.doc.data() as object)

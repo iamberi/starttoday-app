@@ -4,6 +4,7 @@ export class Challenge {
   latitude: number;
   title: string;
   description: string;
+ // challenge-setter: string;
   tools: string;
   participants: string;
   category: string;

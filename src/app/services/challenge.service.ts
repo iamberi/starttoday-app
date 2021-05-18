@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Challenge } from '../models/challenge.model';
 
@@ -26,7 +26,7 @@ export class ChallengeService {
     return new Promise<any>((resolve, reject) =>{
       this.angularFirestore
         .collection('challenge-collection')
-        .add(challenge)
+        .add({challenge})
         .then(response => { console.log(response); }, error => reject(error));
     });
   }

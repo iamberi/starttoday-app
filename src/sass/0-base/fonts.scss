@@ -22,19 +22,17 @@ option {
 h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-size: 1.25em;
+  line-height: 1.875em;
 }
 h3 {
   font-family: "Jost", sans-serif;
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1.125em;
+  line-height: 1.625em;
 }
-h4,
-p,
-label {
-  font-family: "Jost", sans-serif;
+h4,p{
+  font-family: 'Jost', sans-serif;
   font-size: 1em;
   line-height: 1.438em;
 }
@@ -44,9 +42,9 @@ h4 {
 p {
   font-weight: 400;
 }
-.p-info {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+.p-info{
+  font-size: 0.875em;
+  line-height: 1.125em;
 }
 .p-center {
   text-align: center;
@@ -57,30 +55,29 @@ p {
   line-height: 1.125em;
   color: $color-grey-2;
 }
-.form-input {
+.form-input{
   font-size: 1.125em;
-  font-weight: normal;
   line-height: 1.5em;
   color: $color-grey-3;
 }
 .label {
   font-weight: 500;
 }
-.label-orange {
-  color: $color-orange-barrierefrei;
-}
-.label-minze {
-  color: $color-minze-umwelt;
-}
-.label-yellow {
-  color: $color-yellow-klima;
-}
-.label-lilie {
-  color: $color-lilie-vandalismus;
-}
-.link {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  .label-orange{
+    color: $color-orange-barrierefrei;
+  }
+  .label-minze{
+    color: $color-minze-umwelt;
+  }
+  .label-yellow{
+    color: $color-yellow-klima;
+  }
+  .label-lilie{
+    color: $color-lilie-vandalismus;
+  }
+.link{
+  font-size: 1em;
+  line-height: 1.5em;
   color: $color-secondary;
   text-decoration: underline;
 }

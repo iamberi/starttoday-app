@@ -19,7 +19,8 @@ export class CreateProblemComponent implements OnInit {
     this.problemForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      category: ['']
+      category: [''],
+      votes: 0
     })
   }
 

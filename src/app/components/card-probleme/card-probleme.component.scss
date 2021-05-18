@@ -5,25 +5,15 @@
 }
 
 .intro-wrapper{
-  svg{
-    width: 30px ;
-    height: 29px;
-    position: absolute;
-    z-index: 2;
-    top: 0.75em;
-    left:0.75em;
-  }
   position: relative;
 }
-.platzhalter-upvote{
-  background-color: white;
-  border-radius: 5px;
-  width: 3.75em;
-  height: 2.5em;
+.icon-star{
+  width: 30px ;
+  height: 29px;
   position: absolute;
   z-index: 2;
   top: 0.75em;
-  right:0.75em;
+  left:0.75em;
 }
 .img-probleme{
   width:100%;
@@ -42,3 +32,4 @@
 .titel-problem{
   margin-top: 0.25em;
 }
+

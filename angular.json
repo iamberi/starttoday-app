@@ -35,7 +35,8 @@
               "src/sass/styles.scss"
             ],
             "scripts": [
-              "src/js/components/navigation.js"
+              "src/js/components/navigation.js",
+              "src/js/components/upvote-button.js"
             ]
           },
           "configurations": {

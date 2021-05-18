@@ -17,7 +17,6 @@ import { InputTextComponent } from './components/input/input-text/input-text.com
 import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
-import { GallerieSliderComponent } from './gallerie-slider/gallerie-slider.component';
 //views
 import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
@@ -40,6 +39,8 @@ import { EditChallengeComponent } from './edit-challenge/edit-challenge.componen
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+//Galerie
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -58,6 +59,7 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { GalleryNComponent } from './gallery-n/gallery-n.component';
 
 
 //Liste aller Routes
@@ -65,7 +67,6 @@ const routes: Routes = [
   { path: '', component: WillkommenNComponent },
   { path: 'willkommen', component: WillkommenComponent },
   { path: 'register-n', component: RegisterNComponent },
-  { path: 'gallery', component: GallerieSliderComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
@@ -79,7 +80,6 @@ const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
   { path: 'login-n', component: LoginNComponent},
-  //{ path: 'test', component: TestPasswortComponent},
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -136,12 +136,11 @@ const routes: Routes = [
     CreateChallengeComponent,
     ListChallengeComponent,
     EditChallengeComponent,
-    GallerieSliderComponent,
     OverviewComponent,
     RegularButtonComponent,
     DropdownComponent,
     CommentsComponent,
-    GallerieSliderComponent,
+    GalleryNComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -149,6 +148,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

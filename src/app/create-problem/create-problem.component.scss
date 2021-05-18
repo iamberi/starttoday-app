@@ -1,0 +1,119 @@
+@import "src/sass/styles.scss";
+
+//Contentbreite
+:host {
+  max-width: 28em;
+  display: block;
+  margin: $xxl-spacing auto $xl-spacing auto;
+  padding: 0 1.25em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+//Vollflächige mittige Ausrichtung
+.create-problem-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+//Legende (Introtext)
+.create-problem-legende {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625em;
+}
+
+.icon-close-cross {
+  width: 1em;
+  height: 1em;
+  margin-right: 35%;
+}
+
+.hr-head {
+  border: 0, 5px solid #000;
+  height: 2px;
+  margin: 0;
+
+  //das macht das es über die ganze Bildschirmbreite geht, i don't know if best practice
+  //width: 300%;
+  //margin-left: -20em;
+}
+
+//Bild
+.create-problem-image-wrapper {
+  height: 10em;
+  display: flex;
+  margin-left: -3em;
+  justify-content: center;
+}
+
+.create-problem-image-gradient {
+  background: linear-gradient(
+    360deg,
+    rgba(46, 46, 46, 0.3) 2.5%,
+    rgba(46, 46, 46, 0) 100%
+  );
+  width: 100%;
+  margin-left: -20em;
+}
+
+.create-problem-image {
+  height: 100%;
+  position: center;
+}
+
+//Form
+.text-input-wrapper {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 1em;
+}
+
+.text-input-label {
+  border: none;
+  padding: 0;
+  height: auto;
+}
+
+.text-input-input {
+  box-shadow: none;
+  border: none;
+  height: 1.5em;
+  padding: 0;
+  resize: none;
+  overflow: auto;
+}
+
+.text-input-input:focus {
+  color: $color-black;
+  outline-color: transparent;
+  outline-style: none;
+}
+.hr-form {
+  border: 0, 5px solid #000;
+  height: 2px;
+  width: 100%;
+}
+
+#beschreibung {
+  height: 10em;
+}
+
+//Buttons
+.create-button-wrapper {
+  display: flex;
+  margin-top: 2.8125em;
+}
+
+.button-left {
+  margin-right: 1.25em;
+}

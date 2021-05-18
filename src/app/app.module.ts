@@ -36,6 +36,11 @@ import { EditProblemComponent } from './edit-problem/edit-problem.component';
 import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
 import { ListChallengeComponent } from './list-challenge/list-challenge.component';
 import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@angular/material/core';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 //Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -152,6 +157,8 @@ const routes: Routes = [
     DeleteChallengeComponent,
   ],
   imports: [
+    MatDatepickerModule, MatInputModule, MatNativeDateModule, NgxMaterialTimepickerModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,
     CommonModule,

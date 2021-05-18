@@ -1,52 +1,74 @@
-<!DOCTYPE html>
-
-<app-gallerie-slider></app-gallerie-slider>
-<div class="section-4">
-  <h5>Barrierefreiheit</h5>
-  <h1>Überschrift Projekt</h1>
-  <div class="w-layout-grid grid">
-    <table>
-      <tr>
-          <td style="padding-right:30px;"><app-button [btntext]="'Anmelden'"></app-button></td>
-          <td>Platzhalter Symbol</td>
-      </tr>
-    </table>
-    <br>
+<div style="z-index: -1;">
+  <app-gallery-n></app-gallery-n>
+</div>
+<div class="category category-umwelt">
+  <svg aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-umwelt"/>
+  </svg>
+  <p class="category-label"> Barrierefreiheit </p>
+</div>
+<h1 class="headline-problem-detail">Die Umkleide ist zu schmal für meinen Rollstuhl</h1>
+<div class="wrapper-problem-achievement">
+  <app-button
+    [btntext]="'Lösen'"
+    [type]="'button-primary'">
+  </app-button>
+  <div class="achievement">
+    <svg aria-hidden="true" focusable="false" class="ribbon">
+      <use xlink:href="#ribbon"/>
+    </svg>
+    <p class="number-achievement">8</p>
   </div>
 </div>
-<div class="section">
-  <div class="text-block">Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser.</div>
-  <br>
-  <div class="w-row">
-    <app-form-divider></app-form-divider>
-    <table>
-      <tr>
-          <td>User</td>
-          <td style="width:100%;text-align:right;">Datum</td>
-      </tr>
-    </table>
-    <br>
-    <app-form-divider></app-form-divider>
+<p class="detail-problem-description">
+  Beschreibung des Problems. Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser.
+</p>
+<hr>
+<div class="wrapper-problemcreator">
+  <div class="problemcreator">
+    <img class="profilepicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+    <p>@Username</p>
   </div>
+  <p>23.August 2021</p>
 </div>
+<hr>
 <div class="section-2">
   <h2 class="heading-3">Welche Probleme wir lösen:</h2>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83506.8959102098!2d9.103248609378996!3d49.151398999796065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47982897b04d51d1%3A0x41ffd3c8d099070!2sHeilbronn!5e0!3m2!1sde!2sde!4v1620219917997!5m2!1sde!2sde" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<hr>
 </div>
 <div class="section-2">
   <h2 class="heading-3">Was du brauchst:</h2>
-  <div class="w-row">
-      <ul>
-         <li>Punkt 1</li>
-         <li>Punkt 2</li>
-         <li>Punkt 3</li>
-      </ul>
+  <div class="flex-container-challenges-1">
+       <ul>
+          <li>Punkt 1</li>
+          <li>Punkt 2</li>
+          <li>Punkt 3</li>
+       </ul>
+       <ul>
+          <li>Punkt 4</li>
+          <li>Punkt 5</li>
+          <li>Punkt 6</li>
+       </ul>
   </div>
-  <div class="text-block-5">xx Personen nehmen teil.</div>
+  <div class="flex-container-challenges-2">
+
+    <p><br>23 Personen nehmen teil</p>
+  </div>
+  <div class="flex-container-challenges-3">
+      <img class="profilepicture teilnehmerpicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+      <img class="profilepicture teilnehmerpicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+      <img class="profilepicture teilnehmerpicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+      <img class="profilepicture teilnehmerpicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+      <img class="profilepicture teilnehmerpicture" alt="profilepicture" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"/>
+  </div>
+
 </div>
 <div class="section-2">
-  <br><br><br><app-form-divider></app-form-divider>
-  <h2 class="heading-3">Weitere Challenges</h2>
+  <hr>
+  <h2 class="heading-3">
+    Weitere Challenges
+  </h2>
   <app-card-challenge></app-card-challenge>
   <br>
 </div>

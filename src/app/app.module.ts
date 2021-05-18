@@ -141,6 +141,7 @@ const routes: Routes = [
     RegularButtonComponent,
     DropdownComponent,
     CommentsComponent,
+    GallerieSliderComponent,
   ],
   imports: [
     AppRoutingModule,

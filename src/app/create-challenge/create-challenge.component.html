@@ -3,7 +3,7 @@
       <svg aria-hidden="true" class="icon-close-cross" focusable="false">
         <use xlink:href="#icon-close-cross" />
       </svg>
-      <label class="create-challange-label">Challange hinzufügen</label>
+      <label class="create-challange-label">Challenge hinzufügen</label>
     </div>
   <hr class="hr-head" />
 
@@ -19,17 +19,15 @@
       <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="text-input-wrapper">
           <label class="text-input-label label">Standort</label>
-          <textarea class="text-input-input form-input" maxlength="200" type="text">
-            Neckarhalde 21, 74074 Heilbronn
-          </textarea>
+          <textarea class="text-input-input form-input" maxlength="100" type="text">Neckarhalde 21, 74074 Heilbronn </textarea>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Titel</label>
-          <input type="text" formControlName="title" placeholder="Gib der Challange ein Titel" class="form-control" required>
+          <input type="text" formControlName="title" placeholder="Gib der Challenge ein Titel" class="form-control" required>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Beschreibung</label>
-          <input type="text" formControlName="description" placeholder="Beschreibe die Challange" class="form-control" required>
+          <input type="text" formControlName="description" placeholder="Beschreibe die Challenge" class="form-control" required>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Checkliste für Teilnehmer</label>

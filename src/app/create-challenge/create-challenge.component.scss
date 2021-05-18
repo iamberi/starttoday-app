@@ -103,28 +103,21 @@
 #beschreibung {
   height: 10em;
 }
-
 //Buttons
 .create-button-wrapper {
   display: flex;
   margin-top: 2.8125em;
 }
-
 .button-left {
   margin-right: 1.25em;
 }
-
 //Time & Date Picker
 .timepicker {
 		border-color: #ffffff !important;
 }
-
-
-
 .timepicker-overlay {
   z-index: 10000000 !important;
 }
 .timepicker-backdrop-overlay {
   z-index: 1000000 !important;
 }
-

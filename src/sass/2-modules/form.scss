@@ -1,7 +1,128 @@
-.form-control{
-  border:none;
+.form-control {
+  border: none;
   box-shadow: none;
 }
-.form-wrapper{
+.form-wrapper {
   margin: $s-spacing 0 $l-spacing 0;
+}
+
+//VOLLFLÄCHIGE MITTIGE AUSRICHTUNG
+.form-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+//LEGENDE
+.form-legende {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625em;
+}
+.form-iconclose-cross {
+  width: 1em;
+  height: 1em;
+  margin-right: 35%;
+}
+
+.form-hr-head {
+  border: 0, 5px solid #000;
+  height: 2px;
+  width: 300%;
+}
+
+.hr-up {
+  margin: 0;
+  margin-left: -20em;
+}
+.hr-down {
+  margin-top: 0;
+  margin-left: -20em;
+}
+
+//ADD IMAGE
+.form-add-image-wrapper {
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+}
+.form-add-image-wrapper label {
+  margin-top: 0.2em;
+  text-align: center;
+}
+
+.form-add-image-wrapper svg {
+  height: 84px;
+  margin-top: 1.5em;
+  justify-content: center;
+  position: relative;
+  left: 38%;
+}
+
+//BILD
+.form-image-wrapper {
+  height: 10em;
+  display: flex;
+  margin-left: -3em;
+  justify-content: center;
+}
+
+.form-image {
+  height: 100%;
+  position: center;
+}
+
+//FORM
+.form-input-wrapper {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 1em;
+}
+
+.form-input-label {
+  border: none;
+  padding: 0;
+  height: auto;
+}
+
+//FORM INPUT
+.form-input-input {
+  box-shadow: none;
+  border: none;
+  height: 1.5em;
+  padding: 0;
+  resize: none;
+  overflow: auto;
+}
+
+.form-control {
+  padding-left: 0px;
+}
+
+.form-input-input:focus {
+  color: $color-black;
+  outline-color: transparent;
+  outline-style: none;
+}
+.form-hr {
+  border: 0, 5px solid #000;
+  height: 2px;
+  width: 100%;
+}
+
+//BUTTONS
+.form-button-wrapper {
+  display: flex;
+  margin-top: 2.8125em;
+}
+
+.form-button-left {
+  margin-right: 1.25em;
 }

@@ -1,37 +1,79 @@
-<div class="create-challange-container">
-  <div class="create-challange-legende">
-      <svg aria-hidden="true" class="icon-close-cross" focusable="false">
-        <use xlink:href="#icon-close-cross" />
+<div class="form-container">
+  <!-- LEGENDE -->
+  <div class="form-legende">
+    <svg aria-hidden="true" class="form-iconclose-cross" focusable="false">
+      <use xlink:href="#icon-close-cross" />
+    </svg>
+    <label class="create-challange-label">Challange hinzufügen</label>
+  </div>
+  <hr class="form-hr-head hr-up" />
+
+  <!-- CONTENT -->
+  <div>
+    <!-- IMAGE -->
+    <div class="form-add-image-wrapper">
+      <svg aria-hidden="true" class="form-add-image" focusable="false">
+        <use xlink:href="#add" />
       </svg>
-      <label class="create-challange-label">Challenge hinzufügen</label>
+      <label class="label">Bild hinzufügen</label>
     </div>
-  <hr class="hr-head" />
-
-    <div class="create-challange-content">
-      <div class="create-challange-image-wrapper">
-        <img
-          src="https://dummyimage.com/600x400/000/fff"
-          class="create-challange-image"
+    <hr class="form-hr-head hr-down" />
+    <!-- FORM INPUT -->
+    <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-input-wrapper">
+        <label class="form-input-label label">Standort</label>
+        <input
+          type="text"
+          formControlName="location"
+          placeholder="Wo findet die Challenge statt"
+          class="form-control"
+          required
         />
-      </div>
-  <hr class="hr-head" />
 
-      <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
-        <div class="text-input-wrapper">
-          <label class="text-input-label label">Standort</label>
-          <textarea class="text-input-input form-input" maxlength="100" type="text">Neckarhalde 21, 74074 Heilbronn </textarea>
+        <hr class="hr-form" />
+        <label class="form-input-label label">Titel</label>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Gib der Challange ein Titel"
+          class="form-control"
+          required
+        />
 
-          <hr class="hr-form" />
-          <label class="text-input-label label">Titel</label>
-          <input type="text" formControlName="title" placeholder="Gib der Challenge ein Titel" class="form-control" required>
+        <hr class="hr-form" />
+        <label class="form-input-label label">Beschreibung</label>
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Beschreibe die Challange"
+          class="form-control"
+          required
+        />
 
-          <hr class="hr-form" />
-          <label class="text-input-label label">Beschreibung</label>
-          <input type="text" formControlName="description" placeholder="Beschreibe die Challenge" class="form-control" required>
+        <hr class="hr-form" />
+        <label class="form-input-label label">Checkliste für Teilnehmer</label>
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Was brauchen die Teilnehmer"
+          class="form-control"
+          required
+        />
 
-          <hr class="hr-form" />
-          <label class="text-input-label label">Checkliste für Teilnehmer</label>
-          <input type="text" formControlName="description" placeholder="Was brauchen die Teilnehmer" class="form-control" required>
+        <hr class="hr-form" />
+        <label class="form-input-label label">Eventtag</label>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            [matDatepicker]="dpicker"
+            placeholder="Wähle den Tag des Events"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="dpicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dpicker></mat-datepicker>
+        </mat-form-field>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Eventtag</label>
@@ -53,19 +95,27 @@
           <div class="ngx-timepicker-field-example">
             <ngx-timepicker-field [format]="24" [defaultTime]="'12:00'"></ngx-timepicker-field>
           </div>
-          <div class="create-button-wrapper">
-            <select class="dropdown button-left" Name="category" formControlName="category" required>
-              <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
-              <option value="Vandalismus">Vandalismus</option>
-              <option value="Umwelt">Umwelt</option>
-            </select>
-            <button class="button-primary">Speichern</button>
-          </div>
+
+        <!-- BUTTONS -->
+        <div class="form-button-wrapper">
+          <select
+            class="dropdown form-button-left"
+            Name="category"
+            formControlName="category"
+            required
+          >
+            <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
+            <option value="Vandalismus">Vandalismus</option>
+            <option value="Umwelt">Umwelt</option>
+          </select>
+          <button class="button-primary">Speichern</button>
         </div>
-      </form>
-<!--
+      </div>
+    </form>
+    <!--
   <div class="mb-3">
     <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
   </div>
 -->
+  </div>
 </div>

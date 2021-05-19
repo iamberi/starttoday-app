@@ -178,6 +178,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
   ],
+  // exports: [ RouterModule ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]
 })

@@ -39,24 +39,34 @@ export class ChallengesDetailComponent implements OnInit {
 }
  */
 
-
-import { ChallengeService } from './../services/challenge.service';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
+import { ChallengeService } from './../services/challenge.service';
 import { Challenge } from '../models/challenge.model';
 
 @Component({
-  selector: 'app-challenges-detail',
+  selector: 'app-challenge-detail',
   templateUrl: './challenge-detail.component.html',
   styleUrls: ['./challenge-detail.component.scss']
 })
 export class ChallengesDetailComponent implements OnInit {
-  private detailChallenge: any
+  public challenge: Challenge;
 
 
-  constructor(private challengeService: ChallengeService) { }
+  constructor(
+    private challengeService: ChallengeService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    this.challengeService.getChallenge().subscribe(res => {
+    const challengeId: string = this.route.snapshot.paramMap.get('id');
+    this.challengeService.getChallengeDetail(challengeId).subscribe(challenge => {
+      this.challenge = challenge;
+    });
+  }
+
+
+    /* this.challengeService.getChallenge().subscribe(res => {
       this.detailChallenge = res.map( e => {
         console.log(e.payload.doc.data() as object);
         return {
@@ -64,5 +74,5 @@ export class ChallengesDetailComponent implements OnInit {
           ...(e.payload.doc.data() as object)
         } as Challenge;
       });
-    });
+    }); */
   }

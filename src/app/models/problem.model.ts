@@ -9,5 +9,4 @@ export class Problem {
   status: boolean;
   votes: number;
   socialpoints: number;
-  test: string;
 }

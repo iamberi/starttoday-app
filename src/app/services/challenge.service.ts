@@ -1,6 +1,7 @@
+import { Challenge } from './../models/challenge.model';
 import { Injectable, Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Challenge } from '../models/challenge.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,10 +24,12 @@ export class ChallengeService {
     .snapshotChanges();
   }
 
-  /* getChallenge() {
+  getChallengeDetail(challengeId: string): Observable<Challenge> {
     return this.angularFirestore
-
-  } */
+      .collection('challenge-collection')
+      .doc<Challenge>(challengeId)
+      .valueChanges();
+    }
 
   createChallenge(challenge: Challenge) {
     return new Promise<any>((resolve, reject) =>{

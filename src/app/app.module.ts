@@ -46,8 +46,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 //Galerie
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+//NGX Datepicker
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { defineLocale } from 'ngx-bootstrap/chronos';
 
 
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
@@ -157,7 +158,9 @@ const routes: Routes = [
     DeleteChallengeComponent,
   ],
   imports: [
-    MatDatepickerModule, MatInputModule, MatNativeDateModule, NgxMaterialTimepickerModule,
+    MatDatepickerModule, MatInputModule, MatNativeDateModule,
+    BsDatepickerModule.forRoot(),
+    NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,

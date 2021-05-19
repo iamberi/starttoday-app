@@ -35,16 +35,23 @@
 
           <hr class="hr-form" />
           <label class="text-input-label label">Eventtag</label>
+          <input type="text"
+             ngbDatepicker #d="ngbDatepicker"
+            placeholder="Wähle den Tag des Events"
+            class="form-control"
+            bsDatepicker
+            [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
+          <!--
           <mat-form-field appearance="fill">
             <input matInput [matDatepicker]="dpicker" placeholder="Wähle den Tag des Events">
             <mat-datepicker-toggle matSuffix [for]="dpicker"></mat-datepicker-toggle>
             <mat-datepicker #dpicker></mat-datepicker>
           </mat-form-field>
-
+          -->
           <hr class="hr-form" />
           <label class="text-input-label label">Uhrzeit</label>
           <div class="ngx-timepicker-field-example">
-            <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
+            <ngx-timepicker-field [format]="24" [defaultTime]="'12:00'"></ngx-timepicker-field>
           </div>
           <div class="create-button-wrapper">
             <select class="dropdown button-left" Name="category" formControlName="category" required>

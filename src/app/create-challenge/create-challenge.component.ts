@@ -2,8 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeService } from '../services/challenge.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Router } from "@angular/router";
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-challenge',
@@ -12,6 +11,7 @@ import { Router } from "@angular/router";
 })
 export class CreateChallengeComponent implements OnInit {
   public challengeForm: FormGroup;
+  locale = 'de';
 
   constructor(
     public challengeService: ChallengeService,
@@ -27,6 +27,7 @@ export class CreateChallengeComponent implements OnInit {
       status: new FormControl(false),
       socialpoints: 5,
     });
+
   }
 
 

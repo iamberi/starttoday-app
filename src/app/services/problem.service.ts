@@ -17,6 +17,21 @@ export class ProblemService {
     .doc(id)
     .valueChanges();
   }
+  getProblemDog(id) {
+    return this.angularFirestore
+    .collection('problem-collection')
+    .doc(id)
+    .get();
+  }
+
+  updateVotes(problem: Problem, id){
+    return this.angularFirestore
+    .collection('problem-collection')
+    .doc(id)
+    .update({
+      votes: problem.votes,
+    });
+  }
 
   getProblemList() {
     return this.angularFirestore

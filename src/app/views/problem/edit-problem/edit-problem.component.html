@@ -1,53 +1,81 @@
+<!-- <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label>Titel</label>
+    <input type="text" formControlName="title" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label>Beschreibung</label>
+    <input
+      type="email"
+      formControlName="description"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label>Kategirie</label>
+    <input
+      type="text"
+      formControlName="category"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form> -->
+
+<!-- Problem bearbeiten wie im Design -->
+
 <div class="form-container">
   <!-- LEGENDE -->
   <div class="form-legende">
     <svg aria-hidden="true" class="form-iconclose-cross" focusable="false">
       <use xlink:href="#icon-close-cross" />
     </svg>
-    <label class="create-problem-label">Problem hinzufügen</label>
+    <label class="edit-problem-label">Problem bearbeiten</label>
   </div>
   <hr class="form-hr-head hr-up" />
 
   <!-- CONTENT -->
-  <div class="create-problem-content">
+  <div class="edit-problem-content">
     <!-- IMAGE -->
-    <div class="form-add-image-wrapper">
-      <svg aria-hidden="true" class="form-add-image" focusable="false">
-        <use xlink:href="#add" />
-      </svg>
-      <label class="label">Bild hinzufügen</label>
+    <div class="form-image-wrapper">
+      <img src="https://dummyimage.com/600x400/000/fff" class="form-image" />
     </div>
     <hr class="form-hr-head hr-down" />
 
     <!-- FORM INPUT -->
-    <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="form-input-wrapper">
         <label class="form-input-label label">Standort</label>
-        <input
+        <textarea
+          class="form-input-input form-input"
+          maxlength="200"
           type="text"
-          formControlName="location"
-          placeholder="Wo ist das Problem"
-          class="form-control"
-          required
-        />
-
+        >
+Neckarhalde 21, 74074 Heilbronn
+      </textarea
+        >
         <hr class="hr-form" />
         <label class="form-input-label label">Titel</label>
         <input
           type="text"
           formControlName="title"
-          placeholder="Gib deinem Problem ein Titel"
-          class="form-control"
+          class="form-control form-input"
           required
         />
 
         <hr class="hr-form" />
         <label class="form-input-label label">Beschreibung</label>
         <input
-          type="text"
+          type="email"
           formControlName="description"
-          placeholder="Beschreibe dein Problem"
-          class="form-control"
+          class="form-control form-input"
           required
         />
 
@@ -62,7 +90,8 @@
             <option value="Vandalismus">Vandalismus</option>
             <option value="Umwelt">Umwelt</option>
           </select>
-          <button class="button-primary">Speichern</button>
+
+          <button class="button-primary" type="submit">Speichern</button>
         </div>
       </div>
     </form>

@@ -21,7 +21,7 @@ export class CreateProblemComponent implements OnInit {
       description: [''],
       category: [''],
       votes: 0
-    })
+    });
   }
 
   ngOnInit(): void {

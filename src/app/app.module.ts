@@ -25,14 +25,14 @@ import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
   //probleme
 import { ProblemeComponent } from './views/problem/probleme/probleme.component';
-import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
+//import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
 import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
 import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
 //CRUD
 import { CreateProblemComponent } from './create-problem/create-problem.component';
 import { ListProblemComponent } from './list-problem/list-problem.component';
-import { EditProblemComponent } from './edit-problem/edit-problem.component';
+import { EditProblemComponent } from './views/problem/edit-problem/edit-problem.component';
 import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
 import { ListChallengeComponent } from './list-challenge/list-challenge.component';
 import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
@@ -63,7 +63,7 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
-import { DeleteProblemComponent } from './views/delete-problem/delete-problem.component';
+import { DeleteProblemComponent } from './views/problem/delete-problem/delete-problem.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './gallery-n/gallery-n.component';
 import { DeleteChallengeComponent } from './views/delete-challenge/delete-challenge.component';
@@ -93,6 +93,7 @@ const routes: Routes = [
   { path: 'update-problem/:id', component: EditProblemComponent },
   { path: 'edit-problem', component: EditProblemComponent },
   { path: 'delete-problem', component: DeleteProblemComponent },
+  { path: 'delete-problem/:id', component: DeleteProblemComponent },
 
 
   { path: 'create-challenge', component: CreateChallengeComponent },
@@ -105,6 +106,7 @@ const routes: Routes = [
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
   { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'delete-challenge', component: DeleteChallengeComponent },
+  { path: 'edit-challenge', component: EditChallengeComponent },
 
 
   { path: 'overview', component: OverviewComponent },

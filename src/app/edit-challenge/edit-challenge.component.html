@@ -94,6 +94,15 @@
 
         <hr class="hr-form" />
         <label class="form-input-label label">Eventtag</label>
+        <input type="text"
+          ngbDatepicker #d="ngbDatepicker"
+          placeholder="Wann findet die Challenge statt?"
+          class="form-control"
+          bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
+
+
+        <!--
         <mat-form-field appearance="fill">
           <input
             matInput
@@ -106,6 +115,7 @@
           ></mat-datepicker-toggle>
           <mat-datepicker #dpicker></mat-datepicker>
         </mat-form-field>
+        -->
 
         <hr class="hr-form" />
         <label class="form-input-label label">Uhrzeit</label>

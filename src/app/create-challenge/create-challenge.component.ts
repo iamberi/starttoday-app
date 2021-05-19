@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class CreateChallengeComponent implements OnInit {
   public challengeForm: FormGroup;
-  locale = 'de';
 
   constructor(
     public challengeService: ChallengeService,

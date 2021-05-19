@@ -37,9 +37,6 @@ import { CreateChallengeComponent } from './create-challenge/create-challenge.co
 import { ListChallengeComponent } from './list-challenge/list-challenge.component';
 import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatNativeDateModule} from '@angular/material/core';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 // Firebase imports
 import { AngularFireModule } from '@angular/fire';
@@ -48,7 +45,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //NGX Datepicker
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { defineLocale } from 'ngx-bootstrap/chronos';
 
 
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
@@ -97,7 +93,7 @@ const routes: Routes = [
   { path: 'delete-problem', component: DeleteProblemComponent },
   { path: 'delete-problem/:id', component: DeleteProblemComponent },
   { path: 'add-solution', component: AddSolutionComponent},
-  
+
 
 
   { path: 'create-challenge', component: CreateChallengeComponent },
@@ -163,7 +159,6 @@ const routes: Routes = [
     AddSolutionComponent,
   ],
   imports: [
-    MatDatepickerModule, MatInputModule, MatNativeDateModule,
     BsDatepickerModule.forRoot(),
     NgxMaterialTimepickerModule,
     BrowserAnimationsModule,

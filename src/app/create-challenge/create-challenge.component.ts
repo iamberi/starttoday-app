@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ChallengeService } from '../services/challenge.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-create-challenge',
@@ -14,14 +16,19 @@ export class CreateChallengeComponent implements OnInit {
   constructor(
     public challengeService: ChallengeService,
     public formBuilder: FormBuilder,
-    public router: Router
+    public router: Router,
   ) {
     this.challengeForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      category: ['']
-    })
+      category: [''],
+      date: new Date(),
+      votes: 0,
+      status: new FormControl(false),
+      socialpoints: 5,
+    });
   }
+
 
   ngOnInit(): void {
   }

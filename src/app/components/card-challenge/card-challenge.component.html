@@ -15,8 +15,8 @@
         <img class="img-challengesetter" alt="Veranstalter" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stadt-Essen-Logo.svg/600px-Stadt-Essen-Logo.svg.png">
         <p class="p-info name-challengesetter">Stadt Essen</p>
       </div>
-      <p class="location-challenge"> Stadt, Straße Hausnummer · <span>Kategorie</span></p>
-      <h3 class="titel-challenge"> Titel der Challenge</h3>
+      <p class="location-challenge"> Stadt, Straße Hausnummer · <span>{{categoryChallenge}}</span></p>
+      <h3 class="titel-challenge"> {{titleChallenge}}</h3>
     </div>
     <div class="image-gradient-challenge">
     </div>
@@ -27,7 +27,7 @@
       <svg aria-hidden="true" focusable="false">
         <use xlink:href="#icon-calendar"/>
       </svg>
-      <p class="text-detail-challenge">DD.MM.YYYY</p>
+      <p class="text-detail-challenge">{{dateChallenge}}DD.MM.YYYY</p>
     </div>
     <div class="detail-infos-element">
       <svg aria-hidden="true" focusable="false">
@@ -39,7 +39,7 @@
       <svg class="icon-vertical" aria-hidden="true" focusable="false">
         <use xlink:href="#icon-challenge"/>
       </svg>
-      <p class="text-detail-challenge">5</p>
+      <p class="text-detail-challenge">{{socialpointsChallenge}}</p>
     </div>
   </div>
   <hr class="card-challenge-hr">

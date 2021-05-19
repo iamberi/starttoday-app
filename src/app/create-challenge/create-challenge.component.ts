@@ -19,7 +19,9 @@ export class CreateChallengeComponent implements OnInit {
     this.challengeForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      category: ['']
+      category: [''],
+      votes: 0,
+      statusvotes: false
     })
   }
 

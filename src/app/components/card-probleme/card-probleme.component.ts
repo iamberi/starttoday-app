@@ -10,6 +10,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class CardProblemeComponent implements OnInit {
 
   public vote: Problem;
+  public status: boolean;
+  //true=gevotet;false=nicht gevotet
 
   constructor(
     public problemService: ProblemService,
@@ -27,15 +29,24 @@ export class CardProblemeComponent implements OnInit {
 
   upvote(element){
     var res2;
-    element.target.classList.add("upvote-button-wrapper-clicked");
 
     this.problemService.getProblemDog(this.id).subscribe((res) => {
 
       res2 = res.data();
       this.vote = res2;
-      this.vote.votes++;
-      console.log(this.vote);
-      this.problemService.updateVotes(this.vote,this.id);
+      if(this.vote.statusvotes==false){
+        this.vote.votes++;
+        this.vote.statusvotes = true;
+        console.log(this.vote.statusvotes);
+        console.log(element.target);
+        element.target.classList.toggle("upvote-button-wrapper-clicked");
+        console.log(element.target);
+      }else{
+        this.vote.votes--;
+        this.vote.statusvotes = false;
+        console.log(this.vote.statusvotes);
+      };
+      this.problemService.updateVotes(this.vote, this.id);
 
     })
 

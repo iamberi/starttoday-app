@@ -17,6 +17,7 @@ export class ProblemService {
     .doc(id)
     .valueChanges();
   }
+
   getProblemDog(id) {
     return this.angularFirestore
     .collection('problem-collection')
@@ -30,6 +31,7 @@ export class ProblemService {
     .doc(id)
     .update({
       votes: problem.votes,
+      statusvotes: problem.statusvotes
     });
   }
 

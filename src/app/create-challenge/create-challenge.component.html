@@ -19,7 +19,8 @@
       <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="text-input-wrapper">
           <label class="text-input-label label">Standort</label>
-          <textarea class="text-input-input form-input" maxlength="100" type="text">Neckarhalde 21, 74074 Heilbronn </textarea>
+          <textarea formControlName="location" class="text-input-input form-input" maxlength="200" type="text" placeholder="Neckarhalde 21, 74074 Heilbronn" required></textarea>
+
 
           <hr class="hr-form" />
           <label class="text-input-label label">Titel</label>
@@ -28,6 +29,10 @@
           <hr class="hr-form" />
           <label class="text-input-label label">Beschreibung</label>
           <input type="text" formControlName="description" placeholder="Beschreibe die Challenge" class="form-control" required>
+
+          <hr class="hr-form" />
+          <label class="text-input-label label">Challenge-Setter</label>
+          <input type="text" formControlName="setter" placeholder="Veranstalter der Challenge" class="form-control" required>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Checkliste für Teilnehmer</label>
@@ -56,9 +61,4 @@
           </div>
         </div>
       </form>
-<!--
-  <div class="mb-3">
-    <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
-  </div>
--->
 </div>

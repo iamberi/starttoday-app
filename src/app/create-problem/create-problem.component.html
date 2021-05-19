@@ -19,7 +19,7 @@
       <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="text-input-wrapper">
           <label class="text-input-label label">Standort</label>
-          <textarea class="text-input-input form-input" maxlength="200" type="text"> Neckarhalde 21, 74074 Heilbronn</textarea>
+          <textarea formControlName="location" class="text-input-input form-input" maxlength="200" type="text" placeholder="Neckarhalde 21, 74074 Heilbronn"></textarea>
 
           <hr class="hr-form" />
           <label class="text-input-label label">Titel</label>

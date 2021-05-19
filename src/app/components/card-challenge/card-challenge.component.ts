@@ -11,6 +11,8 @@ export class CardChallengeComponent implements OnInit {
   @Input() titleChallenge: string;
   @Input() descriptionChallenge: string;
   @Input() categoryChallenge: string;
+  @Input() locationChallenge: string;
+  @Input() setterChallenge: string;
   @Input() dateChallenge: string;
   @Input() socialpointsChallenge: string;
 

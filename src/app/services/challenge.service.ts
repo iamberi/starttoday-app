@@ -9,6 +9,7 @@ export class ChallengeService {
 
   constructor(private angularFirestore: AngularFirestore) {}
 
+
   getChallengeDoc(id) {
     return this.angularFirestore
     .collection('challenge-collection')
@@ -22,11 +23,16 @@ export class ChallengeService {
     .snapshotChanges();
   }
 
+  /* getChallenge() {
+    return this.angularFirestore
+
+  } */
+
   createChallenge(challenge: Challenge) {
     return new Promise<any>((resolve, reject) =>{
       this.angularFirestore
         .collection('challenge-collection')
-        .add({challenge})
+        .add(challenge)
         .then(response => { console.log(response); }, error => reject(error));
     });
   }

@@ -22,13 +22,14 @@ export class CreateChallengeComponent implements OnInit {
       title: [''],
       description: [''],
       category: [''],
+      location: [''],
+      setter: [''],
       date: new Date(),
       votes: 0,
       status: new FormControl(false),
       socialpoints: 5,
     });
   }
-
 
   ngOnInit(): void {
   }

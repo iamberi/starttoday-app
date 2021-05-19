@@ -63,8 +63,11 @@ export class CardProblemeComponent implements OnInit {
       };
     this.problemService.updateVotes(this.vote, this.id);
     console.log("updated");
+    element.target.classList.toggle("upvote-button-wrapper-clicked");
+    console.log("letztes updated");
+    console.log("letztes updated"+ element.target.classList);
     })
 
-    return null;
+
   }
 }

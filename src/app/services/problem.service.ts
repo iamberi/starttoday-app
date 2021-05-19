@@ -25,6 +25,7 @@ export class ProblemService {
     .get();
   }
 
+
   updateVotes(problem: Problem, id){
     return this.angularFirestore
     .collection('problem-collection')

@@ -8,46 +8,43 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-//models
+// models
 import { Challenge } from './models/challenge.model';
-//components
+// components
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
 import { InputTextComponent } from './components/input/input-text/input-text.component';
 import { CardProblemeComponent } from './components/card-probleme/card-probleme.component';
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
-//views
+// views
 import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
-  //challenges
+// challenges
 import { ChallengesComponent } from './views/challenges/challenges.component';
 import { ChallengesDetailComponent } from './challenge-detail/challenge-detail.component';
   //probleme
 import { ProblemeComponent } from './views/problem/probleme/probleme.component';
-import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
+// import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
 import { ProblemDeleteComponent } from './views/problem/problem-delete/problem-delete.component';
 import { ProblemBearbeitenComponent } from './views/problem/problem-bearbeiten/problem-bearbeiten.component';
-//CRUD
+// CRUD
 import { CreateProblemComponent } from './create-problem/create-problem.component';
 import { ListProblemComponent } from './list-problem/list-problem.component';
-import { EditProblemComponent } from './edit-problem/edit-problem.component';
+import { EditProblemComponent } from './views/problem/edit-problem/edit-problem.component';
 import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
 import { ListChallengeComponent } from './list-challenge/list-challenge.component';
 import { EditChallengeComponent } from './edit-challenge/edit-challenge.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatNativeDateModule} from '@angular/material/core';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
-//Firebase imports
+// Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-//Galerie
+// Galerie
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+//NGX Datepicker
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
@@ -63,13 +60,14 @@ import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
-import { DeleteProblemComponent } from './views/delete-problem/delete-problem.component';
+import { DeleteProblemComponent } from './views/problem/delete-problem/delete-problem.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './gallery-n/gallery-n.component';
 import { DeleteChallengeComponent } from './views/delete-challenge/delete-challenge.component';
+import { AddSolutionComponent } from './views/problem/add-solution/add-solution.component';
 
 
-//Liste aller Routes
+// Liste aller Routes
 const routes: Routes = [
   { path: '', component: WillkommenNComponent },
   { path: 'willkommen', component: WillkommenComponent },
@@ -92,18 +90,22 @@ const routes: Routes = [
   { path: 'update-problem/:id', component: EditProblemComponent },
   { path: 'edit-problem', component: EditProblemComponent },
   { path: 'delete-problem', component: DeleteProblemComponent },
+  { path: 'delete-problem/:id', component: DeleteProblemComponent },
+  { path: 'add-solution', component: AddSolutionComponent},
+
 
 
   { path: 'create-challenge', component: CreateChallengeComponent },
   { path: 'list-challenges', component: ListChallengeComponent },
   { path: 'update-challenge/:id', component: EditChallengeComponent },
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
-  { path: 'problem-erstellen', component: ProblemErstellenComponent },
+  { path: 'problem-erstellen', component: ProblemBearbeitenComponent },
   { path: 'problem-detail', component: ProblemDetailComponent },
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
   { path: 'challenge-detail/:id', component: ChallengesDetailComponent },
   { path: 'delete-challenge', component: DeleteChallengeComponent },
+  { path: 'edit-challenge', component: EditChallengeComponent },
 
 
   { path: 'overview', component: OverviewComponent },
@@ -133,10 +135,9 @@ const routes: Routes = [
     ErrorComponent,
     CardChallengeComponent,
     ChallengesDetailComponent,
-    ProblemErstellenComponent,
+    ProblemBearbeitenComponent,
     ProblemDetailComponent,
     ProblemDeleteComponent,
-    ProblemBearbeitenComponent,
     RegisterNComponent,
     WillkommenNComponent,
     LoginNComponent,
@@ -154,9 +155,11 @@ const routes: Routes = [
     CommentsComponent,
     GalleryNComponent,
     DeleteChallengeComponent,
+    AddSolutionComponent,
   ],
   imports: [
-    MatDatepickerModule, MatInputModule, MatNativeDateModule, NgxMaterialTimepickerModule,
+    BsDatepickerModule.forRoot(),
+    NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,
@@ -174,6 +177,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
   ],
+  // exports: [ RouterModule ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]
 })

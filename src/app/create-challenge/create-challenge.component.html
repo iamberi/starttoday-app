@@ -4,7 +4,7 @@
     <svg aria-hidden="true" class="form-iconclose-cross" focusable="false">
       <use xlink:href="#icon-close-cross" />
     </svg>
-    <label class="create-challange-label">Challange hinzufügen</label>
+    <label class="create-challange-label">Challenge hinzufügen</label>
   </div>
   <hr class="form-hr-head hr-up" />
 
@@ -29,27 +29,24 @@
           class="form-control"
           required
         />
-
         <hr class="hr-form" />
         <label class="form-input-label label">Titel</label>
         <input
           type="text"
           formControlName="title"
-          placeholder="Gib der Challange ein Titel"
+          placeholder="Gib der Challenge ein Titel"
           class="form-control"
           required
         />
-
         <hr class="hr-form" />
         <label class="form-input-label label">Beschreibung</label>
         <input
           type="text"
           formControlName="description"
-          placeholder="Beschreibe die Challange"
+          placeholder="Beschreibe die Challenge"
           class="form-control"
           required
         />
-
         <hr class="hr-form" />
         <label class="form-input-label label">Checkliste für Teilnehmer</label>
         <input
@@ -59,30 +56,15 @@
           class="form-control"
           required
         />
-
         <hr class="hr-form" />
-        <label class="form-input-label label">Eventtag</label>
-        <mat-form-field appearance="fill">
-          <input
-            matInput
-            [matDatepicker]="dpicker"
-            placeholder="Wähle den Tag des Events"
-          />
-          <mat-datepicker-toggle
-            matSuffix
-            [for]="dpicker"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #dpicker></mat-datepicker>
-        </mat-form-field>
+        <label class="text-input-label label">Eventtag</label>
+        <input type="text"
+          ngbDatepicker #d="ngbDatepicker"
+          placeholder="Wann findet die Challenge statt?"
+          class="form-control"
+          bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
 
-          <hr class="hr-form" />
-          <label class="text-input-label label">Eventtag</label>
-          <input type="text"
-             ngbDatepicker #d="ngbDatepicker"
-            placeholder="Wähle den Tag des Events"
-            class="form-control"
-            bsDatepicker
-            [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
           <!--
           <mat-form-field appearance="fill">
             <input matInput [matDatepicker]="dpicker" placeholder="Wähle den Tag des Events">

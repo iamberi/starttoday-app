@@ -26,14 +26,15 @@ export class ChallengeService {
   }
 
 
-  updateVotes(challenge: Challenge, id){
-    return this.angularFirestore
+  updateVotes(challenge: Challenge,element, id){
+    var update = this.angularFirestore
     .collection('challenge-collection')
     .doc(id)
     .update({
       votes: challenge.votes,
       statusvotes: challenge.statusvotes
     });
+    return update;
   }
 
   getChallengeList() {

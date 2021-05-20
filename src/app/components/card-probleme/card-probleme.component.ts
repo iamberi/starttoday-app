@@ -46,15 +46,15 @@ export class CardProblemeComponent implements OnInit {
     console.log("style" + element.target.classList);
   }
 
-  async upvote(element){
+  upvote(element){
     var res2;
-    await this.problemService.getProblemDog(this.id).subscribe((res) => {
+    this.problemService.getProblemDog(this.id).subscribe((res) => {
       res2 = res.data();
       this.vote = res2;
 
-      if(this.vote.statusvotes==false){
+      if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
-        this.vote.statusvotes = true;
+        this.vote.statusvotes = 'gevotet';
         console.log("upvote");
         console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
@@ -62,7 +62,7 @@ export class CardProblemeComponent implements OnInit {
 
       }else{
         this.vote.votes--;
-        this.vote.statusvotes = false;
+        this.vote.statusvotes = 'vote';
         console.log("downvote");
         console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
@@ -71,8 +71,6 @@ export class CardProblemeComponent implements OnInit {
     console.log("updated");
     console.log(element.target.classList);
     })
-    this.styleChange(element);
-    console.log("style" + element.target.classList);
 
   }
 }

@@ -25,7 +25,7 @@ export class CreateChallengeComponent implements OnInit {
       setter: [''],
       date: new Date(),
       votes: 0,
-      statusvotes: false,
+      statusvotes: 'vote',
       status: new FormControl(false),
       socialpoints: 5,
     });

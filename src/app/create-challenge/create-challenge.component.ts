@@ -28,7 +28,7 @@ export class CreateChallengeComponent implements OnInit {
       socialpoints: 5,
     });
 
-
+  }
   ngOnInit(): void {
   }
 

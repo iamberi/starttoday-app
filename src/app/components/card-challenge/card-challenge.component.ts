@@ -1,6 +1,4 @@
-
 import { Component, OnInit, Input } from '@angular/core';
-
 import { ChallengeService } from './../../services/challenge.service';
 import { Challenge } from './../../models/challenge.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -16,7 +14,10 @@ export class CardChallengeComponent implements OnInit {
 
   public vote: Challenge;
 
-  constructor() { }
+  constructor(
+    public challengeService: ChallengeService,
+    public formBuilder: FormBuilder,
+  ) { }
 
   @Input() titleChallenge: string;
   @Input() descriptionChallenge: string;
@@ -25,9 +26,10 @@ export class CardChallengeComponent implements OnInit {
   @Input() setterChallenge: string;
   @Input() dateChallenge: string;
   @Input() socialpointsChallenge: string;
+  @Input() votesChallenge: string;
+  @Input() id: string;
+  @Input() statusvotesChallenge: string;
 
-  public challengeService: ChallengeService
-  public formBuilder: FormBuilder
 
 
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class CardChallengeComponent implements OnInit {
     element.target.classList.toggle("upvote-button-wrapper-clicked");
   }
 
-  /* upvote(element){
+  upvote(element){
     var res2;
     //id Fehler müsste behoben sein, sobald korretkte Daten
     this.challengeService.getChallengeDog(this.id).subscribe((res) => {
@@ -73,5 +75,5 @@ export class CardChallengeComponent implements OnInit {
     })
 
 
-  } */
+  }
 }

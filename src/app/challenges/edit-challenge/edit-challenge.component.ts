@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChallengeService } from '../services/challenge.service';
+import { ChallengeService } from '../../services/challenge.service';
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, FormGroup } from '@angular/forms';
 

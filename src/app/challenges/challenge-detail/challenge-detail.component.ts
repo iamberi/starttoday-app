@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { ChallengeService } from './../services/challenge.service';
-import { Challenge } from '../models/challenge.model';
+import { ChallengeService } from '../../services/challenge.service';
+import { Challenge } from '../../models/challenge.model';
 
 @Component({
   selector: 'app-challenge-detail',

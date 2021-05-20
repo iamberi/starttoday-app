@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ProblemService } from '../../../services/problem.service';
-import { Problem } from '../../../models/problem.model';
-
+import { ProblemService } from './../services/problem.service';
+import { Problem } from './../models/problem.model';
 
 @Component({
-  selector: 'app-delete-problem',
-  templateUrl: './delete-problem.component.html',
-  styleUrls: ['./delete-problem.component.scss']
+  selector: 'app-probleme',
+  templateUrl: './probleme.component.html',
+  styleUrls: ['./probleme.component.scss']
 })
-export class DeleteProblemComponent implements OnInit {
+export class ProblemeComponent implements OnInit {
   Problems: Problem[];
 
   constructor(private problemService: ProblemService) { }

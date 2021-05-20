@@ -1,6 +1,6 @@
-import { ChallengeService } from './../services/challenge.service';
+import { ChallengeService } from '../../services/challenge.service';
 import { Component, OnInit } from '@angular/core';
-import { Challenge } from '../models/challenge.model';
+import { Challenge } from '../../models/challenge.model';
 
 @Component({
   selector: 'app-list-challenge',

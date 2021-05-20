@@ -1,7 +1,7 @@
-import { ProblemService } from './../../../services/problem.service';
+import { ProblemService } from './../../services/problem.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { Problem } from './../../../models/problem.model';
+import { Problem } from './../../models/problem.model';
 
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProblemService } from '../services/problem.service';
+import { ProblemService } from './../../services/problem.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from "@angular/router";
 

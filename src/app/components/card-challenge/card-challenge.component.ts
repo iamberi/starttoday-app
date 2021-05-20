@@ -35,43 +35,34 @@ export class CardChallengeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  bushi(element){
-    console.log("bevor"+ element.target.classList);
-    //this.upvote(element);
-    console.log("nach fkt 1"+ element.target.classList);
-    this.styleChange(element);
-    console.log("nach fkt 2"+ element.target.classList);
-  }
-
   styleChange(element){
-    element.target.classList.toggle("upvote-button-wrapper-clicked");
+
+    element.target.classList.add("upvote-button-wrapper-clicked");
   }
 
   upvote(element){
     var res2;
-    //id Fehler müsste behoben sein, sobald korretkte Daten
     this.challengeService.getChallengeDog(this.id).subscribe((res) => {
       res2 = res.data();
       this.vote = res2;
 
-      if(this.vote.statusvotes==false){
+      if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
-        this.vote.statusvotes = true;
-        console.log(this.vote.statusvotes);
+        this.vote.statusvotes = 'gevotet';
+        /* console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
-
+        console.log("upgevotet"); */
 
       }else{
         this.vote.votes--;
-        this.vote.statusvotes = false;
-        console.log(this.vote.statusvotes);
+        this.vote.statusvotes = 'vote';
+        /* console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
+        console.log("downgevotet"); */
       };
-    this.challengeService.updateVotes(this.vote, this.id);
-    console.log("updated");
-    element.target.classList.toggle("upvote-button-wrapper-clicked");
-    console.log("letztes updated");
-    console.log("letztes updated"+ element.target.classList);
+    this.challengeService.updateVotes(this.vote, element, this.id);
+
+    //console.log("letztes update" + element.target.classList);
     })
 
 

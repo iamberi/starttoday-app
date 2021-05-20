@@ -21,6 +21,8 @@ export class CreateChallengeComponent implements OnInit {
       title: [''],
       description: [''],
       category: [''],
+      location: [''],
+      setter: [''],
       date: new Date(),
       votes: 0,
       statusvotes: false,

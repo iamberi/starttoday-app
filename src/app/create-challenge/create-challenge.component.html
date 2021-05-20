@@ -48,6 +48,10 @@
           required
         />
         <hr class="hr-form" />
+        <label class="text-input-label label">Challenge-Setter</label>
+        <input type="text" formControlName="setter" placeholder="Veranstalter der Challenge" class="form-control" required>
+
+        <hr class="hr-form" />
         <label class="form-input-label label">Checkliste für Teilnehmer</label>
         <input
           type="text"
@@ -94,10 +98,4 @@
         </div>
       </div>
     </form>
-    <!--
-  <div class="mb-3">
-    <button type="submit" class="btn btn-primary" [disabled]="!challengeForm.valid">Create</button>
-  </div>
--->
-  </div>
 </div>

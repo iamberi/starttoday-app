@@ -26,6 +26,6 @@ export class ChallengesComponent implements OnInit {
     });
   }
 
-  removeChallenge = challenge => this.challengeService.deleteChallenge(challenge);
+  //removeChallenge = challenge => this.challengeService.deleteChallenge(challenge);
   }
 

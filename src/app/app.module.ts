@@ -22,8 +22,8 @@ import { ProfilComponent } from './views/profil/profil.component';
 import { RegisterNComponent } from './views/register-n/register-n.component';
 // challenges
 import { ChallengesComponent } from './views/challenges/challenges.component';
-import { ChallengesDetailComponent } from './challenges-detail/challenges-detail.component';
-// probleme
+import { ChallengesDetailComponent } from './challenge-detail/challenge-detail.component';
+  //probleme
 import { ProblemeComponent } from './views/problem/probleme/probleme.component';
 // import { ProblemErstellenComponent } from './views/problem/problem-erstellen/problem-erstellen.component';
 import { ProblemDetailComponent } from './views/problem/problem-detail/problem-detail.component';
@@ -72,7 +72,6 @@ const routes: Routes = [
   { path: '', component: WillkommenNComponent },
   { path: 'willkommen', component: WillkommenComponent },
   { path: 'register-n', component: RegisterNComponent },
-  { path: 'challenges-detail', component: ChallengesDetailComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component: ProfilComponent },
@@ -104,7 +103,7 @@ const routes: Routes = [
   { path: 'problem-detail', component: ProblemDetailComponent },
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
-  { path: 'challenges-detail', component: ChallengesDetailComponent },
+  { path: 'challenge-detail/:id', component: ChallengesDetailComponent },
   { path: 'delete-challenge', component: DeleteChallengeComponent },
   { path: 'edit-challenge', component: EditChallengeComponent },
 

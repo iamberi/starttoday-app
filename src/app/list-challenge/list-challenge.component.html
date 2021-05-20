@@ -13,13 +13,14 @@
   <tbody>
     <tr *ngFor="let challenge of Challenges; let i = index">
       <th scope="row">{{ i + 1 }}</th>
-      <td>{{ challenge.challenge.title }}</td>
-      <td>{{ challenge.challenge.description }}</td>
-      <td>{{ challenge.challenge.category }}</td>
+      <td>{{ challenge.title }}</td>
+      <td>{{ challenge.description }}</td>
+      <td>{{ challenge.category }}</td>
       <td>{{ challenge.status ? "Ungelöst" : "Gelöst" }}</td>
       <td>
         <span (click)="removeChallenge(challenge)" class="text-danger">Delete</span> &nbsp;
-        <span routerLink="/update-challenge/{{challenge.id}}" class="text-primary">Edit</span>
+        <span routerLink="/update-challenge/{{challenge.id}}" class="text-primary">Edit</span> &nbsp;
+        <span routerLink="/challenge-detail/{{challenge.id}}" class="text-primary">Detail</span>&nbsp;
       </td>
     </tr>
   </tbody>

@@ -20,9 +20,10 @@ export class CreateProblemComponent implements OnInit {
       title: [''],
       description: [''],
       category: [''],
+      location: [''],
+      date: new Date(),
       votes: 0,
       statusvotes: false,
-      location: [''],
       socialpoints: 3
     });
   }

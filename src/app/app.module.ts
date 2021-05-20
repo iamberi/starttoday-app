@@ -100,7 +100,7 @@ const routes: Routes = [
   { path: 'update-challenge/:id', component: EditChallengeComponent },
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
   { path: 'problem-erstellen', component: ProblemBearbeitenComponent },
-  { path: 'problem-detail', component: ProblemDetailComponent },
+  { path: 'problem-detail/:id', component: ProblemDetailComponent },
   { path: 'problem-delete', component: ProblemDeleteComponent },
   { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
   { path: 'challenge-detail/:id', component: ChallengesDetailComponent },

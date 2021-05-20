@@ -17,7 +17,8 @@
       <td>{{ problem.category }}</td>
       <td>
         <span (click)="removeProblem(problem)" class="text-danger">Delete</span> &nbsp;
-        <span routerLink="/update-problem/{{problem.id}}" class="text-primary">Edit</span>
+        <span routerLink="/update-problem/{{problem.id}}" class="text-primary">Edit</span>&nbsp;
+        <span routerLink="/problem-detail/{{problem.id}}" class="text-primary">Detail</span>&nbsp;
       </td>
     </tr>
   </tbody>

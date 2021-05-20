@@ -2,6 +2,7 @@ import { CardProblemeComponent } from './../components/card-probleme/card-proble
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Problem } from '../models/problem.model';
+import { Observable } from 'rxjs';
 
 
 
@@ -44,6 +45,13 @@ export class ProblemService {
     .collection('problem-collection')
     .snapshotChanges();
   }
+
+  getProblemDetail(problemId: string): Observable<Problem> {
+    return this.angularFirestore
+      .collection('problem-collection')
+      .doc<Problem>(problemId)
+      .valueChanges();
+    }
 
   createProblem(problem: Problem) {
     return new Promise<any>((resolve, reject) =>{

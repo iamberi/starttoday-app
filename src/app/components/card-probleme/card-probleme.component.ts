@@ -23,6 +23,7 @@ export class CardProblemeComponent implements OnInit {
   @Input() titleProblem: string;
   @Input() descriptionProblem: string;
   @Input() categoryProblem: string;
+  @Input() locationProblem: string;
   @Input() votesProblem: string;
   @Input() id: string;
   @Input() statusvotesProblem: string;

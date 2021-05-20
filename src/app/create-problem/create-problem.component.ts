@@ -23,7 +23,7 @@ export class CreateProblemComponent implements OnInit {
       location: [''],
       date: new Date(),
       votes: 0,
-      statusvotes: false,
+      statusvotes: 'vote',
       socialpoints: 3
     });
   }

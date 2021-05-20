@@ -7,12 +7,12 @@
 </div>
 <p class="open-problems"> 423 Challenges</p>
 
-<app-button
+<!-- <app-button
 [btntext]="'Challenge hinzufügen'"
 [btnlink]="'/create-challenge'"
 [type]="'primary'"
 >
-</app-button>
+</app-button> -->
 
 <app-card-challenge *ngFor="let challenge of Challenges; let i=index"
 [titleChallenge]="challenge.title"
@@ -22,4 +22,8 @@
 [locationChallenge]="challenge.location"
 [dateChallenge]="challenge.date"
 [socialpointsChallenge]="challenge.socialpoints"
+[votesChallenge]="challenge.votes"
+[id]="challenge.id"
+[statusvotesChallenge]="challenge.statusvotes"
+
 ></app-card-challenge>

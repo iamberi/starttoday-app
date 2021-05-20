@@ -8,5 +8,6 @@ export class Problem {
   date: Date;
   status: boolean;
   votes: number;
+  statusvotes: boolean;
   socialpoints: number;
 }

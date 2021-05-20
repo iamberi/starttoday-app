@@ -1,6 +1,8 @@
+import { CardProblemeComponent } from './../components/card-probleme/card-probleme.component';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Problem } from '../models/problem.model';
+
 
 
 @Injectable({
@@ -16,6 +18,25 @@ export class ProblemService {
     .collection('problem-collection')
     .doc(id)
     .valueChanges();
+  }
+
+  getProblemDog(id) {
+    return this.angularFirestore
+    .collection('problem-collection')
+    .doc(id)
+    .get();
+  }
+
+
+  updateVotes(problem: Problem,element, id){
+    return this.angularFirestore
+    .collection('problem-collection')
+    .doc(id)
+    .update({
+      votes: problem.votes,
+      statusvotes: problem.statusvotes
+    })
+
   }
 
   getProblemList() {

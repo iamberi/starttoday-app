@@ -16,6 +16,24 @@ export class ChallengeService {
     .valueChanges();
   }
 
+  getChallengeDog(id) {
+    return this.angularFirestore
+    .collection('challenge-collection')
+    .doc(id)
+    .get();
+  }
+
+
+  updateVotes(challenge: Challenge, id){
+    return this.angularFirestore
+    .collection('challenge-collection')
+    .doc(id)
+    .update({
+      votes: challenge.votes,
+      statusvotes: challenge.statusvotes
+    });
+  }
+
   getChallengeList() {
     return this.angularFirestore
     .collection('challenge-collection')

@@ -23,11 +23,10 @@ export class CreateChallengeComponent implements OnInit {
       category: [''],
       date: new Date(),
       votes: 0,
+      statusvotes: false,
       status: new FormControl(false),
       socialpoints: 5,
     });
-
-  }
 
 
   ngOnInit(): void {

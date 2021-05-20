@@ -11,5 +11,6 @@ export class Challenge {
   date: Date;
   status: boolean;
   votes: number;
+  statusvotes: boolean;
   socialpoints: number;
 }

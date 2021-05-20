@@ -31,26 +31,30 @@ export class CardProblemeComponent implements OnInit {
 
 
   bushi(element){
-    console.log("bevor"+ element.target.classList);
+    /* console.log("bevor"+ element.target.classList);
     this.upvote(element);
-    console.log("nach fkt 1"+ element.target.classList);
+    console.log("nach fkt 1"+ element.target.classList); */
     this.styleChange(element);
     console.log("nach fkt 2"+ element.target.classList);
   }
 
-  styleChange(element){
-    element.target.classList.toggle("upvote-button-wrapper-clicked");
+  async styleChange(element){
+    /* await this.upvote(element);
+    console.log("upvote done"); */
+    element.target.classList.add("upvote-button-wrapper-clicked");
+    console.log("style" + element.target.classList);
   }
 
-  upvote(element){
+  async upvote(element){
     var res2;
-    this.problemService.getProblemDog(this.id).subscribe((res) => {
+    await this.problemService.getProblemDog(this.id).subscribe((res) => {
       res2 = res.data();
       this.vote = res2;
 
       if(this.vote.statusvotes==false){
         this.vote.votes++;
         this.vote.statusvotes = true;
+        console.log("upvote");
         console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
 
@@ -58,16 +62,16 @@ export class CardProblemeComponent implements OnInit {
       }else{
         this.vote.votes--;
         this.vote.statusvotes = false;
+        console.log("downvote");
         console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
       };
-    this.problemService.updateVotes(this.vote, this.id);
+    this.problemService.updateVotes(this.vote, element, this.id);
     console.log("updated");
-    element.target.classList.toggle("upvote-button-wrapper-clicked");
-    console.log("letztes updated");
-    console.log("letztes updated"+ element.target.classList);
+    console.log(element.target.classList);
     })
-
+    this.styleChange(element);
+    console.log("style" + element.target.classList);
 
   }
 }

@@ -22,7 +22,7 @@ export class CardChallengeComponent implements OnInit {
 
   bushi(element){
     console.log("bevor"+ element.target.classList);
-    this.upvote(element);
+    //this.upvote(element);
     console.log("nach fkt 1"+ element.target.classList);
     this.styleChange(element);
     console.log("nach fkt 2"+ element.target.classList);
@@ -32,7 +32,7 @@ export class CardChallengeComponent implements OnInit {
     element.target.classList.toggle("upvote-button-wrapper-clicked");
   }
 
-  upvote(element){
+  /* upvote(element){
     var res2;
     //id Fehler müsste behoben sein, sobald korretkte Daten
     this.challengeService.getChallengeDog(this.id).subscribe((res) => {
@@ -60,5 +60,5 @@ export class CardChallengeComponent implements OnInit {
     })
 
 
-  }
+  } */
 }

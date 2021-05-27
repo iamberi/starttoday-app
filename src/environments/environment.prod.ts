@@ -3,6 +3,7 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyAHKxyg0kuByvsXngM7RuBDmP3lmRgrkYM",
     authDomain: "starttoday-app.firebaseapp.com",
+    databaseURL: "https://starttoday-app-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "starttoday-app",
     storageBucket: "starttoday-app.appspot.com",
     messagingSenderId: "903772913531",

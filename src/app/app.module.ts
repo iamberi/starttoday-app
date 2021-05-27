@@ -13,6 +13,9 @@ import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 // components
 import { ButtonComponent } from './components/buttons/button/button.component';
@@ -22,6 +25,10 @@ import { CardProblemeComponent } from './components/card-probleme/card-probleme.
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// components | upload
+import { UploadFormComponent } from './components/upload/upload-form/upload-form.component';
+import { UploadListComponent } from './components/upload/upload-list/upload-list.component';
+import { UploadDetailsComponent } from './components/upload/upload-details/upload-details.component';
 
 // views
 import { ProfilComponent } from './views/profil/profil.component';
@@ -156,6 +163,9 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
+    UploadFormComponent,
+    UploadListComponent,
+    UploadDetailsComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
@@ -170,12 +180,12 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
-    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
-    AngularFirestoreModule, //imports firebase/firestore, only needed for database features
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   // exports: [ RouterModule ],
   providers: [FirebaseService],

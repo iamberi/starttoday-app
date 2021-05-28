@@ -22,6 +22,7 @@ import { CardProblemeComponent } from './components/card-probleme/card-probleme.
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 // views
 import { ProfilComponent } from './views/profil/profil.component';
@@ -63,6 +64,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+
 
 
 
@@ -156,6 +158,7 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
+    FileUploadComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

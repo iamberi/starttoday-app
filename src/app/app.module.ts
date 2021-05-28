@@ -1,3 +1,4 @@
+import { AngularFireStorageReference } from '@angular/fire/storage';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 
 // components
 import { ButtonComponent } from './components/buttons/button/button.component';
@@ -22,6 +25,11 @@ import { CardProblemeComponent } from './components/card-probleme/card-probleme.
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// components | upload
+import { DropzoneDirective } from './dropzone.directive';
+import { UploaderComponent } from './components/uploader/uploader.component';
+import { UploadTaskComponent } from './components/upload-task/upload-task.component';
+
 
 // views
 import { ProfilComponent } from './views/profil/profil.component';
@@ -63,6 +71,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+
 
 
 
@@ -156,6 +165,9 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
+    DropzoneDirective,
+    UploaderComponent,
+    UploadTaskComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
@@ -170,13 +182,13 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
-    AngularFirestoreModule, //imports firebase/firestore, only needed for database features
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
   ],
+
   // exports: [ RouterModule ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

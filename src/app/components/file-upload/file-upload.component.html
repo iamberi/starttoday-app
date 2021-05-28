@@ -1,42 +1,13 @@
-<div class="dropzone"
-     dropzone
-     (dropped)="startUpload($event)">
-
-     <h3>AngularFire Drop Zone</h3>
-     <p>Drag and Drop a File</p>
-     <div class="file">
-        <label class="file-label">
-
-          <input type="file" (change)="startUpload($event.target.files)">
-
-
-
-
-          <span class="file-cta">
-            <span class="file-icon">
-              <i class="fa fa-upload"></i>
-            </span>
-            <span class="file-label">
-              or choose a file…
-            </span>
-          </span>
-        </label>
-      </div>
-</div>
+<input type="file" (change)="startUpload($event.target.files)">
 
 <!-- Progressbar -->
-<div *ngIf="percentage | async as pct">
+<!-- <div *ngIf="percentage | async as pct">
   <progress [value]="pct" max="100"></progress>
   {{ pct | number }}%
-</div>
-
+</div> -->
 
 <div *ngIf="(snapshot | async) as snap">
-  {{ snap.bytesTransferred }} of {{ snap.totalBytes }}
-
-
   <div *ngIf="downloadURL as url">
-    <h3>Results!</h3>
     <img [src]="url"><br>
   </div>
-  </div>
+</div>

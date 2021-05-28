@@ -52,11 +52,6 @@ export class FileUploadComponent implements OnInit {
 
     this.snapshot   = this.task.snapshotChanges().pipe(
       tap(console.log),
-      /* tap(snap => {
-        if (snap.bytesTransferred === snap.totalBytes) {
-          this.db.collection('images').add( { downloadURL: this.downloadURL, path, size: snap.totalBytes } );
-        }
-      }) */
       finalize( async () =>  {
         this.downloadURL = await ref.getDownloadURL().toPromise();
 

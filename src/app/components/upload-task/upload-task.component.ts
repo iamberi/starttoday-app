@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -28,7 +28,7 @@ export class UploadTaskComponent implements OnInit {
   startUpload() {
 
     // The storage path
-    const path = `test/${Date.now()}_${this.file.name}`;
+    const path = `img/${Date.now()}_${this.file.name}`;
 
     // Reference to storage bucket
     const ref = this.storage.ref(path);

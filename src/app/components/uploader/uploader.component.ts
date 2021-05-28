@@ -11,11 +11,11 @@ export class UploaderComponent {
 
   files: File[] = [];
 
-  toggleHover(event: boolean) {
+  /* toggleHover(event: boolean) {
     this.isHovering = event;
   }
-
-  onDrop(files: FileList) {
+*/
+  upload(files: FileList) {
     for (let i = 0; i < files.length; i++) {
       this.files.push(files.item(i));
     }

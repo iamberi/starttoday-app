@@ -26,7 +26,6 @@ import { CardChallengeComponent } from './components/card-challenge/card-challen
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // components | upload
-import { DropzoneDirective } from './dropzone.directive';
 import { UploaderComponent } from './components/uploader/uploader.component';
 import { UploadTaskComponent } from './components/upload-task/upload-task.component';
 
@@ -165,7 +164,6 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
-    DropzoneDirective,
     UploaderComponent,
     UploadTaskComponent,
   ],

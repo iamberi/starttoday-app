@@ -3,6 +3,7 @@ import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
+import { Problem } from 'src/app/models/problem.model';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class FileUploadComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  startUpload( event: FileList ) {
+  startUpload( event: FileList, problemId: string): Observable<Problem> {
     // The file object
     const file = event.item(0);
 
@@ -59,6 +60,12 @@ export class FileUploadComponent implements OnInit {
       }),
     );
     }
+
+    /* AddImgProblem(problemId: string): Observable<Problem>{
+      this.db.collection('problem-collection')
+        .doc<Problem>(problemId)
+        .update( { downloadURL: this.downloadURL, path });
+    } */
   }
 
 

@@ -24,7 +24,7 @@ export class CreateProblemComponent implements OnInit {
       date: new Date(),
       votes: 0,
       statusvotes: 'vote',
-      socialpoints: 3
+      socialpoints: 3,
     });
   }
 

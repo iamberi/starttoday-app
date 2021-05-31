@@ -1,10 +1,5 @@
-<input type="file" (change)="startUpload($event.target.files)">
+<input type="file" (change)="startUpload($event.target.files, [])">
 
-<!-- Progressbar -->
-<!-- <div *ngIf="percentage | async as pct">
-  <progress [value]="pct" max="100"></progress>
-  {{ pct | number }}%
-</div> -->
 
 <div *ngIf="(snapshot | async) as snap">
   <div *ngIf="downloadURL as url">

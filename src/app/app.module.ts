@@ -35,7 +35,6 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { GalleryNComponent } from './components/gallery-n/gallery-n.component';
 import { AddSolutionComponent } from './probleme/add-solution/add-solution.component';
 
 // challenges
@@ -63,7 +62,6 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { GalleryChallengeComponent } from './gallery-challenge/gallery-challenge.component';
 
 
 
@@ -154,10 +152,8 @@ const routes: Routes = [
     DropdownComponent,
     DeleteProblemComponent,
     CommentsComponent,
-    GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
-    GalleryChallengeComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

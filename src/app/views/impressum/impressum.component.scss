@@ -38,6 +38,10 @@
   margin: 1.625em 0 1.25em 0;
 }
 
+.abstandimpressum {
+  margin-top: -5%;
+}
+
 .google-maps {
   background-color: #eee;
   width: 100%;
@@ -147,7 +151,7 @@ $mediumblu: #1e272d;
   margin: 1.625em 0 1.25em 0;
 }
 
-.google-maps {
+/* .google-maps {
   background-color: #eee;
   width: 100%;
   height: 100%;
@@ -289,7 +293,7 @@ label {
   align-content: flex-start;
 }
 
-/* .teilnehmerpicture {
+.teilnehmerpicture {
   margin-left: 0;
 
 } */

@@ -64,6 +64,7 @@ import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ImpressumComponent } from './views/impressum/impressum.component';
+import { ProfilUnternehmenComponent } from './profil-unternehmen/profil-unternehmen.component';
 
 
 
@@ -160,6 +161,7 @@ const routes: Routes = [
     DeleteChallengeComponent,
     AddSolutionComponent,
     ImpressumComponent,
+    ProfilUnternehmenComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

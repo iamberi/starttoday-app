@@ -16,7 +16,7 @@ export class FileUploadComponent implements OnInit {
 
   task: AngularFireUploadTask;
   snapshot: Observable<any>;
-  downloadURL: Observable<string>;
+  public downloadURL: Observable<string>;
 
   files: File[] = [];
 
@@ -55,6 +55,8 @@ export class FileUploadComponent implements OnInit {
         this.db.collection('images').add( { downloadURL: this.downloadURL, path });
       }),
     );
+    console.log(this.downloadURL, path);
+    return (this.downloadURL, path);
     }
 
     /* AddImgProblem(problemId: string): Observable<Problem>{

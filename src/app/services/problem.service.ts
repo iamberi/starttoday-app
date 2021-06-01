@@ -28,6 +28,14 @@ export class ProblemService {
     .get();
   }
 
+  getImageDoc (id) {
+    console.log(this.angularFirestore.collection('image').doc(id).get);
+    return this.angularFirestore
+    .collection('image')
+    .doc(id)
+    .get();
+  }
+
 
   updateVotes(problem: Problem,element, id){
     return this.angularFirestore

@@ -10,6 +10,9 @@ export class Problem {
   votes: number;
   statusvotes: string;
   socialpoints: number;
+  //image
   downloadURL: any;
   path: string;
+  //https://medium.com/weekly-webtips/handling-file-uploads-in-angular-reactive-approach-7f90453f57cb
+  imagePath: string;
 }

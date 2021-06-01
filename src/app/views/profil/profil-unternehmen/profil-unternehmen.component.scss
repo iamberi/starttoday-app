@@ -42,6 +42,24 @@
   margin-top: -5%;
 }
 
+.roundpicture {
+  position: absolute;
+  width: 5.75em;
+  border-radius: 50%;
+  border: 2px solid #E88E07;
+}
+
+.divroundpic {
+ display: flex;
+ justify-content: center;
+ margin-top: 5%;
+}
+
+.platzhaltertext {
+  text-align: center;
+  margin-top: 5%;
+}
+
 .google-maps {
   background-color: #eee;
   width: 100%;

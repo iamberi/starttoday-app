@@ -59,9 +59,11 @@ import { EditProblemComponent } from './probleme/edit-problem/edit-problem.compo
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { FaqComponent } from './faq/faq.component';
 
 
 
@@ -106,6 +108,7 @@ const routes: Routes = [
   { path: 'delete-challenge', component: DeleteChallengeComponent },
   { path: 'edit-challenge', component: EditChallengeComponent },
 
+  { path: 'faq', component: FaqComponent },
 
   { path: 'overview', component: OverviewComponent },
 
@@ -154,11 +157,13 @@ const routes: Routes = [
     CommentsComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
+    FaqComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
     NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
+    AccordionModule.forRoot(),
     AppRoutingModule,
     BrowserModule,
     CommonModule,

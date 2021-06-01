@@ -1,0 +1,49 @@
+@import "src/sass/styles.scss";
+
+//Contentbreite
+:host {
+  max-width: 28em;
+  display: block;
+  margin: $xxl-spacing auto $xl-spacing auto;
+  padding: 0 1.25em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+:host ::ng-deep .card-header {
+  background-color: white;
+}
+
+:host ::ng-deep .panel{
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+:host ::ng-deep .panel-heading{
+  flex-wrap: wrap;
+
+}
+
+:host ::ng-deep .panel-body{
+  border-top-color: #fff !important;
+}
+
+:host ::ng-deep .btn{
+  padding: 0px;
+}
+
+:host ::ng-deep .btn-link {
+  color: $color-primary;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  line-height: 1.438em;
+  //word-wrap: break-word;
+  max-width: 28em !important;
+}
+
+.accordion-challenge-container {
+ // max-width: 2em;
+}

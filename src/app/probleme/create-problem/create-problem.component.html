@@ -20,9 +20,23 @@
     <hr class="form-hr-head hr-down" />
 
     <!-- FORM INPUT -->
-    <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
+    <form [formGroup]="problemForm" novalidate><!-- (ngSubmit)="onSubmit()" -->
       <div class="form-input-wrapper">
-        <file-upload [image]="problemForm.controls.image"></file-upload>
+        <!-- <file-upload [image]="problemForm.controls.image"></file-upload> -->
+
+        <img
+          *ngIf="problemImagePreview"
+          class="preview-image"
+          [src]="problemImagePreview"
+          alt=""
+        />
+        <input
+          type="file"
+          accept="image/*"
+          formControlName="photo"
+        />
+
+
         <label class="form-input-label label">Standort</label>
         <input
           type="text"
@@ -62,7 +76,10 @@
             <option value="Vandalismus">Vandalismus</option>
             <option value="Umwelt">Umwelt</option>
           </select>
-          <button class="button-primary">Speichern</button>
+          <button
+          class="button-primary"
+          (click)="postProblem()"
+          >Speichern</button>
         </div>
       </div>
     </form>

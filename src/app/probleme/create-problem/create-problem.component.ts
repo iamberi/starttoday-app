@@ -25,6 +25,10 @@ export class CreateProblemComponent implements OnInit {
       votes: 0,
       statusvotes: 'vote',
       socialpoints: 3,
+      image: this.formBuilder.group({
+        downloadURL: [''],
+        path: [''],
+      }),
     });
   }
 

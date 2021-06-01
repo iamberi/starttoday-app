@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
-import { Problem } from 'src/app/models/problem.model';
+//import { Problem } from 'src/app/models/problem.model';
 
 
 @Component({
@@ -14,9 +15,6 @@ import { Problem } from 'src/app/models/problem.model';
 export class FileUploadComponent implements OnInit {
 
   task: AngularFireUploadTask;
-
-  // Progress monitoring
-  percentage: Observable<number>;
   snapshot: Observable<any>;
   downloadURL: Observable<string>;
 
@@ -24,10 +22,12 @@ export class FileUploadComponent implements OnInit {
 
   constructor(private storage: AngularFireStorage, private db: AngularFirestore) { }
 
+  @Input() image: FormGroup;
+
   ngOnInit(): void {
   }
 
-  startUpload( event: FileList, problemId: string): Observable<Problem> {
+  startUpload( event: FileList) {
     // The file object
     const file = event.item(0);
 
@@ -43,12 +43,8 @@ export class FileUploadComponent implements OnInit {
     // Reference to storage bucket
     const ref = this.storage.ref(path);
 
-
     // The main task
     this.task = this.storage.upload(path, file);
-
-    // Progress monitoring
-    this.percentage = this.task.percentageChanges();
 
 
     this.snapshot   = this.task.snapshotChanges().pipe(

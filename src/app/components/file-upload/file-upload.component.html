@@ -1,8 +1,12 @@
-<input type="file" (change)="startUpload($event.target.files, [])">
+<div [formGroup]="image">
+  <input
+    type="file"
+    #fileUploader
+    (change)="startUpload($event.target.files)">
 
-
-<div *ngIf="(snapshot | async) as snap">
-  <div *ngIf="downloadURL as url">
-    <img [src]="url"><br>
+  <div *ngIf="(snapshot | async) as snap">
+    <div *ngIf="downloadURL as url">
+      <img [src]="url"><br>
+    </div>
   </div>
 </div>

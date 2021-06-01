@@ -49,7 +49,13 @@
         />
         <hr class="hr-form" />
         <label class="text-input-label label">Challenge-Setter</label>
-        <input type="text" formControlName="setter" placeholder="Veranstalter der Challenge" class="form-control" required>
+        <input
+          type="text"
+          formControlName="setter"
+          placeholder="Veranstalter der Challenge"
+          class="form-control"
+          required
+        />
 
         <hr class="hr-form" />
         <label class="form-input-label label">Checkliste für Teilnehmer</label>
@@ -62,25 +68,35 @@
         />
         <hr class="hr-form" />
         <label class="text-input-label label">Eventtag</label>
-        <input type="text"
+        <input
+          id="challengeDate"
+          type="date"
+          class="form-control"
+          min="2021-05-31"
+          formControlName="eventDate"
+        />
+
+        <!-- DATEPICKER NGB -->
+        <!-- <input type="text"
           ngbDatepicker #d="ngbDatepicker"
           placeholder="Wann findet die Challenge statt?"
           class="form-control"
           bsDatepicker
-          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
+          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }"> -->
 
-          <!--
+        <!--
           <mat-form-field appearance="fill">
             <input matInput [matDatepicker]="dpicker" placeholder="Wähle den Tag des Events">
             <mat-datepicker-toggle matSuffix [for]="dpicker"></mat-datepicker-toggle>
             <mat-datepicker #dpicker></mat-datepicker>
           </mat-form-field>
           -->
-          <hr class="hr-form" />
-          <label class="text-input-label label">Uhrzeit</label>
-          <div class="ngx-timepicker-field-example">
+        <hr class="hr-form" />
+        <label class="text-input-label label">Uhrzeit</label>
+        <input type="time" class="form-control" formControlName="eventTime" />
+        <!-- <div class="ngx-timepicker-field-example">
             <ngx-timepicker-field [format]="24" [defaultTime]="'12:00'"></ngx-timepicker-field>
-          </div>
+          </div> -->
 
         <!-- BUTTONS -->
         <div class="form-button-wrapper">
@@ -94,8 +110,18 @@
             <option value="Vandalismus">Vandalismus</option>
             <option value="Umwelt">Umwelt</option>
           </select>
-          <button class="button-primary">Speichern</button>
+          <button class="button-primary" onclick="getDate();">Speichern</button>
         </div>
       </div>
     </form>
+  </div>
+
+  <!-- <script>
+  var dateNoFormat = document.getElementById(challengeDate);
+  function printOut(){
+    return console.log("It works");
+  };
+</script>
+-->
+  <button onclick="getDate();">This is text</button>
 </div>

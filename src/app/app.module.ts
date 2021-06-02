@@ -63,7 +63,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { FaqComponent } from './faq/faq.component';
+import { FaqComponent } from './views/faq/faq.component';
 
 
 

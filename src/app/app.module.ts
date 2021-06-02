@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
-
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
 // components
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
@@ -22,7 +22,6 @@ import { CardProblemeComponent } from './components/card-probleme/card-probleme.
 import { CardChallengeComponent } from './components/card-challenge/card-challenge.component';
 import { FormDividerComponent } from './components/form-divider/form-divider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 // views
 import { ProfilComponent } from './views/profil/profil.component';
@@ -158,7 +157,6 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
-    FileUploadComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
@@ -177,8 +175,8 @@ const routes: Routes = [
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
-    AngularFirestoreModule, //imports firebase/firestore, only needed for database features
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   // exports: [ RouterModule ],
   providers: [FirebaseService],

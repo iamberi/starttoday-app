@@ -41,24 +41,35 @@ export class CreateProblemComponent implements OnInit {
       votes: 0,
       statusvotes: 'vote',
       socialpoints: 3,
-      /* image: this.formBuilder.group({
+      image: this.formBuilder.group({
         downloadURL: [''],
-        path: [''], */
+        path: [''],
 
-      image: new FormControl (null, {validators: [Validators.required]})
-      });
-  }
+      //image: new FormControl (null, {validators: [Validators.required]})
+      }),
+  });
+}
 
-  onSubmit() {
-    this.db.collection('problem-collection').add
+  onSubmit(downloadURL, path) {
+    //this.db.collection('problem-collection').add
+  /*   this.problemForm.image.downloadURL='';
+    this.problemForm.image.path=''; */
     this.problemService.createProblem(this.problemForm.value);
+
+    /*this.db.collection('problem-collection').add({ downloadURL: this.downloadURL })
+    async function uploadImgDb(element) {
+
+    } */
+
+
+
     this.router.navigate(['/probleme']);
    };
 
-  ImageToDB(element){
+ /*  ImageToDB(element){
     this.problemService.getImageDoc(this.ImageID);
 
-  }
+  } */
  /*  onSelect (event: Event) {
     const file = (event.target as HTMLInputElement).files[0];
     this.problemForm.patchValue({image: file});
@@ -96,6 +107,7 @@ export class CreateProblemComponent implements OnInit {
           this.downloadURL = await ref.getDownloadURL().toPromise();
 
           this.db.collection('images').add( { downloadURL: this.downloadURL, path });
+          console.log(this.downloadURL, path);
           return (this.downloadURL, path);
         }),
       );

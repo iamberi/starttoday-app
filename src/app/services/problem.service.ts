@@ -30,10 +30,11 @@ export class ProblemService {
 
   getImageDoc (id) {
     console.log(this.angularFirestore.collection('image').doc(id).get);
-    return this.angularFirestore
+    this.angularFirestore
     .collection('image')
     .doc(id)
     .get();
+
   }
 
 

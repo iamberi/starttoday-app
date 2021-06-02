@@ -42,6 +42,7 @@ export class ProblemDetailComponent implements OnInit {
       this.problem = problem;
     });
   }
+  
   upvote(element){
     var res2;
     this.problemService.getProblemDog(this.id).subscribe((res) => {
@@ -67,5 +68,7 @@ export class ProblemDetailComponent implements OnInit {
     console.log("updated");
     console.log(element.target.classList);
     })
+
   }
+
 }

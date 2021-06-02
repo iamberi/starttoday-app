@@ -11,6 +11,7 @@ import { __classPrivateFieldSet } from 'tslib';
   styleUrls: ['./card-challenge.component.scss']
 })
 export class CardChallengeComponent implements OnInit {
+  Challenges: Challenge[];
 
   public vote: Challenge;
 

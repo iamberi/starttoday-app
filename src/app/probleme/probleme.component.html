@@ -6,15 +6,7 @@
   </svg>
 </div>
 <p class="open-problems"> 423 offene Probleme</p>
-
-<!-- <app-button
-[btntext]="'Problem hinzufügen'"
-[btnlink]="'/create-problem'"
-[type]="'primary'"
->
-</app-button> -->
-
-
+<app-add-content></app-add-content>
 <app-card-probleme *ngFor="let problem of Problems; let i=index"
 [titleProblem]="problem.title"
 [descriptionProblem]="problem.description"

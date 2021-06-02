@@ -62,6 +62,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { AddContentComponent } from './components/add-content/add-content.component';
 
 
 
@@ -154,6 +155,7 @@ const routes: Routes = [
     CommentsComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
+    AddContentComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

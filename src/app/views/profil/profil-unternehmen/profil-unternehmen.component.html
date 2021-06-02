@@ -1,12 +1,12 @@
 <div class="firstline">
     <div>
-      <a href="#"><svg aria-hidden="true" focusable="false" class="edit">
+      <a href="/profil/profil-bearbeiten"><svg aria-hidden="true" focusable="false" class="edit">
       <use xlink:href="#edit"/>
       </svg></a>
     </div>
     <div><b>Profil</b></div>
     <div>
-      <a href="#"><svg aria-hidden="true" focusable="false" class="setting">
+      <a href="/profil/einstellungen"><svg aria-hidden="true" focusable="false" class="setting">
       <use xlink:href="#setting"/>
       </svg></a>
     </div>
@@ -34,13 +34,15 @@
 </div>
 
 <div class="button-neueva">
-  <app-button
-  [btntext]="'+ Neue Veranstaltung'"
-  [type]="'button-primary'">
-  </app-button>
+  <a href="/create-challenge">
+    <app-button
+      [btntext]="'+ Neue Veranstaltung'"
+      [type]="'button-primary'">
+    </app-button>
+  </a>
 </div>
 
-<br><br>
+
 
 <div class="headline-links">
   <b>
@@ -51,7 +53,7 @@
 <div>
   <div class="boxes-grey">
     <div class="greybox box-color">
-        <p><a href="#">Bevorstehende Veranstaltungen</a></p>
+        <p><a href="/challenges">Bevorstehende Veranstaltungen</a></p>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
@@ -74,13 +76,13 @@
 <div>
   <div class="boxes-grey">
     <div class="greybox box-color">
-      <p><a href="#">FAQ</a></p>
+      <p><a href="/faq">FAQ</a></p>
       <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
       <use xlink:href="#arrow-left-profil"/>
       </svg>
     </div>
     <div class="greybox box-color">
-      <p><a href="#">Impressum</a></p>
+      <p><a href="/impressum">Impressum</a></p>
       <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
       <use xlink:href="#arrow-left-profil"/>
       </svg>

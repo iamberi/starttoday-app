@@ -54,27 +54,35 @@
         <input
           type="text"
           formControlName="description"
-          placeholder="Was brauchen die Teilnehmer?"
           class="form-control"
           required
         />
 
         <hr class="hr-form" />
         <label class="form-input-label label">Eventtag</label>
-        <input type="text"
+        <input
+          id="challengeDate"
+          type="date"
+          class="form-control"
+          min="2021-05-31"
+          formControlName="eventDate"
+          placeholder=""
+        />
+        <!--  <input type="text"
           ngbDatepicker #d="ngbDatepicker"
           placeholder="Wann findet die Challenge statt?"
           class="form-control"
           bsDatepicker
-          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }">
+          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }"> -->
         <hr class="hr-form" />
         <label class="form-input-label label">Uhrzeit</label>
-        <div class="ngx-timepicker-field-example">
+        <input type="time" class="form-control" formControlName="eventTime" />
+        <!-- <div class="ngx-timepicker-field-example">
           <ngx-timepicker-field
             [format]="24"
             [defaultTime]="'23:11'"
           ></ngx-timepicker-field>
-        </div>
+        </div> -->
 
         <!-- BUTTONS -->
         <div class="form-button-wrapper">

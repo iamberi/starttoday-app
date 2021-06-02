@@ -65,6 +65,7 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ImpressumComponent } from './views/impressum/impressum.component';
 import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
+import { ProfilPrivatpersonComponent } from './profil-privatperson/profil-privatperson.component';
 
 
 
@@ -163,6 +164,7 @@ const routes: Routes = [
     AddSolutionComponent,
     ImpressumComponent,
     ProfilUnternehmenComponent,
+    ProfilPrivatpersonComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

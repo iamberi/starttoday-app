@@ -66,6 +66,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { ImpressumComponent } from './views/impressum/impressum.component';
 import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
 import { ProfilPrivatpersonComponent } from './views/profil/profil-privatperson/profil-privatperson.component';
+import { UnderConstructionComponent } from './views/under-construction/under-construction.component';
 
 
 
@@ -116,6 +117,7 @@ const routes: Routes = [
   { path: 'impressum', component: ImpressumComponent },
   { path: 'profil/unternehmen', component: ProfilUnternehmenComponent },
   { path: 'profil/privatperson', component: ProfilPrivatpersonComponent },
+  { path: 'under-construction', component: UnderConstructionComponent },
 
 
 ];
@@ -166,6 +168,7 @@ const routes: Routes = [
     ImpressumComponent,
     ProfilUnternehmenComponent,
     ProfilPrivatpersonComponent,
+    UnderConstructionComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

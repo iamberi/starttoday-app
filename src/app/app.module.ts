@@ -55,7 +55,7 @@ import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.
 import { ErrorComponent } from './views/error/error.component';
 
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
-//import { LoginNComponent } from './views/login-n/login-n.component';
+import { LoginNComponent } from './views/login-n/login-n.component';
 import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
@@ -65,8 +65,6 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './gallery-n/gallery-n.component';
 import { DeleteChallengeComponent } from './views/delete-challenge/delete-challenge.component';
 import { AddSolutionComponent } from './views/problem/add-solution/add-solution.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 
 // Liste aller Routes
@@ -85,7 +83,7 @@ const routes: Routes = [
 
   { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
- // { path: 'login-n', component: LoginNComponent},
+  { path: 'login-n', component: LoginNComponent},
 
   { path: 'create-problem', component: CreateProblemComponent },
   { path: 'list-problems', component: ListProblemComponent },
@@ -142,7 +140,7 @@ const routes: Routes = [
     ProblemDeleteComponent,
     RegisterNComponent,
     WillkommenNComponent,
-    //LoginNComponent,
+    LoginNComponent,
     TestPasswortComponent,
     CreateProblemComponent,
     ListProblemComponent,
@@ -158,8 +156,6 @@ const routes: Routes = [
     GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
-    ForgotPasswordComponent,
-    VerifyEmailComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

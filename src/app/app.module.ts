@@ -69,7 +69,6 @@ import { AddSolutionComponent } from './views/problem/add-solution/add-solution.
 //Refactoring Login a la tutorial
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
-import { AuthGuard } from "./shared/guard/auth.guard";
 // Auth service
 import { AuthService } from './shared/services/auth.service';
 
@@ -83,7 +82,7 @@ const routes: Routes = [
   { path: 'profil', component: ProfilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'logged-in-start', component: LoggedInStartComponent , canActivate: [AuthGuard]},
+  { path: 'logged-in-start', component: LoggedInStartComponent },
 
   //Refactoring Login a la tutorial
   { path: 'verify-email', component: VerifyEmailComponent },

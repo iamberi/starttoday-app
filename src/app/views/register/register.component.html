@@ -1,5 +1,4 @@
 
-<!--bereits vor refactoirng auskommentiert-->
 <!-- <div *ngIf="!isSignedIn">
   <h2>Schön dich kennenzulernen.</h2>
   <p>Vor und Nachname</p>
@@ -22,13 +21,9 @@
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
 -->
-
-
 <!--https://angular.io/api/forms/Validators#email-->
 <!--Formular-->
 <!--{{diagnostic}}-->
-
-
 <a href="/willkommen-n">
   <svg class="icon-arrow-left" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-arrow-left"/>
@@ -36,56 +31,40 @@
 </a>
 <div *ngIf="!isSignedIn" [hidden]="submitted">
   <h1>Schön dich kennenzulernen.</h1>
-  <form>
-    <div class="form-group">
-      <label class="text-input-label label" for="email">E-Mail</label>
-      <input class="text-input-input form-input form-control" type="email" placeholder="E-Mail Adresse" #userEmail required>
-    </div>
-    <div class="form-group">
-      <label class="text-input-label label" for="email">E-Mail</label>
-      <input class="text-input-input form-input form-control" type="password" placeholder="Passwort" #userPwd required>
-    </div>
-  </form>
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-wrapper">
 
-
-  <!--auskommentiert refact-->
-    <!-- <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-wrapper">
-  <form #userForm="ngForm" class="form-wrapper"></form>
     <div class="form-group">
       <label class="text-input-label label" for="vorname">Vorname</label>
       <input class="text-input-input form-input form-control" placeholder="Maria" type="text" id="vorname"
           required
           [(ngModel)]="model.vorname" name="vorname"
           #vorname="ngModel">
-    </div> -->
+    </div>
 
-    <!-- Zeigt Fehlermeldung an || auskommentiert refac-->
-    <!-- <div [hidden]="vorname.valid || vorname.pristine"
+    <!-- Zeigt Fehlermeldung an-->
+    <div [hidden]="vorname.valid || vorname.pristine"
       class="alert alert-danger">
       Bitte gebe deinen Vornamen an.
     </div>
-    <hr class="hr-form"> -->
+    <hr class="hr-form">
 
-    <!--auskommentiert before refactoring-->
     <!--This example has a temporary diagnostic interpolation after each input tag, {{model.name}}, to show the current data value of the corresponding property. The note reminds you to remove the diagnostic lines when you have finished observing the two-way data binding at work.-->
 
-    <!--auskommentiert refac-->
-    <!-- <div class="form-group">
+    <div class="form-group">
       <label class="text-input-label label" for="nachname">Nachname</label>
       <input class="text-input-input form-input form-control" type="text" placeholder="Huber" id="nachname"
           required
           [(ngModel)]="model.nachname" name="nachname"
           #nachname="ngModel">
-    </div> -->
-    <!-- Zeigt Fehlermeldung an || auskommentiert refac-->
-    <!-- <div [hidden]="nachname.valid || nachname.pristine"
+    </div>
+    <!-- Zeigt Fehlermeldung an-->
+    <div [hidden]="nachname.valid || nachname.pristine"
       class="alert alert-danger">
       Bitte gebe deinen Nachnamen an.
     </div>
-    <hr class="hr-form"> -->
+    <hr class="hr-form">
 
-    <!--auskommentiert refac-->
-    <!-- <div class="form-group">
+    <div class="form-group">
       <label class="text-input-label label" for="mail">E-Mail Adresse</label>
       <input class="text-input-input form-input form-control" type="text" #emailSignup placeholder="maria.huber@mail.de" id="email"
           #mail="ngModel"
@@ -98,9 +77,8 @@
     	<small class="text-danger" *ngIf="mail.errors.required">Um dich registrieren zu können, benötigen wir Deine Mail Adresse.</small>
     	<small class="text-danger" *ngIf="mail.errors.pattern">Bitte überprüfe deine E-Mail Adresse</small>
   	</div>
-    <hr class="hr-form"> -->
+    <hr class="hr-form">
 
-    <!--Bevor Refactoring bereits auskommentiert-->
     <!--
     <div class="form-group">
       <label class="text-input-label label" for="mail2">Gebe deine E-Mail Adresse erneut ein</label>
@@ -119,18 +97,15 @@
     <hr class="hr-form">
   -->
 
-    <!--auskommentiert refac-->
-    <!-- <div class="form-group">
+    <div class="form-group">
       <label class="text-input-label label" for="mail">Passwort</label>
       <input class="text-input-input form-input form-control" type="text" #passwordSignup placeholder="Wähle weise" id="passwort"
         required minlength="10" maxlength="32" pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
         [(ngModel)]="model.passwort" name="passwort"
         #passwort="ngModel">
-    </div> -->
-
-    <!--auskommentiert refac-->
+    </div>
     <!-- Zeigt Fehlermeldung an-->
-    <!-- <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
+    <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
       <div *ngIf="passwort.errors.required">
         Bitte gebe ein Passwort ein.
       </div>
@@ -158,25 +133,27 @@
         required minlength="10"
         [(ngModel)]="model.passwort" name="passwort"
         #passwort="ngModel">
-    </div> -->
-
-    <!--auskommentiert refac-->
+    </div>
     <!-- Zeigt Fehlermeldung an-->
-    <!-- <div [hidden]="passwort.valid || passwort.pristine"
+    <div [hidden]="passwort.valid || passwort.pristine"
       class="alert alert-danger">
       Bitte gebe ein Passwort ein.
     </div>
     <hr class="hr-form">
   </form>
--->
+
 
   <p class="p-center">Unternehmensprofile können nach der Registrierung im Profil beantragt werden</p>
 
-
-  <!-- <button class="button-primary button-fullwidth" (click)="onSignup(emailSignup.value, passwordSignup.value); onSubmit(); userForm.reset()">Registrieren</button> -->
-  <button class="button-primary button-fullwidth" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrieren</button>
+  <!--
+  <app-button
+    [btnlink] = '"https://angular.io/guide/forms#build-the-form"'
+    [type]='"button-primary button-fullwidth"'
+    [btntext] = '"Jetzt registrieren"'
+  ></app-button>-->
+  <button class="button-primary button-fullwidth" (click)="onSignup(emailSignup.value, passwordSignup.value); onSubmit(); userForm.reset()">Registrieren</button>
+  <!--<button type="submit" class="button-primary button-fullwidth" [disabled]="!userForm.form.valid" (click)="newUser(); onSubmit(); userForm.reset() ">Registrieren</button>-->
 </div>
-
 
 <!--Text nach Registrierung-->
 <div [hidden]="!submitted">

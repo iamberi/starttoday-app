@@ -1,6 +1,5 @@
 import { FirebaseService } from './../../services/firebase.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -10,11 +9,7 @@ import { AuthService } from "../../shared/services/auth.service";
 export class LoginComponent implements OnInit {
 
   isSignedIn = false;
-  constructor
-    (
-    public FirebaseService: FirebaseService,
-    public authService: AuthService
-    ) { }
+  constructor(public FirebaseService: FirebaseService) { }
 
   ngOnInit(): void {
     if(localStorage.getItem('user')!== null)

@@ -1,9 +1,7 @@
 import { FirebaseService } from './../../services/firebase.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../../services/user';
-//Refactoring
-import { AuthService } from "../../shared/services/auth.service";
+import { User } from '../../user';
 
 @Component({
   selector: 'app-register',
@@ -19,9 +17,7 @@ export class RegisterComponent implements OnInit {
   constructor(
     public FirebaseService : FirebaseService,
     private _router: Router,
-    private _activatedRoute : ActivatedRoute,
-    public authService: AuthService
-    ) { }
+    private _activatedRoute : ActivatedRoute) { }
 
 
   newUser():void {

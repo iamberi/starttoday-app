@@ -115,6 +115,12 @@ const routes: Routes = [
 
 
 
+//Firebase imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { WillkommenComponent } from './views/willkommen/willkommen.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -177,8 +183,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
   ],
-  // exports: [ RouterModule ],
-  providers: [FirebaseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

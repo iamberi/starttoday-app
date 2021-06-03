@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from 'src/app//shared/services/user';
+import { User } from 'src/app/shared/services/user';
 //import { auth } from 'firebase/app';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
@@ -32,22 +32,20 @@ export class AuthService {
     }
 
     // Sign in with email/password
-  SignIn(email, password) {
-    //.auth nach afAuth weg, weil Fehlermeldung
-    return this.afAuth.signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
-        this.SetUserData(result.user);
-      }).catch((error) => {
-        window.alert(error.message)
-      })
-  }
+    SignIn(email, password) {
+      return this.afAuth.signInWithEmailAndPassword(email, password)
+        .then((result) => {
+          this.ngZone.run(() => {
+            this.router.navigate(['logged-in-start']);
+          });
+          this.SetUserData(result.user);
+        }).catch((error) => {
+          window.alert(error.message)
+        })
+    }
 
   // Sign up with email/password
   SignUp(email, password) {
-    //.auth nach afAuth weg, weil Fehlermeldung
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign
@@ -89,7 +87,7 @@ export class AuthService {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['logged-in-start']);
         })
       this.SetUserData(result.user);
     }).catch((error) => {

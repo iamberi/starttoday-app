@@ -1,4 +1,5 @@
 
+<!-- Backup oder sowas von vor Refactoring -->
 <!-- <div *ngIf="!isSignedIn">
   <h2>Willkommen zurück.</h2>
   <p>E-Mail</p>
@@ -14,7 +15,9 @@
 </div>
 <app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
 -->
-<a href="/willkommen-n">
+
+<!-- vor Refactoring -->
+<!-- <a href="/willkommen-n">
   <svg class="icon-arrow-left" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-arrow-left"/>
   </svg>
@@ -36,8 +39,35 @@
   <p class="p-center">Noch keinen Account? <a href="/register-n" class="link">Registrieren</a></p>
   <button (click)="onSignin(email.value, password.value)" class="button-primary button-fullwidth">Einloggen</button>
 </div>
-<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
+<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start> -->
 
+<a href="/willkommen-n">
+  <svg class="icon-arrow-left" aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-arrow-left"/>
+  </svg>
+</a>
+<div *ngIf="!isSignedIn">
+  <h1>Willkommen zurück.</h1>
+  <form class="form-wrapper">
+    <div class="form-group">
+      <label class="text-input-label label" for="E-Mail">E-Mail</label>
+      <input type="text" class="text-input-input form-input form-control" placeholder="Dein Benutzname" #userName required>
+      <hr class="hr-form">
+    </div>
+    <div class="form-group">
+      <label class="text-input-label label" for="E-Mail">Passwort</label>
+      <input type="password" class="text-input-input form-input form-control" placeholder="Passwort" #userPassword required>
+      <hr class="hr-form">
+    </div>
+  </form>
+  <p class="p-center">Passwort vergessen? <a href="/forgot-password" class="link">Passwort zurücksetzen</a></p>
+  <p class="p-center">Noch keinen Account? <a href="/register" class="link">Registrieren</a></p>
+
+  <!-- Calling SignIn Api from AuthService -->
+  <button class="button-primary button-fullwidth" (click)="authService.SignIn(userName.value, userPassword.value)">Einloggen</button>
+
+</div>
+<app-logged-in-start *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in-start>
 
 
 <p>login works!</p>

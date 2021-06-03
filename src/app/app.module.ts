@@ -65,12 +65,9 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './gallery-n/gallery-n.component';
 import { DeleteChallengeComponent } from './views/delete-challenge/delete-challenge.component';
 import { AddSolutionComponent } from './views/problem/add-solution/add-solution.component';
-
-//Refactoring Login a la tutorial
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
-// Auth service
-import { AuthService } from './shared/services/auth.service';
+
 
 // Liste aller Routes
 const routes: Routes = [
@@ -83,11 +80,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logged-in-start', component: LoggedInStartComponent },
-
-  //Refactoring Login a la tutorial
-  { path: 'verify-email', component: VerifyEmailComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
-
   { path: 'error', component: ErrorComponent },
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 
@@ -190,10 +182,7 @@ const routes: Routes = [
     AngularFirestoreModule, //imports firebase/firestore, only needed for database features
   ],
   // exports: [ RouterModule ],
-  providers:
-  [ FirebaseService,
-    AuthService
-  ],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

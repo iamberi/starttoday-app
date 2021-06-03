@@ -12,7 +12,7 @@ import { AuthService } from "../../shared/services/auth.service";
 })
 export class RegisterComponent implements OnInit {
 
-  model = new User (24, '', '', '', '','');
+/*   model = new User (24, '', '', '', '',''); */
   submitted = false;
   isSignedIn = false;
 
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
     ) { }
 
 
-  newUser():void {
+ /*  newUser():void {
     this.model = new User(42, '', '', '','', '');
   }
 
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
     const myUser =  new User(42, 'hanna', 'musterfrau', 'info@mail', 'info@mail','password');
     console.log('My hero is called ' + myUser.vorname); // "My hero is called SkyDog"
     return myUser;
-  }
+  } */
 
   ngOnInit(): void {
     if(localStorage.getItem('user')!== null)

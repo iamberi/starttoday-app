@@ -18,7 +18,8 @@ export class CreateProblemComponent implements OnInit {
 
   task: AngularFireUploadTask;
   snapshot: Observable<any>;
-  public downloadURL: Observable<string>
+  public downloadURL: Observable<string>;
+  public path: string;
   files: File[] = [];
 
   constructor(
@@ -50,18 +51,21 @@ export class CreateProblemComponent implements OnInit {
   });
 }
 
-  onSubmit(downloadURL, path) {
+  onSubmit() {
     //this.db.collection('problem-collection').add
   /*   this.problemForm.image.downloadURL='';
     this.problemForm.image.path=''; */
+    console.log('test2', this.problemForm.value);
+    this.problemForm.value.image.downloadURL = this.downloadURL;
+    this.problemForm.value.image.path = this.path;
     this.problemService.createProblem(this.problemForm.value);
 
     /*this.db.collection('problem-collection').add({ downloadURL: this.downloadURL })
     async function uploadImgDb(element) {
 
     } */
-
-
+    console.log('test', this.downloadURL, this.path);
+    //this.db.collection('problem-collection').doc().add( { downloadURL: this.downloadURL, path: this.path });
 
     this.router.navigate(['/probleme']);
    };
@@ -92,13 +96,13 @@ export class CreateProblemComponent implements OnInit {
       }
 
       // The storage path
-      const path = `images/${new Date().getTime()}_${file.name}`;
+      this.path = `images/${new Date().getTime()}_${file.name}`;
 
       // Reference to storage bucket
-      const ref = this.storage.ref(path);
+      const ref = this.storage.ref(this.path);
 
       // The main task
-      this.task = this.storage.upload(path, file);
+      this.task = this.storage.upload(this.path, file);
 
 
       this.snapshot   = this.task.snapshotChanges().pipe(
@@ -106,9 +110,9 @@ export class CreateProblemComponent implements OnInit {
         finalize( async () =>  {
           this.downloadURL = await ref.getDownloadURL().toPromise();
 
-          this.db.collection('images').add( { downloadURL: this.downloadURL, path });
-          console.log(this.downloadURL, path);
-          return (this.downloadURL, path);
+          this.db.collection('images').add( { downloadURL: this.downloadURL, path: this.path });
+          console.log(this.downloadURL, this.path);
+          return (this.downloadURL, this.path);
         }),
       );
       }

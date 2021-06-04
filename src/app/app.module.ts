@@ -37,6 +37,8 @@ import { DropdownComponent } from './components/buttons/dropdown/dropdown.compon
 import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './components/gallery-n/gallery-n.component';
 import { AddSolutionComponent } from './probleme/add-solution/add-solution.component';
+import { BevorstehendeChallengesComponent } from './views/profil/bevorstehende-challenges/bevorstehende-challenges.component';
+import { VergangeneChallengesComponent } from './views/profil/vergangene-challenges/vergangene-challenges.component';
 
 // challenges
 import { ChallengesComponent } from './challenges/challenges.component';
@@ -66,6 +68,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { ImpressumComponent } from './views/impressum/impressum.component';
 import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
 import { ProfilPrivatpersonComponent } from './views/profil/profil-privatperson/profil-privatperson.component';
+
 
 
 
@@ -114,10 +117,12 @@ const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
 
   { path: 'impressum', component: ImpressumComponent },
+
+  //Profilansicht
   { path: 'profil/unternehmen', component: ProfilUnternehmenComponent },
   { path: 'profil/privatperson', component: ProfilPrivatpersonComponent },
-
-
+  { path: 'bevorstehende-challenges', component: BevorstehendeChallengesComponent },
+  { path: 'vergangene-challenges', component: VergangeneChallengesComponent },
 ];
 
 
@@ -166,6 +171,8 @@ const routes: Routes = [
     ImpressumComponent,
     ProfilUnternehmenComponent,
     ProfilPrivatpersonComponent,
+    BevorstehendeChallengesComponent,
+    VergangeneChallengesComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

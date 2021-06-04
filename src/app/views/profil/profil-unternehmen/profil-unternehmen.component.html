@@ -34,12 +34,11 @@
 </div>
 
 <div class="button-neueva">
-  <a href="/create-challenge">
-    <app-button
-      [btntext]="'+ Neue Veranstaltung'"
-      [type]="'button-primary'">
-    </app-button>
-  </a>
+  <app-button
+    [btntext]="'+ Neue Veranstaltung'"
+    [type]="'button-primary'"
+    [btnlink]="'/create-challenge'">
+  </app-button>
 </div>
 
 
@@ -53,13 +52,13 @@
 <div>
   <div class="boxes-grey">
     <div class="greybox box-color">
-        <p><a href="/challenges">Bevorstehende Veranstaltungen</a></p>
+        <p><a href="/bevorstehende-challenges">Bevorstehende Veranstaltungen</a></p>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
     </div>
     <div class="greybox box-color">
-      <p><a href="#">Vergangene Veranstaltungen</a></p>
+      <p><a href="/vergangene-challenges">Vergangene Veranstaltungen</a></p>
       <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
       <use xlink:href="#arrow-left-profil"/>
       </svg>

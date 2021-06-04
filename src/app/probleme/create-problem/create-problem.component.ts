@@ -14,8 +14,6 @@ import { finalize, tap } from 'rxjs/operators';
 })
 export class CreateProblemComponent implements OnInit {
   public problemForm: FormGroup;
-  public imagePreview: string;
-
   task: AngularFireUploadTask;
   snapshot: Observable<any>;
   public downloadURL: Observable<string>;
@@ -29,9 +27,6 @@ export class CreateProblemComponent implements OnInit {
     private storage: AngularFireStorage,
     private db: AngularFirestore
   ) {  }
-
-  @Input() ImageID: string;
-
   ngOnInit(): void {
     this.problemForm = this.formBuilder.group({
       title: [''],
@@ -42,22 +37,15 @@ export class CreateProblemComponent implements OnInit {
       votes: 0,
       statusvotes: 'vote',
       socialpoints: 3,
-     /*  image: this.formBuilder.group({
-        downloadURL: [''],
-        path: [''],
-      }), */
       downloadURL: [''],
       path: [''],
   });
 }
 
   onSubmit() {
-
-    console.log('test2', this.problemForm.value);
     this.problemForm.value.downloadURL = this.downloadURL;
     this.problemForm.value.path = this.path;
     this.problemService.createProblem(this.problemForm.value);
-    console.log('test', this.downloadURL, this.path);
     this.router.navigate(['/probleme']);
    };
 
@@ -71,7 +59,7 @@ export class CreateProblemComponent implements OnInit {
         return;
       }
       // The storage path
-      this.path = `images/${new Date().getTime()}_${file.name}`;
+      this.path = `images/probleme/${new Date().getTime()}_${file.name}`;
 
       // Reference to storage bucket
       const ref = this.storage.ref(this.path);

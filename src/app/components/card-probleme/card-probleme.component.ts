@@ -27,6 +27,7 @@ export class CardProblemeComponent implements OnInit {
   @Input() votesProblem: string;
   @Input() id: string;
   @Input() statusvotesProblem: string;
+  @Input() downloadURL: string;
   ngOnInit(): void {
   }
 

@@ -45,56 +45,29 @@ export class CreateProblemComponent implements OnInit {
       image: this.formBuilder.group({
         downloadURL: [''],
         path: [''],
-
-      //image: new FormControl (null, {validators: [Validators.required]})
       }),
   });
 }
 
   onSubmit() {
-    //this.db.collection('problem-collection').add
-  /*   this.problemForm.image.downloadURL='';
-    this.problemForm.image.path=''; */
+
     console.log('test2', this.problemForm.value);
     this.problemForm.value.image.downloadURL = this.downloadURL;
     this.problemForm.value.image.path = this.path;
     this.problemService.createProblem(this.problemForm.value);
-
-    /*this.db.collection('problem-collection').add({ downloadURL: this.downloadURL })
-    async function uploadImgDb(element) {
-
-    } */
     console.log('test', this.downloadURL, this.path);
-    //this.db.collection('problem-collection').doc().add( { downloadURL: this.downloadURL, path: this.path });
-
     this.router.navigate(['/probleme']);
    };
 
- /*  ImageToDB(element){
-    this.problemService.getImageDoc(this.ImageID);
-
-  } */
- /*  onSelect (event: Event) {
-    const file = (event.target as HTMLInputElement).files[0];
-    this.problemForm.patchValue({image: file});
-    this.problemForm.get('image').updateValueAndValidity();
-    const reader = new FileReader();
-    reader.onload = () => {
-    this.imagePreview = reader.result.toString();
-    };
-    reader.readAsDataURL(file);
-    } */
 
     startUpload( event: FileList) {
       // The file object
       const file = event.item(0);
-
       // Client-side validation
       if (file.type.split('/')[0] !== 'image') {
         console.error('unsupported file type :( ');
         return;
       }
-
       // The storage path
       this.path = `images/${new Date().getTime()}_${file.name}`;
 

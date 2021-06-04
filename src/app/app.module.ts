@@ -36,6 +36,17 @@ import { RegularButtonComponent } from './components/buttons/regular-button/regu
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { AddSolutionComponent } from './probleme/add-solution/add-solution.component';
+import { ImpressumComponent } from './views/impressum/impressum.component';
+
+// Profil
+import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
+import { ProfilPrivatpersonComponent } from './views/profil/profil-privatperson/profil-privatperson.component';
+import { BevorstehendeChallengesComponent } from './views/profil/bevorstehende-challenges/bevorstehende-challenges.component';
+import { VergangeneChallengesComponent } from './views/profil/vergangene-challenges/vergangene-challenges.component';
+import { EingereichteProblemeComponent } from './views/profil/eingereichte-probleme/eingereichte-probleme.component';
+import { GeloesteProblemeComponent } from './views/profil/geloeste-probleme/geloeste-probleme.component';
+import { BevorstehendeChallengesPComponent } from './views/profil/bevorstehende-challenges-p/bevorstehende-challenges-p.component';
+
 
 // challenges
 import { ChallengesComponent } from './challenges/challenges.component';
@@ -59,11 +70,15 @@ import { EditProblemComponent } from './probleme/edit-problem/edit-problem.compo
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AddContentComponent } from './components/add-content/add-content.component';
 
+import { VerifizierungComponent } from './views/profil/verifizierung/verifizierung.component';
+
+import { FaqComponent } from './views/faq/faq.component';
 
 
 
@@ -108,8 +123,22 @@ const routes: Routes = [
   { path: 'delete-challenge', component: DeleteChallengeComponent },
   { path: 'edit-challenge', component: EditChallengeComponent },
 
+  { path: 'faq', component: FaqComponent },
 
   { path: 'overview', component: OverviewComponent },
+
+  { path: 'impressum', component: ImpressumComponent },
+
+  //Profilansicht
+  { path: 'profil/unternehmen', component: ProfilUnternehmenComponent },
+  { path: 'profil/privatperson', component: ProfilPrivatpersonComponent },
+  { path: 'bevorstehende-challenges', component: BevorstehendeChallengesComponent },
+  { path: 'vergangene-challenges', component: VergangeneChallengesComponent },
+  { path: 'meine-challenges', component: BevorstehendeChallengesPComponent },
+  { path: 'geloeste-probleme', component: GeloesteProblemeComponent },
+  { path: 'eingereichte-probleme', component: EingereichteProblemeComponent },
+  { path: 'verifizierung', component: VerifizierungComponent },
+
 
 
 ];
@@ -157,11 +186,22 @@ const routes: Routes = [
     DeleteChallengeComponent,
     AddSolutionComponent,
     AddContentComponent,
+    ImpressumComponent,
+    ProfilUnternehmenComponent,
+    ProfilPrivatpersonComponent,
+    BevorstehendeChallengesComponent,
+    VergangeneChallengesComponent,
+    EingereichteProblemeComponent,
+    GeloesteProblemeComponent,
+    BevorstehendeChallengesPComponent,
+    VerifizierungComponent,
+    FaqComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
     NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
+    AccordionModule.forRoot(),
     AppRoutingModule,
     BrowserModule,
     CommonModule,

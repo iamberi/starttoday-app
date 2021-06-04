@@ -48,7 +48,7 @@ export class CardChallengeComponent implements OnInit {
 
       if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
-        this.vote.statusvotes = 'gevotet';
+        this.vote.statusvotes = 'gevotet ✔️';
         /* console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
         console.log("upgevotet"); */

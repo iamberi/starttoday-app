@@ -35,7 +35,6 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { GalleryNComponent } from './components/gallery-n/gallery-n.component';
 import { AddSolutionComponent } from './probleme/add-solution/add-solution.component';
 import { ImpressumComponent } from './views/impressum/impressum.component';
 
@@ -71,11 +70,13 @@ import { EditProblemComponent } from './probleme/edit-problem/edit-problem.compo
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { VerifizierungComponent } from './views/profil/verifizierung/verifizierung.component';
 
+import { FaqComponent } from './views/faq/faq.component';
 
 
 
@@ -120,6 +121,7 @@ const routes: Routes = [
   { path: 'delete-challenge', component: DeleteChallengeComponent },
   { path: 'edit-challenge', component: EditChallengeComponent },
 
+  { path: 'faq', component: FaqComponent },
 
   { path: 'overview', component: OverviewComponent },
 
@@ -179,7 +181,6 @@ const routes: Routes = [
     DropdownComponent,
     DeleteProblemComponent,
     CommentsComponent,
-    GalleryNComponent,
     DeleteChallengeComponent,
     AddSolutionComponent,
     ImpressumComponent,
@@ -191,11 +192,13 @@ const routes: Routes = [
     GeloesteProblemeComponent,
     BevorstehendeChallengesPComponent,
     VerifizierungComponent,
+    FaqComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),
     NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
+    AccordionModule.forRoot(),
     AppRoutingModule,
     BrowserModule,
     CommonModule,

@@ -16,13 +16,9 @@
     <p class="text-upvote">{{ problem.statusvotes }}</p>
   </div>
 
-  <img
-    class="detail-image"
-    alt=""
-    src="{{problem.downloadURL}}"
-  />
-
-  <!-- <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+  <img class="detail-image" alt="" src="{{ problem.downloadURL }}" />
+</div>
+<!-- <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
     <ng-template ngbSlide *ngFor="let image of images">
       <div class="picsum-img-wrapper">
         <img class="img-gallery" [src]="image" alt="Random slide">

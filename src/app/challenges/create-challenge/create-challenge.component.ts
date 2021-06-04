@@ -41,15 +41,23 @@ export class CreateChallengeComponent implements OnInit {
       socialpoints: 5,
       downloadURL: [''],
       path: [''],
+      eventDate: ['getDate();'], // formatedDate
+      eventTime: [''],
     });
   }
 
+  // tslint:disable-next-line:typedef
   onSubmit() {
     this.challengeForm.value.downloadURL = this.downloadURL;
     this.challengeForm.value.path = this.path;
     this.challengeService.createChallenge(this.challengeForm.value);
     this.router.navigate(['/challenges']);
-   };
+
+
+
+
+    // console.log(testDate);
+   }
 
 
    startUpload( event: FileList) {
@@ -83,3 +91,5 @@ export class CreateChallengeComponent implements OnInit {
     }
 
 }
+
+

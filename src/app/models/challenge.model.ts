@@ -16,4 +16,6 @@ export class Challenge {
   socialpoints: number;
   downloadURL: string;
   path: string;
+  eventDate: string;
+  eventTime: string;
 }

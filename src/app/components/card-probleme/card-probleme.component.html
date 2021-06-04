@@ -1,9 +1,10 @@
 <div class="wrapper-card">
   <div class="intro-wrapper">
-    <svg class="icon-star" aria-hidden="true" focusable="false">
+    <!-- <svg class="icon-star" aria-hidden="true" focusable="false">
       <use xlink:href="#icon-star"/>
-    </svg>
+    </svg> -->
     <img class="img-probleme" alt="Bild vom Problem" src={{downloadURL}}/>
+
     <div id="upvote-button" class="upvote-button-wrapper" (click)="upvote($event)">
       <div class="number-upvote">
         {{votesProblem}}
@@ -12,6 +13,6 @@
     </div>
   </div>
   <p class="location-problem">{{locationProblem}} · <span> {{categoryProblem}} </span></p>
-  <h3 class="titel-problem">{{titleProblem}}</h3>
+  <h3 class="titel-problem" routerLink="/problem-detail/{{id}}">{{titleProblem}}</h3>
 
 </div>

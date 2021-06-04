@@ -1,46 +1,56 @@
 <div class="wrapper-card">
   <div class="intro-wrapper image-gradient">
     <svg class="icon-star" aria-hidden="true" focusable="false">
-      <use xlink:href="#icon-star"/>
+      <use xlink:href="#icon-star" />
     </svg>
     <img class="img-probleme" alt="Beschreibung des Problems" src={{downloadURL}}/>
     <div id="upvote-button" class="upvote-button-wrapper" (click)="upvote($event)">
       <div class="number-upvote">
-        {{votesChallenge}}
+        {{ votesChallenge }}
       </div>
-      <p class="text-upvote"> {{statusvotesChallenge}}</p>
+      <p class="text-upvote">{{ statusvotesChallenge }}</p>
     </div>
     <div class="wrapper-main-infos-challenge">
       <div class="wrapper-challengesetter">
-        <img class="img-challengesetter" alt="Veranstalter" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stadt-Essen-Logo.svg/600px-Stadt-Essen-Logo.svg.png">
-        <p class="p-info name-challengesetter">{{setterChallenge}}</p>
+        <img
+          class="img-challengesetter"
+          alt="Veranstalter"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stadt-Essen-Logo.svg/600px-Stadt-Essen-Logo.svg.png"
+        />
+        <p class="p-info name-challengesetter">{{ setterChallenge }}</p>
       </div>
-      <p class="location-challenge">{{locationChallenge}} · <span>{{categoryChallenge}}</span></p>
-      <h3 class="titel-challenge">{{titleChallenge}}</h3>
+      <p class="location-challenge">
+        {{ locationChallenge }} · <span>{{ categoryChallenge }}</span>
+      </p>
+      <h3 routerLink="/challenge-detail/{{id}}" class="titel-challenge">
+        {{ titleChallenge }}
+      </h3>
+<!--       <span routerLink="/challenge-detail/{{challenge.id}}" class="text-primary">Detail</span>&nbsp;
+ -->
+
     </div>
-    <div class="image-gradient-challenge">
-    </div>
+    <div class="image-gradient-challenge"></div>
   </div>
 
   <div class="wrapper-detail-infos">
     <div class="detail-infos-element">
       <svg aria-hidden="true" focusable="false">
-        <use xlink:href="#icon-calendar"/>
+        <use xlink:href="#icon-calendar" />
       </svg>
-      <p class="text-detail-challenge">{{dateChallenge}}DD.MM.YYYY</p>
+      <p class="text-detail-challenge">{{ eventDateChallenge }}</p>
     </div>
     <div class="detail-infos-element">
       <svg aria-hidden="true" focusable="false">
-        <use xlink:href="#icon-clock"/>
+        <use xlink:href="#icon-clock" />
       </svg>
-      <p class="text-detail-challenge">09:30 Uhr</p>
+      <p class="text-detail-challenge">{{ eventTimeChallenge }} Uhr</p>
     </div>
     <div class="detail-infos-element">
       <svg class="icon-vertical" aria-hidden="true" focusable="false">
-        <use xlink:href="#icon-challenge"/>
+        <use xlink:href="#icon-challenge" />
       </svg>
-      <p class="text-detail-challenge">{{socialpointsChallenge}}</p>
+      <p class="text-detail-challenge">{{ socialpointsChallenge }}</p>
     </div>
   </div>
-  <hr class="card-challenge-hr">
+  <hr class="card-challenge-hr" />
 </div>

@@ -37,8 +37,17 @@ import { DropdownComponent } from './components/buttons/dropdown/dropdown.compon
 import { CommentsComponent } from './components/comments/comments.component';
 import { GalleryNComponent } from './components/gallery-n/gallery-n.component';
 import { AddSolutionComponent } from './probleme/add-solution/add-solution.component';
+import { ImpressumComponent } from './views/impressum/impressum.component';
+
+// Profil
+import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
+import { ProfilPrivatpersonComponent } from './views/profil/profil-privatperson/profil-privatperson.component';
 import { BevorstehendeChallengesComponent } from './views/profil/bevorstehende-challenges/bevorstehende-challenges.component';
 import { VergangeneChallengesComponent } from './views/profil/vergangene-challenges/vergangene-challenges.component';
+import { EingereichteProblemeComponent } from './views/profil/eingereichte-probleme/eingereichte-probleme.component';
+import { GeloesteProblemeComponent } from './views/profil/geloeste-probleme/geloeste-probleme.component';
+import { BevorstehendeChallengesPComponent } from './views/profil/bevorstehende-challenges-p/bevorstehende-challenges-p.component';
+
 
 // challenges
 import { ChallengesComponent } from './challenges/challenges.component';
@@ -65,9 +74,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { ImpressumComponent } from './views/impressum/impressum.component';
-import { ProfilUnternehmenComponent } from './views/profil/profil-unternehmen/profil-unternehmen.component';
-import { ProfilPrivatpersonComponent } from './views/profil/profil-privatperson/profil-privatperson.component';
+import { VerifizierungComponent } from './views/profil/verifizierung/verifizierung.component';
 
 
 
@@ -123,6 +130,13 @@ const routes: Routes = [
   { path: 'profil/privatperson', component: ProfilPrivatpersonComponent },
   { path: 'bevorstehende-challenges', component: BevorstehendeChallengesComponent },
   { path: 'vergangene-challenges', component: VergangeneChallengesComponent },
+  { path: 'meine-challenges', component: BevorstehendeChallengesPComponent },
+  { path: 'geloeste-probleme', component: GeloesteProblemeComponent },
+  { path: 'eingereichte-probleme', component: EingereichteProblemeComponent },
+  { path: 'verifizierung', component: VerifizierungComponent },
+
+
+
 ];
 
 
@@ -173,6 +187,10 @@ const routes: Routes = [
     ProfilPrivatpersonComponent,
     BevorstehendeChallengesComponent,
     VergangeneChallengesComponent,
+    EingereichteProblemeComponent,
+    GeloesteProblemeComponent,
+    BevorstehendeChallengesPComponent,
+    VerifizierungComponent,
   ],
   imports: [
     BsDatepickerModule.forRoot(),

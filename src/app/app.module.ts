@@ -90,7 +90,7 @@ const routes: Routes = [
   { path: 'register-n', component: RegisterNComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
-  { path: 'profil', component: ProfilComponent },
+  { path: 'profil', component:  ProfilUnternehmenComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logged-in-start', component: LoggedInStartComponent },

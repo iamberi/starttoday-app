@@ -10,7 +10,6 @@ export class Problem {
   votes: number;
   statusvotes: string;
   socialpoints: number;
-  //image
-  downloadURL: any;
+  downloadURL: string;
   path: string;
 }

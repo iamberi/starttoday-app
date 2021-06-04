@@ -42,18 +42,20 @@ export class CreateProblemComponent implements OnInit {
       votes: 0,
       statusvotes: 'vote',
       socialpoints: 3,
-      image: this.formBuilder.group({
+     /*  image: this.formBuilder.group({
         downloadURL: [''],
         path: [''],
-      }),
+      }), */
+      downloadURL: [''],
+      path: [''],
   });
 }
 
   onSubmit() {
 
     console.log('test2', this.problemForm.value);
-    this.problemForm.value.image.downloadURL = this.downloadURL;
-    this.problemForm.value.image.path = this.path;
+    this.problemForm.value.downloadURL = this.downloadURL;
+    this.problemForm.value.path = this.path;
     this.problemService.createProblem(this.problemForm.value);
     console.log('test', this.downloadURL, this.path);
     this.router.navigate(['/probleme']);

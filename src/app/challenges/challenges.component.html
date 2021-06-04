@@ -25,4 +25,10 @@
 [votesChallenge]="challenge.votes"
 [id]="challenge.id"
 [statusvotesChallenge]="challenge.statusvotes"
+
+routerLink="/challenge-detail/{{challenge.id}}"
+
+
 ></app-card-challenge>
+<!-- Damit Einträge nicht unter der Navi verschwinden-->
+<div class="spacedown"></div>

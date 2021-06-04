@@ -34,6 +34,15 @@ export class CardChallengeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.challengeService.getChallengeList().subscribe(res => {
+      this.Challenges = res.map( e => {
+        console.log(e.payload.doc.data());
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data() as object)
+        } as Challenge;
+      });
+    });
   }
 
   styleChange(element){

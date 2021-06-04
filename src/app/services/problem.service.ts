@@ -28,7 +28,6 @@ export class ProblemService {
     .get();
   }
 
-
   updateVotes(problem: Problem,element, id){
     return this.angularFirestore
     .collection('problem-collection')

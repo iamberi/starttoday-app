@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
-
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
 // components
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonIconComponent } from './components/buttons/button-icon/button-icon.component';
@@ -63,6 +63,7 @@ import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AddContentComponent } from './components/add-content/add-content.component';
+
 
 
 
@@ -174,8 +175,8 @@ const routes: Routes = [
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
-    AngularFirestoreModule, //imports firebase/firestore, only needed for database features
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   // exports: [ RouterModule ],
   providers: [FirebaseService],

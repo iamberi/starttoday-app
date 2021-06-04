@@ -29,6 +29,7 @@ export class CardChallengeComponent implements OnInit {
   @Input() votesChallenge: string;
   @Input() id: string;
   @Input() statusvotesChallenge: string;
+  @Input() downloadURL: string;
 
 
 

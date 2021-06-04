@@ -21,6 +21,16 @@
     <!-- FORM INPUT -->
     <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="form-input-wrapper">
+        <input
+          type="file"
+          (change)="startUpload($event.target.files)">
+
+        <div *ngIf="(snapshot | async) as snap">
+          <div *ngIf="downloadURL as url">
+            <img [src]="url"><br>
+          </div>
+        </div>
+
         <label class="form-input-label label">Standort</label>
         <input
           type="text"

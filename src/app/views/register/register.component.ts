@@ -26,13 +26,13 @@ export class RegisterComponent implements OnInit {
 
  /*  newUser():void {
     this.model = new User(42, '', '', '','', '');
-  }
+  }*/
 
   onSubmit():void {
     this.submitted = true;
     return;
   }
-
+/*
   skyDog(): User {
     const myUser =  new User(42, 'hanna', 'musterfrau', 'info@mail', 'info@mail','password');
     console.log('My hero is called ' + myUser.vorname); // "My hero is called SkyDog"

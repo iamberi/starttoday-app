@@ -18,49 +18,4 @@
   margin-right: 30%;
 }
 
-.add-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
 
-
-.image-upload::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.image-upload::before {
-  content: "+";
-  display: inline-block;
-  background: $color-secondary;
-  cursor: pointer;
-  font-weight: 100;
-  font-size: 40pt;
-  color: #fff;
-
-  // Rund machen
-  width: 112px;
-  height: 112px;
-  -moz-border-radius: 56px;
-  -webkit-border-radius: 56px;
-  border-radius: 56px;
-  line-height: 112px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.image-upload::after{
-  display: none;
-}
-
-
-.image-upload {
-  height: 112px;
-  width: 112px;
-  object-fit: cover;
-
-  margin: 20px;
-}
-.image-create {
-  height: 15em;
-  width: 28em;
-  object-fit: cover;
-}

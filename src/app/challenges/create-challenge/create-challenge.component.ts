@@ -54,9 +54,6 @@ export class CreateChallengeComponent implements OnInit {
     this.router.navigate(['/challenges']);
 
 
-
-
-    // console.log(testDate);
    }
 
 

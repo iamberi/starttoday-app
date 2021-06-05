@@ -1,10 +1,21 @@
+<script>
+  function getCategory(){
+  var category = document.getElementById("category-card").innerHTML;
+  console.log(category);
+}
+</script>
 <div class="wrapper-card">
   <div class="intro-wrapper image-gradient">
-    <svg class="icon-star" aria-hidden="true" focusable="false">
-      <use xlink:href="#icon-star" />
-    </svg>
-    <img class="img-probleme" alt="Beschreibung des Problems" src={{downloadURL}}/>
-    <div id="upvote-button" class="upvote-button-wrapper" (click)="upvote($event)">
+    <img
+      class="img-probleme"
+      alt="Beschreibung des Problems"
+      src="{{ downloadURL }}"
+    />
+    <div
+      id="upvote-button"
+      class="upvote-button-wrapper"
+      (click)="upvote($event)"
+    >
       <div class="number-upvote">
         {{ votesChallenge }}
       </div>
@@ -20,14 +31,13 @@
         <p class="p-info name-challengesetter">{{ setterChallenge }}</p>
       </div>
       <p class="location-challenge">
-        {{ locationChallenge }} · <span>{{ categoryChallenge }}</span>
+        {{ locationChallenge }} · <span onclick="getCategory();" class="category-card">{{categoryChallenge}}</span>
       </p>
-      <h3 routerLink="/challenge-detail/{{id}}" class="titel-challenge">
+      <h3 routerLink="/challenge-detail/{{ id }}" class="titel-challenge">
         {{ titleChallenge }}
       </h3>
-<!--       <span routerLink="/challenge-detail/{{challenge.id}}" class="text-primary">Detail</span>&nbsp;
+      <!--       <span routerLink="/challenge-detail/{{challenge.id}}" class="text-primary">Detail</span>&nbsp;
  -->
-
     </div>
     <div class="image-gradient-challenge"></div>
   </div>
@@ -54,3 +64,4 @@
   </div>
   <hr class="card-challenge-hr" />
 </div>
+

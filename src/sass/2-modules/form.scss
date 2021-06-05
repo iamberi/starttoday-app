@@ -10,13 +10,19 @@
 .form-container {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: left;
   flex-direction: column;
 }
 
+
+.form-iconclose-cross{
+  width: 1em;
+  height: 1em;
+}
+.wrapper-icon-close{
+  margin-right: 30%;
+}
 //LEGENDE
 .form-legende {
   display: flex;
@@ -34,16 +40,16 @@
 .form-hr-head {
   border: 0, 5px solid #000;
   height: 2px;
-  width: 300%;
+  width: 100%;
 }
 
 .hr-up {
   margin: 0;
-  margin-left: -20em;
+  //margin-left: -20em;
 }
 .hr-down {
   margin-top: 0;
-  margin-left: -20em;
+  //margin-left: -20em;
 }
 
 //ADD IMAGE

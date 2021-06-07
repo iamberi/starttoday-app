@@ -27,6 +27,7 @@ export class CardProblemeComponent implements OnInit {
   @Input() votesProblem: string;
   @Input() id: string;
   @Input() statusvotesProblem: string;
+  @Input() downloadURL: string;
   ngOnInit(): void {
   }
 
@@ -54,7 +55,7 @@ export class CardProblemeComponent implements OnInit {
 
       if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
-        this.vote.statusvotes = 'gevotet';
+        this.vote.statusvotes = 'gevotet ✔️';
         console.log("upvote");
         console.log(this.vote.statusvotes);
         console.log(this.vote.votes);

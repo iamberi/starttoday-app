@@ -1,0 +1,104 @@
+<div class="form-container">
+  <!-- LEGENDE -->
+  <div class="form-legende">
+    <a class="form-iconclose-cross" href="javascript:history.back()">
+      <svg aria-hidden="true" focusable="false">
+        <use xlink:href="#icon-close-cross" />
+      </svg>
+    </a>
+    <label class="create-challange-label">Challenge bearbeiten</label>
+  </div>
+  <hr class="form-hr-head hr-up" />
+
+  <!-- CONTENT -->
+  <div>
+    <!-- IMAGE -->
+    <div class="form-image-wrapper">
+      <img src="https://dummyimage.com/600x400/000/fff" class="form-image" />
+    </div>
+    <hr class="form-hr-head hr-down" />
+    <!-- FORM INPUT -->
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-input-wrapper">
+        <label class="form-input-label label">Standort</label>
+        <input
+          type="text"
+          formControlName="location"
+          placeholder="Wo findet die Challenge statt?"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Titel</label>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Gib der Challenge ein Titel"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Beschreibung</label>
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Beschreibe die Challenge"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Checkliste für Teilnehmer</label>
+        <input
+          type="text"
+          formControlName="description"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Eventtag</label>
+        <input
+          id="challengeDate"
+          type="date"
+          class="form-control"
+          min="2021-05-31"
+          formControlName="eventDate"
+          placeholder=""
+        />
+        <!--  <input type="text"
+          ngbDatepicker #d="ngbDatepicker"
+          placeholder="Wann findet die Challenge statt?"
+          class="form-control"
+          bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY' }"> -->
+        <hr class="hr-form" />
+        <label class="form-input-label label">Uhrzeit</label>
+        <input type="time" class="form-control" formControlName="eventTime" />
+        <!-- <div class="ngx-timepicker-field-example">
+          <ngx-timepicker-field
+            [format]="24"
+            [defaultTime]="'23:11'"
+          ></ngx-timepicker-field>
+        </div> -->
+
+        <!-- BUTTONS -->
+        <div class="form-button-wrapper">
+          <select
+            class="dropdown form-button-left"
+            Name="category"
+            formControlName="category"
+            required
+          >
+            <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
+            <option value="Vandalismus">Vandalismus</option>
+            <option value="Umwelt">Umwelt</option>
+          </select>
+          <button class="button-primary" type="submit">Speichern</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

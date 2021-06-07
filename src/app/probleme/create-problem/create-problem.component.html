@@ -1,0 +1,86 @@
+<div class="form-container">
+  <!-- LEGENDE -->
+  <div class="form-legende">
+    <a class="wrapper-icon-close" href="javascript:history.back()">
+      <svg aria-hidden="true" class="form-iconclose-cross" focusable="false">
+        <use xlink:href="#icon-close-cross" />
+      </svg>
+    </a>
+    <label class="create-problem-label">Problem hinzufügen</label>
+  </div>
+  <hr class="form-hr-head hr-up" />
+
+  <!-- CONTENT -->
+  <div class="create-problem-content">
+    <!-- FORM INPUT -->
+    <form [formGroup]="problemForm" (ngSubmit)="onSubmit()" novalidate>
+      <!-- IMAGE -->
+      <div class="add-image-wrapper">
+
+        <input
+          type="file"
+          (change)="startUpload($event.target.files)"
+          class="image-upload"
+        />
+
+        <div *ngIf="snapshot | async as snap">
+          <div *ngIf="downloadURL as url">
+            <img class="image-create" [src]="url" /><br />
+          </div>
+        </div>
+
+        <!--         <label class="label">Bild hinzufügen</label>
+ -->
+      </div>
+      <hr class="form-hr-head hr-down" />
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label label">Standort</label>
+        <input
+          type="text"
+          formControlName="location"
+          placeholder="Wo ist das Problem"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Titel</label>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Gib deinem Problem ein Titel"
+          class="form-control"
+          required
+        />
+
+        <hr class="hr-form" />
+        <label class="form-input-label label">Beschreibung</label>
+        <textarea
+          formControlName="description"
+          placeholder="Beschreibe die Challenge"
+          class="form-control"
+          cols="30"
+          rows="5"
+        ></textarea>
+
+        <!-- BUTTONS -->
+        <div class="form-button-wrapper">
+          <select
+            class="dropdown form-button-left"
+            formControlName="category"
+            Name="category"
+          >
+            <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
+            <option value="Vandalismus">Vandalismus</option>
+            <option value="Umwelt">Umwelt</option>
+          </select>
+          <button class="button-primary" type="submit">Speichern</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Damit Einträge nicht unter der Navi verschwinden-->
+<div class="spacedown"></div>

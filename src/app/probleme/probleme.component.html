@@ -1,0 +1,22 @@
+<div class="wrapper-filter-probleme">
+  <p class="text-filter">Probleme in <span>Heilbronn</span></p>
+  <hr size="20">
+  <svg aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-filter"/>
+  </svg>
+</div>
+<p class="open-problems"> 423 offene Probleme</p>
+<app-add-content></app-add-content>
+<app-card-probleme *ngFor="let problem of Problems; let i=index"
+[titleProblem]="problem.title"
+[descriptionProblem]="problem.description"
+[categoryProblem]="problem.category"
+[locationProblem]="problem.location"
+[votesProblem]="problem.votes"
+[id]="problem.id"
+[statusvotesProblem]="problem.statusvotes"
+[downloadURL]="problem.downloadURL"
+></app-card-probleme>
+
+<!-- Damit Einträge nicht unter der Navi verschwinden-->
+<div class="spacedown"></div>

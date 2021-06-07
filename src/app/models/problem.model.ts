@@ -1,7 +1,6 @@
 export class Problem {
   id: string; //number?
-  longitude: number;
-  latitude: number;
+  location: string;
   title: string;
   description: string;
   category: string;
@@ -10,4 +9,6 @@ export class Problem {
   votes: number;
   statusvotes: string;
   socialpoints: number;
+  downloadURL: string;
+  path: string;
 }

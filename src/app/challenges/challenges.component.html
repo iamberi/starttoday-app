@@ -1,0 +1,33 @@
+<div class="wrapper-filter-probleme">
+  <p class="text-filter">Challenges in <span>Heilbronn</span></p>
+  <hr size="20">
+  <svg aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-filter"/>
+  </svg>
+</div>
+<p class="open-problems"> 423 Challenges</p>
+
+<!-- <app-button
+[btntext]="'Challenge hinzufügen'"
+[btnlink]="'/create-challenge'"
+[type]="'primary'"
+>
+</app-button> -->
+
+<app-card-challenge *ngFor="let challenge of Challenges; let i=index"
+[titleChallenge]="challenge.title"
+[descriptionChallenge]="challenge.description"
+[categoryChallenge]="challenge.category"
+[setterChallenge]="challenge.setter"
+[locationChallenge]="challenge.location"
+[dateChallenge]="challenge.date"
+[socialpointsChallenge]="challenge.socialpoints"
+[votesChallenge]="challenge.votes"
+[id]="challenge.id"
+[statusvotesChallenge]="challenge.statusvotes"
+[downloadURL]="challenge.downloadURL"
+[eventDateChallenge]="challenge.eventDate"
+[eventTimeChallenge]="challenge.eventTime"
+></app-card-challenge>
+<!-- Damit Einträge nicht unter der Navi verschwinden-->
+<div class="spacedown"></div>

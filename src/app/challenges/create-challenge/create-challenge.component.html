@@ -1,0 +1,112 @@
+<div class="form-container">
+  <!-- LEGENDE -->
+  <div class="form-legende">
+    <a class="wrapper-icon-close" href="javascript:history.back()">
+      <svg aria-hidden="true" class="form-iconclose-cross" focusable="false">
+        <use xlink:href="#icon-close-cross" />
+      </svg>
+    </a>
+    <label class="create-challange-label">Challenge hinzufügen</label>
+  </div>
+  <hr class="form-hr-head hr-up" />
+
+  <!-- CONTENT -->
+  <div>
+    <!-- FORM INPUT -->
+    <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()" novalidate>
+      <!-- IMAGE -->
+      <div class="add-image-wrapper">
+        <input
+          type="file"
+          (change)="startUpload($event.target.files)"
+          class="image-upload"
+        />
+
+        <div *ngIf="snapshot | async as snap">
+          <div *ngIf="downloadURL as url">
+            <img [src]="url" class="image-create" /><br />
+          </div>
+        </div>
+      </div>
+      <hr class="form-hr-head hr-down" />
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label label">Standort</label>
+        <input
+          type="text"
+          formControlName="location"
+          placeholder="Wo findet die Challenge statt"
+          class="form-control"
+          required
+        />
+        <hr class="hr-form" />
+        <label class="form-input-label label">Titel</label>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Gib der Challenge ein Titel"
+          class="form-control"
+          required
+        />
+        <hr class="hr-form" />
+        <label class="form-input-label label">Beschreibung</label>
+        <textarea
+          formControlName="description"
+          placeholder="Beschreibe die Challenge"
+          class="form-control"
+          cols="30"
+          rows="5"
+        ></textarea>
+
+        <hr class="hr-form" />
+        <label class="text-input-label label">Challenge-Setter</label>
+        <input
+          type="text"
+          formControlName="setter"
+          placeholder="Veranstalter der Challenge"
+          class="form-control"
+          required
+        />
+        <hr class="hr-form" />
+        <label class="text-input-label label">Eventtag</label>
+        <input
+          id="challengeDate"
+          type="date"
+          class="form-control"
+          min="2021-05-31"
+          formControlName="eventDate"
+        />
+
+        <hr class="hr-form" />
+        <label class="text-input-label label">Uhrzeit</label>
+        <input type="time" class="form-control" formControlName="eventTime" />
+
+        <!-- BUTTONS -->
+        <div class="form-button-wrapper">
+          <select
+            class="dropdown form-button-left"
+            Name="category"
+            formControlName="category"
+            required
+          >
+            <option value="Barrierefreiheit" selected>Barrierefreiheit</option>
+            <option value="Vandalismus">Vandalismus</option>
+            <option value="Umwelt">Umwelt</option>
+          </select>
+          <button class="button-primary" type="submit" onclick="getDate();">
+            Speichern
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- <script>
+  var dateNoFormat = document.getElementById(challengeDate);
+  function printOut(){
+    return console.log("It works");
+  };
+</script>
+--></div>
+
+<div class="spacedown"></div>

@@ -11,6 +11,7 @@ import { __classPrivateFieldSet } from 'tslib';
   styleUrls: ['./card-challenge.component.scss']
 })
 export class CardChallengeComponent implements OnInit {
+  Challenges: Challenge[];
 
   public vote: Challenge;
 
@@ -29,10 +30,22 @@ export class CardChallengeComponent implements OnInit {
   @Input() votesChallenge: string;
   @Input() id: string;
   @Input() statusvotesChallenge: string;
+  @Input() downloadURL: string;
+  @Input() eventDateChallenge: string;
+  @Input() eventTimeChallenge: string;
 
 
 
   ngOnInit(): void {
+    this.challengeService.getChallengeList().subscribe(res => {
+      this.Challenges = res.map( e => {
+        console.log(e.payload.doc.data());
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data() as object)
+        } as Challenge;
+      });
+    });
   }
 
   styleChange(element){
@@ -48,7 +61,7 @@ export class CardChallengeComponent implements OnInit {
 
       if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
-        this.vote.statusvotes = 'gevotet';
+        this.vote.statusvotes = 'gevotet ✔️';
         /* console.log(this.vote.statusvotes);
         console.log(this.vote.votes);
         console.log("upgevotet"); */

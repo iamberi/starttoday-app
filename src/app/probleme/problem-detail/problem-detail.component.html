@@ -1,0 +1,56 @@
+<div class="wrapper-galerie">
+  <!--   Schließen Button  -->
+  <a href="javascript:history.back()">
+    <svg class="icon-close-circle" aria-hidden="true" focusable="false">
+      <use xlink:href="#icon-close-circle" />
+    </svg>
+  </a>
+  <div
+    id="upvote-button"
+    class="upvote-button-wrapper"
+    (click)="upvote($event)"
+  >
+    <div class="number-upvote">
+      {{ problem.votes }}
+    </div>
+    <p class="text-upvote">{{ problem.statusvotes }}</p>
+  </div>
+  <img class="img-gallery" alt="" src="{{ problem.downloadURL }}" />
+</div>
+<div class="category category-umwelt">
+  <svg aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-umwelt" />
+  </svg>
+  <p class="category-label">{{ problem.category }}</p>
+</div>
+<h1 class="headline-problem-detail">{{ problem.title }}</h1>
+<div class="wrapper-problem-achievement">
+  <app-button [btntext]="'Lösen'" [type]="'button-primary'"> </app-button>
+  <div class="achievement">
+    <svg aria-hidden="true" focusable="false" class="ribbon">
+      <use xlink:href="#ribbon" />
+    </svg>
+    <p class="number-achievement">{{ problem.socialpoints }}</p>
+  </div>
+</div>
+<p class="detail-problem-description">{{ problem.description }}</p>
+<hr />
+<div class="wrapper-problemcreator">
+  <div class="problemcreator">
+    <img
+      class="profilepicture"
+      alt="profilepicture"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+    />
+    <p>@Username</p>
+  </div>
+  <p>{{ problem.location }}</p>
+</div>
+<hr />
+
+<!-- Damit Einträge nicht unter der Navi verschwinden-->
+<div class="spacedown"></div>
+
+<!-- Andere Meinungen
+<app-comments></app-comments>
+ -->

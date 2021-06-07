@@ -1,0 +1,32 @@
+@import "src/sass/styles.scss";
+:host {
+  max-width: 48em;
+  display: block;
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+.wrapper-add-content{
+  bottom: 7em;
+  right: 10%;
+  position: fixed;
+  z-index: 10;
+}
+@media (min-width: 780px) {
+  .wrapper-add-content{
+    right: 15%;
+  }
+}
+.background-add-content{
+  height: 4em;
+  width: 4em;
+  background-color: $color-secondary;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.19);
+  svg{
+    width: 2em;
+    height: 1.75em;
+  }
+}

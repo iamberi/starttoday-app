@@ -25,12 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // views
 import { ProfilComponent } from './views/profil/profil.component';
-import { RegisterNComponent } from './views/register-n/register-n.component';
 import { LoggedInStartComponent } from './views/logged-in-start/logged-in-start.component';
 import { ErrorComponent } from './views/error/error.component';
 import { WillkommenNComponent } from './views/willkommen-n/willkommen-n.component';
-//import { LoginNComponent } from './views/login-n/login-n.component';
-import { TestPasswortComponent } from './test-passwort/test-passwort.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { RegularButtonComponent } from './components/buttons/regular-button/regular-button.component';
 import { DropdownComponent } from './components/buttons/dropdown/dropdown.component';
@@ -71,7 +68,6 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
-import { WillkommenComponent } from './views/willkommen/willkommen.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AddContentComponent } from './components/add-content/add-content.component';
@@ -92,8 +88,6 @@ import { AuthService } from './shared/services/auth.service';
 // Liste aller Routes
 const routes: Routes = [
   { path: '', component: WillkommenNComponent },
-  { path: 'willkommen', component: WillkommenComponent },
-  { path: 'register-n', component: RegisterNComponent },
   { path: 'probleme', component: ProblemeComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'profil', component:  ProfilUnternehmenComponent },
@@ -108,7 +102,6 @@ const routes: Routes = [
   { path: 'error', component: ErrorComponent },
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 
-  { path: 'register-n', component: RegisterNComponent },
   { path: 'willkommen-n', component: WillkommenNComponent},
  // { path: 'login-n', component: LoginNComponent},
 
@@ -169,7 +162,6 @@ const routes: Routes = [
     ChallengesComponent,
     ProfilComponent,
     CardProblemeComponent,
-    WillkommenComponent,
     LoginComponent,
     RegisterComponent,
     LoggedInStartComponent,
@@ -179,10 +171,7 @@ const routes: Routes = [
     ProblemBearbeitenComponent,
     ProblemDetailComponent,
     ProblemDeleteComponent,
-    RegisterNComponent,
     WillkommenNComponent,
-    //LoginNComponent,
-    TestPasswortComponent,
     CreateProblemComponent,
     ListProblemComponent,
     EditProblemComponent,

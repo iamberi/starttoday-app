@@ -2,6 +2,8 @@ import { FirebaseService } from './services/firebase.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
+import { AuthService } from "./shared/services/auth.service";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +14,9 @@ export class AppComponent implements OnInit {
   isSignedIn = false
 
   constructor(
-    private afs: AngularFirestore, public FirebaseService : FirebaseService) {
+    private afs: AngularFirestore,
+    public FirebaseService : FirebaseService,
+    public authService: AuthService) {
     }
 
     ngOnInit(): void {

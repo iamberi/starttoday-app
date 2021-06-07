@@ -1,12 +1,12 @@
 <!--https://angular.io/api/forms/Validators#email-->
 <!--Formular-->
 <!--{{diagnostic}}-->
-<a href="/willkommen-n">
+<!-- <a href="/willkommen-n">
   <svg class="icon-arrow-left" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-arrow-left"/>
   </svg>
 </a>
-<div  [hidden]="submitted">
+<div ">
   <h1>Schön dich kennenzulernen.</h1>
   <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-wrapper">
 
@@ -16,26 +16,26 @@
           required
           [(ngModel)]="model.vorname" name="vorname"
           #vorname="ngModel">
-    </div>
+    </div> -->
 
     <!-- Zeigt Fehlermeldung an-->
-    <div [hidden]="vorname.valid || vorname.pristine"
+    <!-- <div [hidden]="vorname.valid || vorname.pristine"
       class="alert alert-danger">
       Bitte gebe deinen Vornamen an.
     </div>
-    <hr class="hr-form">
+    <hr class="hr-form"> -->
 
     <!--This example has a temporary diagnostic interpolation after each input tag, {{model.name}}, to show the current data value of the corresponding property. The note reminds you to remove the diagnostic lines when you have finished observing the two-way data binding at work.-->
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label class="text-input-label label" for="nachname">Nachname</label>
       <input class="text-input-input form-input form-control" type="text" placeholder="Huber" id="nachname"
           required
           [(ngModel)]="model.nachname" name="nachname"
           #nachname="ngModel">
-    </div>
+    </div> -->
     <!-- Zeigt Fehlermeldung an-->
-    <div [hidden]="nachname.valid || nachname.pristine"
+    <!-- <div [hidden]="nachname.valid || nachname.pristine"
       class="alert alert-danger">
       Bitte gebe deinen Nachnamen an.
     </div>
@@ -55,7 +55,7 @@
     	<small class="text-danger" *ngIf="mail.errors.pattern">Bitte überprüfe deine E-Mail Adresse</small>
   	</div>
     <hr class="hr-form">
-
+ -->
     <!--
     <div class="form-group">
       <label class="text-input-label label" for="mail2">Gebe deine E-Mail Adresse erneut ein</label>
@@ -74,15 +74,15 @@
     <hr class="hr-form">
   -->
 
-    <div class="form-group">
+   <!--  <div class="form-group">
       <label class="text-input-label label" for="mail">Passwort</label>
       <input class="text-input-input form-input form-control" type="text" #passwordSignup placeholder="Wähle weise" id="passwort"
         required minlength="10" maxlength="32" pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
         [(ngModel)]="model.passwort" name="passwort"
-        #passwort="ngModel">
-    </div>
+        #passwort="ngModel"> -->
+    <!-- </div> -->
     <!-- Zeigt Fehlermeldung an-->
-    <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
+  <!--   <div *ngIf="passwort.invalid && (passwort.dirty || passwort.touched)" class="alert">
       <div *ngIf="passwort.errors.required">
         Bitte gebe ein Passwort ein.
       </div>
@@ -112,7 +112,7 @@
         #passwort="ngModel">
     </div>
     <!-- Zeigt Fehlermeldung an-->
-    <div [hidden]="passwort.valid || passwort.pristine"
+   <!--  <div [hidden]="passwort.valid || passwort.pristine"
       class="alert alert-danger">
       Bitte gebe ein Passwort ein.
     </div>
@@ -120,23 +120,23 @@
   </form>
 
 
-  <p class="p-center">Unternehmensprofile können nach der Registrierung im Profil beantragt werden</p>
-
+  <p class="p-center">Unternehmensprofile können nach der Registrierung im Profil beantragt werden</p> -->
+ -->
   <!--
   <app-button
     [btnlink] = '"https://angular.io/guide/forms#build-the-form"'
     [type]='"button-primary button-fullwidth"'
     [btntext] = '"Jetzt registrieren"'
   ></app-button>-->
-  <button >Registrieren</button>
+ <!--  <button >Registrieren</button>
   <button type="submit" class="button-primary button-fullwidth" [disabled]="!userForm.form.valid" (click)="newUser(); onSubmit(); userForm.reset() ">Registrieren</button>
-</div>
+</div> -->
 
 <!--Text nach Registrierung-->
-<div [hidden]="!submitted">
+<!-- <div [hidden]="!submitted">
   <h1> Wir haben Dir eine Mail geschickt</h1>
   <h2>Klicke jetzt nur noch auf den Link in der Mail, die wir dir geschickt haben und schon kann es mit dem Welt verbessern losgehen.</h2>
-</div>
+</div> -->
 
 
 

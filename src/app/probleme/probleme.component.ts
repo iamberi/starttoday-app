@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs';
-import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { ProblemService } from './../services/problem.service';
 import { Problem } from './../models/problem.model';
@@ -11,12 +10,17 @@ import { Problem } from './../models/problem.model';
 })
 export class ProblemeComponent implements OnInit {
   Problems: Problem[];
-  ref: AngularFireStorageReference;
-  task: AngularFireUploadTask;
-  downloadURL: Observable<string>;
+  numberProblems: number;
 
-
-  constructor(private problemService: ProblemService, private problemStorage: AngularFireStorage) { }
+  constructor(private problemService: ProblemService, private db: AngularFirestore) {
+    this.db.firestore
+    .collection('problem-collection').get().then(querySnapshot => {
+      console.log(`Found ${querySnapshot.size} documents.`);
+      this.numberProblems = querySnapshot.size;
+      console.log(this.numberProblems);
+      return this.numberProblems;
+   });
+  }
 
   ngOnInit(): void {
     this.problemService.getProblemList().subscribe(res => {
@@ -28,13 +32,4 @@ export class ProblemeComponent implements OnInit {
       });
     });
   }
-
- /*  upload(event) {
-    const id = Math.random().toString(36).substring(2);
-    this.ref = this.problemStorage.ref(id);
-    this.task = this.ref.put(event.target.files[0]);
-    this.downloadURL = this.task.downloadURL();
-  }
- */
-  removeProblem = problem => this.problemService.deleteProblem(problem);
   }

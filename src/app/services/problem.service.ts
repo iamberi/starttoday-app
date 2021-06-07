@@ -35,8 +35,7 @@ export class ProblemService {
     .update({
       votes: problem.votes,
       statusvotes: problem.statusvotes
-    })
-
+    });
   }
 
   getProblemList() {

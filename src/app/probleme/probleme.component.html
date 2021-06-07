@@ -5,7 +5,9 @@
     <use xlink:href="#icon-filter"/>
   </svg>
 </div>
-<p class="open-problems"> 423 offene Probleme</p>
+<p class="open-problems">{{numberProblems}} offene Probleme</p>
+
+
 <app-add-content></app-add-content>
 <app-card-probleme *ngFor="let problem of Problems; let i=index"
 [titleProblem]="problem.title"

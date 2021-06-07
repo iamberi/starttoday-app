@@ -1,6 +1,7 @@
 import { ChallengeService } from './../services/challenge.service';
 import { Component, OnInit } from '@angular/core';
 import { Challenge } from './../models/challenge.model';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-challenges',
@@ -9,10 +10,17 @@ import { Challenge } from './../models/challenge.model';
 })
 export class ChallengesComponent implements OnInit {
   Challenges: Challenge[];
+  numberChallenges: number;
 
-
-
-  constructor(private challengeService: ChallengeService) { }
+  constructor(private challengeService: ChallengeService, private db: AngularFirestore) {
+    this.db.firestore
+    .collection('challenge-collection').get().then(querySnapshot => {
+      console.log(`Found ${querySnapshot.size} documents.`);
+      this.numberChallenges = querySnapshot.size;
+      console.log(this.numberChallenges);
+      return this.numberChallenges;
+   });
+  }
 
   ngOnInit(): void {
     this.challengeService.getChallengeList().subscribe(res => {
@@ -25,7 +33,5 @@ export class ChallengesComponent implements OnInit {
       });
     });
   }
-
-  //removeChallenge = challenge => this.challengeService.deleteChallenge(challenge);
-  }
+}
 

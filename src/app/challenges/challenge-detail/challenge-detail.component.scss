@@ -301,5 +301,9 @@ body {
   margin: 0;
 }
 
+//Pls nicht löschen, das ist wichtig für die Funktionalität vom Email absenden
+#contactemail {
+  display: none;
+}
 
 // Die Stylings des Popups sind in der "src/sass/2-modules/popup.scss"

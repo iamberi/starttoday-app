@@ -18,4 +18,5 @@ export class Challenge {
   path: string;
   eventDate: string;
   eventTime: string;
+  contactmail: string;
 }

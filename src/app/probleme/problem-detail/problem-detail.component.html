@@ -1,7 +1,4 @@
 <app-edit-problem></app-edit-problem>
-
-
-
 <div class="wrapper-galerie">
   <!--   Schließen Button  -->
   <a href="javascript:history.back()">
@@ -25,8 +22,10 @@
 <h1 class="headline-problem-detail">{{ problem.title }}</h1>
 <div class="wrapper-problem-achievement">
   <a onclick="Solution();">
-    <button class="button-primary" >Lösen</button>
+    <button id="solution-button" class="button-primary" >Lösen</button>
   </a>
+
+  
 
   <div class="achievement">
     <svg aria-hidden="true" focusable="false" class="ribbon">
@@ -36,6 +35,19 @@
   </div>
 </div>
 <p class="detail-problem-description">{{ problem.description }}</p>
+
+<div id="problem-solution-wrapper" class="problem-solution-wrapper">
+  <div class="label-box">
+    <label>eingereichte Lösung</label>
+  </div>
+  <p id="solution-text"> {{ problem.solution }}</p>
+  <div>
+    <svg aria-hidden="true" focusable="false">
+      <use xlink:href="#icon-info" />
+    </svg>
+    <p class="p-info"> Die Lösung wurde noch nicht von unserem Team verifiziert</p>
+  </div>
+</div>
 <hr />
 <div class="wrapper-problemcreator">
   <div class="problemcreator">

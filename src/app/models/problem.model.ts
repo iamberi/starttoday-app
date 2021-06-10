@@ -11,4 +11,5 @@ export class Problem {
   socialpoints: number;
   downloadURL: string;
   path: string;
+  solution: string;
 }

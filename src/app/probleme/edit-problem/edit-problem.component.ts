@@ -22,10 +22,11 @@ export class EditProblemComponent implements OnInit {
     this.editForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      category: ['']
-    })
+      category: [''],
+      solution: ['']
+    });
   }
-
+  /* @Input() locationProblem: string; */
   ngOnInit(): void {
     const id = this.act.snapshot.paramMap.get('id');
 
@@ -34,7 +35,8 @@ export class EditProblemComponent implements OnInit {
       this.editForm = this.formBuilder.group({
         title: [this.problemRef.name],
         description: [this.problemRef.email],
-        category: [this.problemRef.contact]
+        category: [this.problemRef.contact],
+        solution: [this.problemRef.solution]
       })
     })
   }
@@ -43,7 +45,22 @@ export class EditProblemComponent implements OnInit {
     const id = this.act.snapshot.paramMap.get('id');
 
     this.problemService.updateProblem(this.editForm.value, id);
-    this.router.navigate(['list-problems']);
+    //this.router.navigate(['problem-detail/:id']);
+
+    //Prüft ob eine Lösung eingetragen wurde und gibt, falls ja lösung aus und disabled den button
+    const checkSolution = document.getElementById("solution-text").innerHTML;
+    const displaySolution = document.getElementById("problem-solution-wrapper");
+    const button = document.getElementById("solution-button");
+    if(checkSolution !== null && checkSolution !== ''){
+      displaySolution.className = "problem-solution-wrapper-visible";
+      (document.getElementById('solution-button') as HTMLButtonElement).disabled = true;
+      button.className = 'button-disabled';
+      button.innerHTML = 'Gelöst';
+    }
+    
+    //Blendet Popup aus
+    const status = document.getElementById("solution-popup")
+    status.className = "popover-wrapper";
   };
 
 }

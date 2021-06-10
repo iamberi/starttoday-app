@@ -39,6 +39,7 @@ export class CreateProblemComponent implements OnInit {
       socialpoints: 3,
       downloadURL: [''],
       path: [''],
+      solution: [''],
   });
 }
 

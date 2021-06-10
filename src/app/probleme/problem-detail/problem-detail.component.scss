@@ -58,15 +58,6 @@
   margin-bottom: 3%;
 }
 
-label {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s ease-in;
-  opacity: 0;
-}
 .close {
   margin: 60px 0 0 5px;
   position: absolute;
@@ -117,4 +108,48 @@ label {
   height: 15em;
   width: 100%;
   object-fit: cover;
+}
+
+.problem-solution-wrapper {
+  display: none;
+}
+
+.problem-solution-wrapper-visible {
+  margin-top: 30px;
+  border: 1px solid $color-secondary;
+  border-radius: 15px;
+  background-color: $color-secondary-light;
+  .label-box{
+    background-color: $color-secondary;
+    width: fit-content;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: -10px;
+    
+    label{
+      color: #fff;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-weight: 600;
+    }
+  }
+  
+  p {
+    margin: 10px 20px 20px 20px;
+  }
+
+  div {
+    display: flex;
+    margin: 10px 20px 20px 20px;
+    
+    svg{
+      width: 30px;
+      height: 30px;
+    }
+    .p-info{
+      color: $color-grey-3;
+      margin: 0 0 0 10px;
+    }
+  }
+  
 }

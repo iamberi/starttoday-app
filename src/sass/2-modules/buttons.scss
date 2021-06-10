@@ -30,6 +30,14 @@ button {
   background-color: $color-secondary;
 }
 
+.button-disabled {
+  color: $color-white;
+  background-color: $color-primary-light;
+  a{
+    color: white;
+  }
+}
+
 .dropdown {
   //Position
   position: relative;

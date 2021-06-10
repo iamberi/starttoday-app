@@ -38,18 +38,15 @@
             <use xlink:href="#icon-close-circle" />
           </svg>
         </div>
-        <img src="https://cpng.pikpng.com/pngl/s/418-4181845_oojs-ui-icon-calendar-ltr-calendar-icon-clipart.png" alt="">
-        <h2>Jetzt Anmelden</h2>
-        <p>Stelle eine kurze Anfrage an den Veranstalter</p>
-        <p>Er wird sich umgehend mit dir in Verbindung setzen</p>
+        <h2>Du hast eine Lösung gefunden?</h2>
+        <p>Cool! Beschreibe deine Lösung kurz:</p>
+        
 
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+          <!-- <textarea formControlName="location"> {{ problem.location }} </textarea> -->
+          
+          <input type="text" formControlName="solution" class="form-control" required />
 
-          <select class="dropdown form-button-left" formControlName="category" Name="category" >
-            <option value="Barrierefreiheit">Barrierefreiheit</option>
-            <option value="Vandalismus">Vandalismus</option>
-            <option value="Umwelt">Umwelt</option>
-          </select>
           <button class="button-primary">Absenden</button>
         </form>
 

@@ -72,9 +72,7 @@ export class ProblemService {
       .collection('problem-collection')
       .doc(id)
       .update({
-        title: problem.title,
-        description: problem.description,
-        category: problem.category
+        solution: problem.solution
       });
   }
 }

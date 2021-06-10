@@ -88,12 +88,12 @@ import { AuthService } from './shared/services/auth.service';
 // Liste aller Routes
 const routes: Routes = [
   { path: '', component: WillkommenNComponent },
-  { path: 'probleme', component: ProblemeComponent },
-  { path: 'challenges', component: ChallengesComponent },
-  { path: 'profil', component:  ProfilUnternehmenComponent },
+  { path: 'probleme', component: ProblemeComponent, canActivate: [AuthGuard] },
+  { path: 'challenges', component: ChallengesComponent, canActivate: [AuthGuard]  },
+  { path: 'profil', component:  ProfilUnternehmenComponent, canActivate: [AuthGuard]  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'logged-in-start', component: LoggedInStartComponent , canActivate: [AuthGuard]},
+  { path: 'logged-in-start', component: LoggedInStartComponent},
 
   //Refactoring Login a la tutorial
   { path: 'verify-email', component: VerifyEmailComponent },
@@ -103,45 +103,44 @@ const routes: Routes = [
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 
   { path: 'willkommen-n', component: WillkommenNComponent},
- // { path: 'login-n', component: LoginNComponent},
 
-  { path: 'create-problem', component: CreateProblemComponent },
-  { path: 'list-problems', component: ListProblemComponent },
-  { path: 'update-problem/:id', component: EditProblemComponent },
-  { path: 'edit-problem', component: EditProblemComponent },
-  { path: 'delete-problem', component: DeleteProblemComponent },
-  { path: 'delete-problem/:id', component: DeleteProblemComponent },
-  { path: 'add-solution', component: AddSolutionComponent},
-
+  { path: 'create-problem', component: CreateProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'list-problems', component: ListProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'update-problem/:id', component: EditProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'edit-problem', component: EditProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'delete-problem', component: DeleteProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'delete-problem/:id', component: DeleteProblemComponent, canActivate: [AuthGuard]  },
+  { path: 'add-solution', component: AddSolutionComponent, canActivate: [AuthGuard] },
 
 
-  { path: 'create-challenge', component: CreateChallengeComponent },
-  { path: 'list-challenges', component: ListChallengeComponent },
-  { path: 'update-challenge/:id', component: EditChallengeComponent },
-  { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
-  { path: 'problem-erstellen', component: ProblemBearbeitenComponent },
-  { path: 'problem-detail/:id', component: ProblemDetailComponent },
-  { path: 'problem-delete', component: ProblemDeleteComponent },
-  { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent },
-  { path: 'challenge-detail/:id', component: ChallengesDetailComponent },
-  { path: 'delete-challenge', component: DeleteChallengeComponent },
-  { path: 'edit-challenge', component: EditChallengeComponent },
 
-  { path: 'faq', component: FaqComponent },
+  { path: 'create-challenge', component: CreateChallengeComponent, canActivate: [AuthGuard]  },
+  { path: 'list-challenges', component: ListChallengeComponent, canActivate: [AuthGuard]  },
+  { path: 'update-challenge/:id', component: EditChallengeComponent, canActivate: [AuthGuard]  },
 
-  { path: 'overview', component: OverviewComponent },
+  { path: 'problem-erstellen', component: ProblemBearbeitenComponent, canActivate: [AuthGuard] },
+  { path: 'problem-detail/:id', component: ProblemDetailComponent, canActivate: [AuthGuard] },
+  { path: 'problem-delete', component: ProblemDeleteComponent, canActivate: [AuthGuard] },
+  { path: 'problem-bearbeiten', component: ProblemBearbeitenComponent, canActivate: [AuthGuard] },
+  { path: 'challenge-detail/:id', component: ChallengesDetailComponent, canActivate: [AuthGuard] },
+  { path: 'delete-challenge', component: DeleteChallengeComponent, canActivate: [AuthGuard] },
+  { path: 'edit-challenge', component: EditChallengeComponent, canActivate: [AuthGuard] },
 
-  { path: 'impressum', component: ImpressumComponent },
+  { path: 'faq', component: FaqComponent, canActivate: [AuthGuard] },
+
+  { path: 'overview', component: OverviewComponent, canActivate: [AuthGuard] },
+
+  { path: 'impressum', component: ImpressumComponent, canActivate: [AuthGuard] },
 
   //Profilansicht
-  { path: 'profil/unternehmen', component: ProfilUnternehmenComponent },
-  { path: 'profil/privatperson', component: ProfilPrivatpersonComponent },
-  { path: 'bevorstehende-challenges', component: BevorstehendeChallengesComponent },
-  { path: 'vergangene-challenges', component: VergangeneChallengesComponent },
-  { path: 'meine-challenges', component: BevorstehendeChallengesPComponent },
-  { path: 'geloeste-probleme', component: GeloesteProblemeComponent },
-  { path: 'eingereichte-probleme', component: EingereichteProblemeComponent },
-  { path: 'verifizierung', component: VerifizierungComponent },
+  { path: 'profil/unternehmen', component: ProfilUnternehmenComponent, canActivate: [AuthGuard] },
+  { path: 'profil/privatperson', component: ProfilPrivatpersonComponent , canActivate: [AuthGuard]},
+  { path: 'bevorstehende-challenges', component: BevorstehendeChallengesComponent, canActivate: [AuthGuard] },
+  { path: 'vergangene-challenges', component: VergangeneChallengesComponent, canActivate: [AuthGuard] },
+  { path: 'meine-challenges', component: BevorstehendeChallengesPComponent, canActivate: [AuthGuard] },
+  { path: 'geloeste-probleme', component: GeloesteProblemeComponent, canActivate: [AuthGuard] },
+  { path: 'eingereichte-probleme', component: EingereichteProblemeComponent, canActivate: [AuthGuard] },
+  { path: 'verifizierung', component: VerifizierungComponent , canActivate: [AuthGuard]},
 
 
 

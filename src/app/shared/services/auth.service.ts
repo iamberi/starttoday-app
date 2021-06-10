@@ -45,7 +45,7 @@ export class AuthService {
     }
 
   // Sign up with email/password
-  SignUp(email, password, displayName) {
+  SignUp(email, password) {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign
@@ -62,7 +62,7 @@ export class AuthService {
     return this.afAuth.currentUser.then((user) => {
       return user.sendEmailVerification();
     }).then(() => {
-      this.router.navigate(['verify-email-address']);
+      this.router.navigate(['verify-email']);
     })
   }
 

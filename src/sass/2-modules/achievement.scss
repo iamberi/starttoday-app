@@ -1,0 +1,22 @@
+.achievement {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+.number-achievement {
+  font-weight: 700;
+  color: $color-primary;
+  margin: 0 0 0 0.25em;
+  .ribbon{
+    fill:$color-primary;
+  }
+}
+
+.achievement:hover{
+  .number-achievement{
+    color: $color-secondary;
+    .ribbon{
+      fill:$color-secondary;
+    }
+  }
+}

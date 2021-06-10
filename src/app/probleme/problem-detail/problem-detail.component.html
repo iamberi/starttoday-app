@@ -1,3 +1,7 @@
+<app-edit-problem></app-edit-problem>
+
+
+
 <div class="wrapper-galerie">
   <!--   Schließen Button  -->
   <a href="javascript:history.back()">
@@ -5,16 +9,11 @@
       <use xlink:href="#icon-close-circle" />
     </svg>
   </a>
-  <div
-    id="upvote-button"
-    class="upvote-button-wrapper"
-    (click)="upvote($event)"
-  >
-    <div class="number-upvote">
-      {{ problem.votes }}
-    </div>
+  <div id="upvote-button" class="upvote-button-wrapper" (click)="upvote($event)">
+    <div class="number-upvote"> {{ problem.votes }} </div>
     <p class="text-upvote">{{ problem.statusvotes }}</p>
   </div>
+
   <img class="img-gallery" alt="" src="{{ problem.downloadURL }}" />
 </div>
 <div class="category category-umwelt">
@@ -25,7 +24,10 @@
 </div>
 <h1 class="headline-problem-detail">{{ problem.title }}</h1>
 <div class="wrapper-problem-achievement">
-  <app-button [btntext]="'Lösen'" [type]="'button-primary'"> </app-button>
+  <a onclick="Solution();">
+    <button class="button-primary" >Lösen</button>
+  </a>
+
   <div class="achievement">
     <svg aria-hidden="true" focusable="false" class="ribbon">
       <use xlink:href="#ribbon" />

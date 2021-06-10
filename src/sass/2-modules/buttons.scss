@@ -3,6 +3,33 @@
   bottom: $xs-spacing;
 }
 
+button {
+  display: inline-block;
+  padding: 1em 2.5em;
+  border-radius: 0.35em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Jost";
+  text-align: center;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s;
+  border: 0;
+}
+
+.button-primary {
+  color: $color-white;
+  background-color: $color-primary;
+  a{
+    color: white;
+  }
+}
+.button-primary:hover {
+  background-color: $color-secondary;
+}
+
 .dropdown {
   //Position
   position: relative;

@@ -38,6 +38,7 @@ export class ChallengesDetailComponent implements OnInit {
   @Input() votesChallenge: string;
   @Input() id: string;
   @Input() statusvotesChallenge: string;
+  @Input() contactmail: string;
 
   ngOnInit(): void {
     const challengeId: string = this.route.snapshot.paramMap.get('id');

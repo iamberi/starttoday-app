@@ -1,113 +1,139 @@
-<div class="firstline">
-    <div>
-      <a href="/profil/profil-bearbeiten"><svg aria-hidden="true" focusable="false" class="edit">
-      <use xlink:href="#edit"/>
-      </svg></a>
+<div class="popover-wrapper" id="verfizierung-popup">
+  <div class="background-blur"></div>
+  <div class="popover-content">
+    <div class="popover-content-wrapper">
+        <div>
+          <svg aria-hidden="true" focusable="false" onclick=" CloseVerifizieren();">
+            <use xlink:href="#icon-close-circle" />
+          </svg>
+        </div>
+<!--         <img src="src/assets/img/Checkmark.png" alt=""> -->     
+        <h2>Verifizierung Beantragen</h2>
+        <p>Sende eine Kurze Mail an unseren Support</p>
+        <p>Er wird sich bezüglich der nächsten Schritte umgehend mit dir in Verbindung setzen</p>
+        <a href="mailto:mail@starttoday.social.de">
+        <button class="button-primary">Absenden</button>
+      </a>
     </div>
-    <div><b>Profil</b></div>
-    <div>
-      <a href="/profil/einstellungen"><svg aria-hidden="true" focusable="false" class="setting">
-      <use xlink:href="#setting"/>
-      </svg></a>
-    </div>
+    
+  </div>
 </div>
 
-<div class="outline" style="margin:auto;">
-  <div class="outline-position">
-      <div class="divroundpic">
-        <img src="https://img.welt.de/img/vermischtes/mobile227424725/4012503017-ci102l-w1024/Lisa-Licentia.jpg" alt="Profilbild" class="roundpicture">
-      </div>
-      <div class="divroundpic" style="padding-left:5%">
-        <svg aria-hidden="true" focusable="false" class="ribbon">
-          <use xlink:href="#ribbon"/>
+
+  <div class="firstline">
+      <div>
+        <a href="/profil/profil-bearbeiten">
+        <svg aria-hidden="true" focusable="false" class="edit">
+          <use xlink:href="#edit"/>
         </svg>
-        <p style="font-size: 36px;font-weight:700;padding-left:0.2em;padding-right:5%;">198</p>
+        </a>
       </div>
+      <div><b>Profil</b></div>
+      <div>
+        <a href="/profil/einstellungen">
+          <svg aria-hidden="true" focusable="false" class="setting">
+        <use xlink:href="#setting"/>
+        </svg>
+      </a>
+      </div>
+  </div>
+
+  <div class="outline" style="margin:auto;">
+    <div class="outline-position">
+        <div class="divroundpic">
+          <img src="https://img.welt.de/img/vermischtes/mobile227424725/4012503017-ci102l-w1024/Lisa-Licentia.jpg" alt="Profilbild" class="roundpicture">
+        </div>
+        <div class="divroundpic" style="padding-left:5%">
+          <svg aria-hidden="true" focusable="false" class="ribbon">
+            <use xlink:href="#ribbon"/>
+          </svg>
+          <p style="font-size: 36px;font-weight:700;padding-left:0.2em;padding-right:5%;">198</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="profiltext">
+    <div class="zeile" style="font-size: 14px;">
+        <svg aria-hidden="true" focusable="false" class="locationnadel">
+          <use xlink:href="#locationnadel"/>
+        </svg>
+      Heilbronn
     </div>
-</div>
-
-<div class="profiltext">
-  <div class="zeile" style="font-size: 14px;">
-      <svg aria-hidden="true" focusable="false" class="locationnadel">
-        <use xlink:href="#locationnadel"/>
-      </svg>
-    Heilbronn
+    <div>
+      <h3 class="name-headline">
+        Unternehmen Mustermann
+      </h3>
+    </div>
+    <div class="ort" style="padding-top:3px;">
+      Mail-Adresse<br>
+    </div>
   </div>
+
+  <div class="headline-links">
+    <b>
+      Für dich
+    </b>
+  </div>
+
   <div>
-    <h3 class="name-headline">
-      Unternehmen Mustermann
-    </h3>
-  </div>
-  <div class="ort" style="padding-top:3px;">
-    Mail-Adresse<br>
-  </div>
-</div>
-
-<div class="headline-links">
-  <b>
-    Für dich
-  </b>
-</div>
-
-<div>
-  <div class="boxes-grey">
-    <!--
-    <div class="greybox box-color">
-        <p><a href="/#">Merkliste</a></p>
+    <div class="boxes-grey">
+      <!--
+      <div class="greybox box-color">
+          <p><a href="/#">Merkliste</a></p>
+          <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+          <use xlink:href="#arrow-left-profil"/>
+          </svg>
+      </div>
+      -->
+      <p ></p>
+      <div class="greybox box-color">
+        <a class="link-in-profile" href="/eingereichte-probleme">Eingereichte Probleme</a>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
-    </div>
-    -->
-    <p ></p>
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/eingereichte-probleme">Eingereichte Probleme</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
-    </div>
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/geloeste-probleme">Gelöste Probleme</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
-    </div>
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/meine-challenges">Challenges, an denen ich teilnehme</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
+      </div>
+      <div class="greybox box-color">
+        <a class="link-in-profile" href="/geloeste-probleme">Gelöste Probleme</a>
+        <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+        <use xlink:href="#arrow-left-profil"/>
+        </svg>
+      </div>
+      <div class="greybox box-color">
+        <a class="link-in-profile" href="/meine-challenges">Challenges, an denen ich teilnehme</a>
+        <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+        <use xlink:href="#arrow-left-profil"/>
+        </svg>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="headline-links">
-  <b>
-    Organisation
-  </b>
-</div>
+  <div class="headline-links">
+    <b>
+      Organisation
+    </b>
+  </div>
 
-<div>
-  <div class="boxes-grey">
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/verifizierung">Verifizierung beantragen</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
-    </div>
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/faq">FAQ</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
-    </div>
-    <div class="greybox box-color">
-      <a class="link-in-profile" href="/impressum">Impressum</a>
-      <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
-      <use xlink:href="#arrow-left-profil"/>
-      </svg>
+  <div>
+    <div class="boxes-grey">
+      <div class="greybox box-color">
+        <a class="link-in-profile" onclick="verifizieren();">Verifizierung beantragen</a>
+        <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+        <use xlink:href="#arrow-left-profil"/>
+        </svg>
+      </div>
+      <div class="greybox box-color">
+        <a class="link-in-profile" href="/faq">FAQ</a>
+        <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+        <use xlink:href="#arrow-left-profil"/>
+        </svg>
+      </div>
+      <div class="greybox box-color">
+        <a class="link-in-profile" href="/impressum">Impressum</a>
+        <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
+        <use xlink:href="#arrow-left-profil"/>
+        </svg>
+      </div>
     </div>
   </div>
-</div>
+  <div class="spacedown"></div>
 
-<p><br><br><br><br><br><br></p>

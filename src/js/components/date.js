@@ -19,3 +19,6 @@ function getCategory(){
     var category = document.getElementById("category-card").innerHTML;
     console.log(category);
 }
+
+
+

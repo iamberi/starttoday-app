@@ -29,10 +29,44 @@
   </div>
 </form> -->
 
-<!-- Problem bearbeiten wie im Design -->
+<div class="popover-wrapper" id="solution-popup">
+  <div class="background-blur"></div>
+  <div class="popover-content">
+    <div class="popover-content-wrapper">
+        <div>
+          <svg aria-hidden="true" focusable="false" onclick="closeSolution();">
+            <use xlink:href="#icon-close-circle" />
+          </svg>
+        </div>
+        <img src="https://cpng.pikpng.com/pngl/s/418-4181845_oojs-ui-icon-calendar-ltr-calendar-icon-clipart.png" alt="">
+        <h2>Jetzt Anmelden</h2>
+        <p>Stelle eine kurze Anfrage an den Veranstalter</p>
+        <p>Er wird sich umgehend mit dir in Verbindung setzen</p>
 
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <select class="dropdown form-button-left" formControlName="category" Name="category" >
+            <option value="Barrierefreiheit">Barrierefreiheit</option>
+            <option value="Vandalismus">Vandalismus</option>
+            <option value="Umwelt">Umwelt</option>
+          </select>
+          <button class="button-primary">Absenden</button>
+        </form>
+
+          
+        
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Problem bearbeiten wie im Design -->
+<!-- 
 <div class="form-container">
-  <!-- LEGENDE -->
+  
   <div class="form-legende">
     <a class="form-iconclose-cross" href="javascript:history.back()">
       <svg aria-hidden="true" focusable="false">
@@ -43,15 +77,15 @@
   </div>
   <hr class="form-hr-head hr-up" />
 
-  <!-- CONTENT -->
+  
   <div class="edit-problem-content">
-    <!-- IMAGE -->
+   
     <div class="form-image-wrapper">
       <img src="https://dummyimage.com/600x400/000/fff" class="form-image" />
     </div>
     <hr class="form-hr-head hr-down" />
 
-    <!-- FORM INPUT -->
+    
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="form-input-wrapper">
         <label class="form-input-label label">Standort</label>
@@ -81,7 +115,7 @@ Neckarhalde 21, 74074 Heilbronn
           required
         />
 
-        <!-- BUTTONS -->
+        
         <div class="form-button-wrapper">
           <select
             class="dropdown form-button-left"
@@ -98,4 +132,4 @@ Neckarhalde 21, 74074 Heilbronn
       </div>
     </form>
   </div>
-</div>
+</div> -->

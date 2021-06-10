@@ -1,10 +1,11 @@
-@import "src/sass/0-base/colors.scss";
+@import "src/sass/styles.scss";
 
 :host {
   max-width: 48em;
   display: block;
   margin: 0 auto;
   padding: 0 1.25em;
+
 }
 
 .callengetime-divider {
@@ -31,6 +32,7 @@
     height: 20px;
     position: absolute;
     right: 1em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 .text-filter {
@@ -89,8 +91,6 @@
 $white: #ffffff;
 $blue: #337ab7;
 $mediumblu: #1e272d;
-
-@import "src/sass/styles.scss";
 
 :host {
   max-width: 48em;
@@ -300,3 +300,6 @@ body {
   height: 25px;
   margin: 0;
 }
+
+
+// Die Stylings des Popups sind in der "src/sass/2-modules/popup.scss"

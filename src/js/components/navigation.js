@@ -13,3 +13,4 @@ function setProfilActive(){
   document.getElementById("btn-challenges").className = "nav-item";
   document.getElementById("btn-profil").className = "nav-item nav-item-active";
 }
+

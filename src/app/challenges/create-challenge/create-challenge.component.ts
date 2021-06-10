@@ -43,6 +43,7 @@ export class CreateChallengeComponent implements OnInit {
       path: [''],
       eventDate: ['getDate();'], // formatedDate
       eventTime: [''],
+      contactmail: [''],
     });
   }
 

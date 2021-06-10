@@ -1,22 +1,51 @@
-<div class="wrapper-galerie">
-  <a href="javascript:history.back()">
-    <svg class="icon-close-circle" aria-hidden="true" focusable="false">
-      <use xlink:href="#icon-close-circle" />
-    </svg>
-  </a>
-  <div
-    id="upvote-button"
-    class="upvote-button-wrapper"
-    (click)="upvote($event)"
-  >
-    <div class="number-upvote">
-      {{ challenge.votes }}
+<div class="popover-wrapper" id="teilnehmen-popup">
+  <div class="background-blur"></div>
+  <div class="popover-content">
+    <div class="popover-content-wrapper">
+      <div>
+        <svg aria-hidden="true" focusable="false" onclick="closeTeilnehmen();">
+          <use xlink:href="#icon-close-circle" />
+        </svg>
+      </div>
+      <!--  <img src = '../src/assets/img/calendar.png' alt="" /> -->
+      <h2>Jetzt Anmelden</h2>
+      <p>
+        Stelle eine kurze Anfrage an den Veranstalter
+        <b>{{ challenge.setter }}</b>
+      </p>
+      <p>Er wird sich umgehend mit dir in Verbindung setzen</p>
+      <a id="sendTeilnehmenMail" onclick="sendMail();" href="">
+        <button class="button-primary">Absenden</button>
+      </a>
     </div>
-    <p class="text-upvote">{{ challenge.statusvotes }}</p>
   </div>
-  <img class="img-gallery" alt="Bild vom Problem" src={{challenge.downloadURL}}/>
 </div>
-<hr class="callengetime-divider" />
+
+<div class="">
+  <div class="wrapper-galerie">
+    <a href="javascript:history.back()">
+      <svg class="icon-close-circle" aria-hidden="true" focusable="false">
+        <use xlink:href="#icon-close-circle" />
+      </svg>
+    </a>
+    <div
+      id="upvote-button"
+      class="upvote-button-wrapper"
+      (click)="upvote($event)"
+    >
+      <div class="number-upvote">
+        {{ challenge.votes }}
+      </div>
+      <p class="text-upvote">{{ challenge.statusvotes }}</p>
+    </div>
+    <img
+      class="img-gallery"
+      alt="Bild vom Problem"
+      src="{{ challenge.downloadURL }}"
+    />
+  </div>
+
+  <hr class="callengetime-divider" />
 
   <div class="delete-challenge-info">
     <svg aria-hidden="true" focusable="false">
@@ -31,79 +60,80 @@
       <label>Uhrzeit</label>
     </div>
   </div>
-<hr />
-
-<div class="category category-umwelt">
-  <svg aria-hidden="true" focusable="false">
-    <use xlink:href="#icon-umwelt" />
-  </svg>
-  <p class="category-label">{{ challenge.category }}</p>
-</div>
-<h1 class="headline-problem-detail">{{ challenge.title }}</h1>
-<div class="wrapper-problem-achievement">
-  <app-button [btntext]="'Teilnehmen'" [type]="'button-primary'"> </app-button>
-  <div class="achievement">
-    <svg aria-hidden="true" focusable="false" class="ribbon">
-      <use xlink:href="#ribbon" />
-    </svg>
-    <p class="number-achievement">{{ challenge.socialpoints }}</p>
-  </div>
-</div>
-<p class="detail-problem-description">{{ challenge.description }}</p>
-<hr />
-<div class="wrapper-problemcreator">
-  <div class="problemcreator">
-    <img
-      class="profilepicture"
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-    <p>{{ challenge.setter }}</p>
-  </div>
-<!--   <p>{{ challenge.date }}</p>-->
-</div>
-<hr />
-<div class="section-2">
-</div>
-<div class="section-2">
-
-  <div class="flex-container-challenges-2">
-    <p><br />23 Personen nehmen teil</p>
-  </div>
-  <div class="flex-container-challenges-3">
-    <img
-      class="profilepicture "
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-    <img
-      class="profilepicture teilnehmerpicture"
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-    <img
-      class="profilepicture teilnehmerpicture"
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-    <img
-      class="profilepicture teilnehmerpicture"
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-    <img
-      class="profilepicture teilnehmerpicture"
-      alt="profilepicture"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-    />
-  </div>
-</div>
-<div class="section-2">
   <hr />
-  <h2 class="heading-3">Weitere Challenges Test</h2>
-  <app-card-challenge></app-card-challenge>
-  <br />
-</div>
 
-<!-- Damit Einträge nicht unter der Navi verschwinden-->
-<div class="spacedown"></div>
+  <div class="category category-umwelt">
+    <svg aria-hidden="true" focusable="false">
+      <use xlink:href="#icon-umwelt" />
+    </svg>
+    <p class="category-label">{{ challenge.category }}</p>
+  </div>
+  <h1 class="headline-problem-detail">{{ challenge.title }}</h1>
+  <p id="contactemail"> Hallo {{ contactmail }}</p>
+  <div class="wrapper-problem-achievement">
+    <button class="button-primary" onclick="teilnehmen();">Teilnehmen</button>
+
+    <div class="achievement">
+      <svg aria-hidden="true" focusable="false" class="ribbon">
+        <use xlink:href="#ribbon" />
+      </svg>
+      <p class="number-achievement">{{ challenge.socialpoints }}</p>
+    </div>
+  </div>
+  <p class="detail-problem-description">{{ challenge.description }}</p>
+  <hr />
+  <div class="wrapper-problemcreator">
+    <div class="problemcreator">
+      <img
+        class="profilepicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+      <p>{{ challenge.setter }}</p>
+    </div>
+    <!--   <p>{{ challenge.date }}</p>-->
+  </div>
+  <hr />
+  <div class="section-2"></div>
+  <div class="section-2">
+    <div class="flex-container-challenges-2">
+      <p><br />23 Personen nehmen teil</p>
+    </div>
+    <div class="flex-container-challenges-3">
+      <img
+        class="profilepicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+      <img
+        class="profilepicture teilnehmerpicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+      <img
+        class="profilepicture teilnehmerpicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+      <img
+        class="profilepicture teilnehmerpicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+      <img
+        class="profilepicture teilnehmerpicture"
+        alt="profilepicture"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+      />
+    </div>
+  </div>
+  <div class="section-2">
+    <hr />
+    <h2 class="heading-3">Weitere Challenges Test</h2>
+    <app-card-challenge></app-card-challenge>
+    <br />
+  </div>
+
+  <!-- Damit Einträge nicht unter der Navi verschwinden-->
+  <div class="spacedown"></div>
+</div>

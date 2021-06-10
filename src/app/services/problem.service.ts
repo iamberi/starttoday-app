@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 
 export class ProblemService {
+  numberProblems: any;
 
   constructor(private angularFirestore: AngularFirestore) {}
 
@@ -50,6 +51,16 @@ export class ProblemService {
       .doc<Problem>(problemId)
       .valueChanges();
     }
+
+  async counterProblems(){
+    this.numberProblems = this.angularFirestore.firestore
+      .collection('problem-collection').get().then(querySnapshot => {
+        //console.log(`Found ${querySnapshot.size} documents.`);
+        this.numberProblems = querySnapshot.size;
+        console.log(this.numberProblems);
+        return this.numberProblems;
+      });
+  }
 
   createProblem(problem: Problem) {
     return new Promise<any>((resolve, reject) =>{

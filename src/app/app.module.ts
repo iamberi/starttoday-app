@@ -1,3 +1,5 @@
+import { ChallengeService } from './services/challenge.service';
+import { ProblemService } from './services/problem.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -236,7 +238,9 @@ const routes: Routes = [
   // exports: [ RouterModule ],
   providers:
   [ FirebaseService,
-    AuthService
+    AuthService,
+    ProblemService,
+    ChallengeService,
   ],
   bootstrap: [AppComponent]
 })

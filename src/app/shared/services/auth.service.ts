@@ -45,17 +45,35 @@ export class AuthService {
     }
 
   // Sign up with email/password
-  SignUp(email, password) {
+  /* SignUp(email, password) {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign
-        up and returns promise */
+        up and returns promise *//*
         this.SendVerificationMail();
         this.SetUserData(result.user);
       }).catch((error) => {
         window.alert(error.message)
       })
-  }
+  } */
+
+  // Sign up with email/password
+  SignUp(email, password, fullname) {
+    return new Promise ((resolve, reject) => {
+      this.afAuth.createUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        result.user.updateProfile({
+          displayName: fullname,
+          photoURL: ''
+        }).then(() => {
+        this.SendVerificationMail();
+        this.SetUserData(result.user);
+        resolve(result);
+      });
+    },
+    err => reject(err))
+  });
+}
 
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {

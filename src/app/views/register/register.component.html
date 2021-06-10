@@ -3,7 +3,7 @@
     <use xlink:href="#icon-arrow-left"/>
   </svg>
 </a>
-<div [hidden]="submitted">
+<div>
   <h1>Schön dich kennenzulernen.</h1>
   <form>
     <div class="form-group">
@@ -24,16 +24,11 @@
 
 
 
-  <button class="button-primary button-fullwidth" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrieren</button>
-</div>
-
-
-<!--Text nach Registrierung-->
-<div [hidden]="!submitted">
-  <h1> Wir haben Dir eine Mail geschickt</h1>
-  <h2>Klicke jetzt nur noch auf den Link in der Mail, die wir dir geschickt haben und schon kann es mit dem Welt verbessern losgehen.</h2>
+  <button class="button-primary button-fullwidth" (click)="authService.SignUp(userEmail.value, userPwd.value, userDisplayName.value)">Registrieren</button>
 </div>
 
 
 
-<p>register works!</p>
+
+
+

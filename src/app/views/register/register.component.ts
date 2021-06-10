@@ -13,7 +13,7 @@ import { AuthService } from "../../shared/services/auth.service";
 export class RegisterComponent implements OnInit {
 
 
-  submitted = false;
+
   isSignedIn = false;
 
   constructor(
@@ -24,23 +24,13 @@ export class RegisterComponent implements OnInit {
     ) { }
 
 
-  onSubmit():void {
-    this.submitted = true;
-    return;
-  }
+
 
   ngOnInit(): void {
     if(localStorage.getItem('user')!== null)
       this.isSignedIn = true
       else
       this.isSignedIn = false
-  }
-
-
-  async onSignup(email:string, password:string){
-    await this.FirebaseService.signup(email,password)
-    if(this.FirebaseService.isLoggedIn)
-    this.isSignedIn = true
   }
 
   handleLogout(){

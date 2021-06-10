@@ -7,7 +7,7 @@
             <use xlink:href="#icon-close-circle" />
           </svg>
         </div>
-<!--         <img src="src/assets/img/Checkmark.png" alt=""> -->     
+<!--         <img src="src/assets/img/Checkmark.png" alt=""> -->
         <h2>Verifizierung Beantragen</h2>
         <p>Sende eine Kurze Mail an unseren Support</p>
         <p>Er wird sich bezüglich der nächsten Schritte umgehend mit dir in Verbindung setzen</p>
@@ -15,10 +15,24 @@
         <button class="button-primary">Absenden</button>
       </a>
     </div>
-    
   </div>
 </div>
-
+<div class="popover-wrapper" id="socialpoints-popup">
+  <div class="background-blur"></div>
+  <div class="popover-content">
+    <div class="popover-content-wrapper">
+      <div>
+        <svg aria-hidden="true" focusable="false" onclick="closeExplainSocialPoints();">
+          <use xlink:href="#icon-close-circle" />
+        </svg>
+      </div>
+      <!--  <img src = '../src/assets/img/calendar.png' alt="" /> -->
+      <h2>Was sind Social Points?</h2>
+      <p>Social Points bekommst du von uns als <b>Dankeschön</b>, dass du deine Stadt verbessert hast. Die Zahl sagt, wie viele Social Points du erhalten kannst. Mit den Social Points bekommst du <b>Vergünstigungen</b> bei deinen lokalen Einzelhändlern.</p>
+      <button class="button-primary">Verstanden</button>
+    </div>
+  </div>
+</div>
 
   <div class="firstline">
       <div>
@@ -47,7 +61,7 @@
           <svg aria-hidden="true" focusable="false" class="ribbon">
             <use xlink:href="#ribbon"/>
           </svg>
-          <p style="font-size: 36px;font-weight:700;padding-left:0.2em;padding-right:5%;">198</p>
+          <p onclick="openExplainSocialPoints()" style="font-size: 36px;font-weight:700;padding-left:0.2em;padding-right:5%;">198</p>
         </div>
       </div>
   </div>

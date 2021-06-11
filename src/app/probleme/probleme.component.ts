@@ -14,8 +14,8 @@ export class ProblemeComponent implements OnInit {
 
   constructor(public problemService: ProblemService) {
   }
-  ngOnInit(): void {
-    this.problemService.getProblemList().subscribe(res => {
+  async ngOnInit(): Promise<void> {
+   await this.problemService.getProblemList().subscribe(res => {
       this.Problems = res.map( e => {
         return {
           id: e.payload.doc.id,
@@ -23,8 +23,10 @@ export class ProblemeComponent implements OnInit {
         } as Problem;
       });
     });
-    this.ProblemCount = this.problemService.counterProblems;
-    console.log(this.ProblemCount);
+   this.ProblemCount = await this.problemService.counterProblems();
+    }
   }
-  }
+
+
+
 

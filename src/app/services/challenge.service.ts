@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChallengeService {
+  public numberChallenges: any;
 
   constructor(private angularFirestore: AngularFirestore) {}
 
@@ -49,6 +50,15 @@ export class ChallengeService {
       .doc<Challenge>(challengeId)
       .valueChanges();
     }
+
+  async counterChallenges(){
+    const number =  await this.angularFirestore.firestore
+      .collection('challenge-collection').get().then(async querySnapshot =>{
+        this.numberChallenges = await querySnapshot.size;
+        return this.numberChallenges;
+      });
+    return number;
+  }
 
   createChallenge(challenge: Challenge) {
     return new Promise<any>((resolve, reject) =>{

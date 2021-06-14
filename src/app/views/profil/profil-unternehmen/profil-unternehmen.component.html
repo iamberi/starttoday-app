@@ -1,14 +1,27 @@
+<div class="wrapper-profile-buttons">
+  <app-button
+    [btntext]="'Unternehmensprofil'"
+    [type]="'button-secondary'"
+    [btnlink]="'/profil'">
+  </app-button>
+  <app-button
+  [btntext]="'Profil für Privatpersonen'"
+  [type]="'button-secondary'"
+  [btnlink]="'/profil/privatperson'">
+  </app-button>
+</div>
+
 <div class="firstline">
-    <div>
-      <a href="/profil/profil-bearbeiten"><svg aria-hidden="true" focusable="false" class="edit">
+    <div onclick="openComingSoon()">
+      <svg aria-hidden="true" focusable="false" class="edit">
       <use xlink:href="#edit"/>
-      </svg></a>
+      </svg>
     </div>
     <div><b>Profil</b></div>
-    <div>
-      <a href="/profil/einstellungen"><svg aria-hidden="true" focusable="false" class="setting">
+    <div onclick="openComingSoon()">
+      <svg aria-hidden="true" focusable="false" class="setting">
       <use xlink:href="#setting"/>
-      </svg></a>
+      </svg>
     </div>
 </div>
 
@@ -52,13 +65,13 @@
 <div>
   <div class="boxes-grey">
     <div class="greybox box-color">
-        <a class="link-in-profile" href="/bevorstehende-challenges">Bevorstehende Challenges</a>
+        <a onclick="openComingSoon()" class="link-in-profile" routerLink="/profil">Bevorstehende Challenges</a>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
     </div>
     <div class="greybox box-color">
-      <a class="link-in-profile" href="/vergangene-challenges">Vergangene Challenges</a>
+      <a onclick="openComingSoon()" class="link-in-profile" routerLink="/profil">Vergangene Challenges</a>
       <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
       <use xlink:href="#arrow-left-profil"/>
       </svg>

@@ -38,16 +38,19 @@
             <use xlink:href="#icon-close-circle" />
           </svg>
         </div>
-        <h2>Du hast eine Lösung gefunden?</h2>
-        <p>Cool! Beschreibe deine Lösung kurz:</p>
+        <h2>Lösung einreichen</h2>
+        <!-- <label>Beschreibung deiner Lösung</label> -->
+        <!-- <p>Cool! Beschreibe deine Lösung kurz:</p> -->
         
 
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
-          <!-- <textarea formControlName="location"> {{ problem.location }} </textarea> -->
-          
-          <input type="text" formControlName="solution" class="form-control" required />
+          <label>Beschreibung deiner Lösung</label>
+          <br />  
+          <textarea class="solution-textarea" type="text" formControlName="solution" rows="4"> </textarea>
+          <br />         
+          <!-- <input type="text" formControlName="solution" class="form-control" required /> -->
 
-          <button class="button-primary">Absenden</button>
+          <button type="submit" class="button-primary">Speichern</button>
         </form>
 
           

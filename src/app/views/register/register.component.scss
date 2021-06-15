@@ -7,6 +7,24 @@
   margin: $l-spacing auto $xl-spacing auto;
   padding: 0 1.25em;
 }
+
+.register-wrapper {
+  label {
+    padding: 0;
+  }
+
+  p {
+    position: fixed;
+    bottom: 70px;
+    width: 357px;
+  }
+  button {
+    position: fixed;
+    bottom: $xs-spacing;
+    width: 357px;
+  }
+}
+
 /*
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid #42A948;

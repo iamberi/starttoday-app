@@ -5,7 +5,7 @@
 </a>
 <div>
   <h1>Willkommen zurück.</h1>
-  <form class="form-wrapper">
+  <form class="form-wrapper login-wrapper">
     <div class="form-group">
       <label class="text-input-label label" for="E-Mail">E-Mail</label>
       <input type="text" class="text-input-input form-input form-control" placeholder="Dein Benutzname" #userName required>
@@ -17,11 +17,13 @@
       <hr class="hr-form">
     </div>
   </form>
-  <p class="p-center">Passwort vergessen? <a href="/forgot-password" class="link">Passwort zurücksetzen</a></p>
-  <p class="p-center">Noch keinen Account? <a href="/register" class="link">Registrieren</a></p>
+  <div class="login-additional-fuctions-wrapper">
+    <p class="p-center">Passwort vergessen? <a href="/forgot-password" class="link">Passwort zurücksetzen</a></p>
+    <p class="p-center">Noch keinen Account? <a href="/register" class="link">Registrieren</a></p>
 
-  <!-- Calling SignIn Api from AuthService -->
-  <button class="button-primary button-fullwidth" (click)="authService.SignIn(userName.value, userPassword.value)">Einloggen</button>
+    <!-- Calling SignIn Api from AuthService -->
+    <button class="button-primary button-fullwidth" (click)="authService.SignIn(userName.value, userPassword.value)">Einloggen</button>
+  </div>
 
 </div>
 <app-logged-in-start *ngIf="authService.userData as user" (isLogout)="handleLogout()"></app-logged-in-start>

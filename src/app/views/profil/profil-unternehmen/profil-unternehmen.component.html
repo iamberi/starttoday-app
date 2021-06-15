@@ -43,9 +43,9 @@
   </app-button>
 </div>
 
-<div>
+<!-- <div>
   <button (click)=authService.SignOut()>Logout</button>
-</div>
+</div> -->
 
 
 
@@ -92,7 +92,16 @@
       <use xlink:href="#arrow-left-profil"/>
       </svg>
     </div>
+  <div class="button-logout-wrapper">
+    <button (click)=authService.SignOut() class="button-secondary button-fullwidth button-logout">
+      <svg aria-hidden="true" focusable="false" class="">
+        <use xlink:href="#logout"/>
+      </svg>
+      Logout
+    </button>
+  </div>
+
+        
   </div>
 </div>
-
-<p><br><br><br><br><br><br></p>
+<div class="spacedown"></div>

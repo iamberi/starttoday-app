@@ -60,3 +60,25 @@
 #contactemail {
   display: none;
 }
+.delete-challenge-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.delete-challenge-info div {
+  width: fit-content;
+  margin-left: 1.5em;
+}
+
+.delete-challenge-info div h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $color-primary;
+}
+
+.delete-challenge-info svg {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+}

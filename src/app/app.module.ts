@@ -104,7 +104,7 @@ const routes: Routes = [
   { path: 'error', component: ErrorComponent },
   { path: '', redirectTo: '/willkommen-n', pathMatch: 'full'},
 
-  { path: 'willkommen-n', component: WillkommenNComponent},
+  { path: 'willkommen', component: WillkommenNComponent},
 
   { path: 'create-problem', component: CreateProblemComponent, canActivate: [AuthGuard]  },
   { path: 'list-problems', component: ListProblemComponent, canActivate: [AuthGuard]  },

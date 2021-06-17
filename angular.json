@@ -38,7 +38,6 @@
             ],
             "scripts": [
               "src/js/components/navigation.js",
-              "src/js/components/upvote-button.js",
               "src/js/components/date.js",
               "src/js/components/popup.js"
             ]

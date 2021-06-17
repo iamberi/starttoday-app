@@ -89,16 +89,11 @@ export class ChallengesDetailComponent implements OnInit {
       if(this.vote.statusvotes=='vote'){
         this.vote.votes++;
         this.vote.statusvotes = 'gevotet ✔️';
-        /* console.log(this.vote.statusvotes);
-        console.log(this.vote.votes);
-        console.log("upgevotet"); */
 
       }else{
         this.vote.votes--;
         this.vote.statusvotes = 'vote';
-        /* console.log(this.vote.statusvotes);
-        console.log(this.vote.votes);
-        console.log("downgevotet"); */
+
       };
     this.challengeService.updateVotes(this.vote, element, this.id);
 

@@ -82,11 +82,11 @@
     </div>
     <div>
       <h3 class="name-headline">
-        Unternehmen Mustermann
+        {{user.displayName}}
       </h3>
     </div>
     <div class="ort" style="padding-top:3px;">
-      Mail-Adresse<br>
+      {{user.email}}<br>
     </div>
   </div>
 
@@ -156,5 +156,14 @@
       </div>
     </div>
   </div>
-  <div class="spacedown"></div>
+  <div class="button-logout-wrapper">
+    <button (click)=authService.SignOut() class="button-secondary button-fullwidth button-logout">
+      <svg aria-hidden="true" focusable="false" class="">
+        <use xlink:href="#logout"/>
+      </svg>
+      Logout
+    </button>
+  </div>
 
+
+<div class="spacedown"></div>

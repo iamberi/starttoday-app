@@ -1,19 +1,28 @@
 <svg class="icon-logo-start" aria-hidden="true" focusable="false">
   <use xlink:href="#logo"/>
 </svg>
-<h1 class="headline-intro">Deine Stadt<br> braucht <span>dich.</span></h1>
-<p class="p-center">Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser.</p>
-<div class="wrapper-buttons-bottom wrapper-buttons-welcome">
-    <app-button
-        [btnlink] = '"/register"'
-        [type]='"button-secondary"'
-        [btntext] = '"Registrieren"'
-      >
-    </app-button>
-    <app-button
-        [btnlink] = '"/login"'
-        [type]='"button-primary"'
-        [btntext] = '"Einloggen"'
-      >
-    </app-button>
+<!-- vor Login -->
+<div *ngIf="!authService.userData as user">
+  <h1 class="headline-intro">Deine Stadt<br> braucht <span>dich.</span></h1>
+  <p class="p-center">Gemeinsam sind wir stark. Nimm Teil an unseren Challenges und mach deine Stadt Stück für Stück besser.</p>
+  <div class="wrapper-buttons-bottom wrapper-buttons-welcome">
+      <app-button
+          [btnlink] = '"/register"'
+          [type]='"button-secondary"'
+          [btntext] = '"Registrieren"'
+        >
+      </app-button>
+      <app-button
+          [btnlink] = '"/login"'
+          [type]='"button-primary"'
+          [btntext] = '"Einloggen"'
+        >
+      </app-button>
+  </div>
+</div>
+<div class="spacedown"></div>
+
+<!-- nach Login -->
+<div *ngIf="authService.userData as user">
+  <p class="p-center">Cool, dass du da bist! Sieh dich um und schau, wo du in deiner Stadt etwas bewirken kannst!</p>
 </div>

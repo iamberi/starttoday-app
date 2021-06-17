@@ -1,4 +1,4 @@
-<div class="wrapper-nav">
+<div *ngIf="authService.userData as user" class="wrapper-nav">
   <div class="wrapper-nav-items">
     <a id="btn-probleme" onclick="setProblemeActive()" class="nav-item nav-item-active" routerLink="/probleme">
       <svg aria-hidden="true" focusable="false">

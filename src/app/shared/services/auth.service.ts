@@ -36,7 +36,7 @@ export class AuthService {
       return this.afAuth.signInWithEmailAndPassword(email, password)
         .then((result) => {
           this.ngZone.run(() => {
-            this.router.navigate(['logged-in-start']);
+            this.router.navigate(['/probleme']);
           });
           this.SetUserData(result.user);
         }).catch((error) => {
@@ -45,24 +45,42 @@ export class AuthService {
     }
 
   // Sign up with email/password
-  SignUp(email, password, displayName) {
+  /* SignUp(email, password) {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign
-        up and returns promise */
+        up and returns promise *//*
         this.SendVerificationMail();
         this.SetUserData(result.user);
       }).catch((error) => {
         window.alert(error.message)
       })
-  }
+  } */
+
+  // Sign up with email/password
+  SignUp(email, password, fullname) {
+    return new Promise ((resolve, reject) => {
+      this.afAuth.createUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        result.user.updateProfile({
+          displayName: fullname,
+          photoURL: ''
+        }).then(() => {
+        this.SendVerificationMail();
+        this.SetUserData(result.user);
+        resolve(result);
+      });
+    },
+    err => reject(err))
+  });
+}
 
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {
     return this.afAuth.currentUser.then((user) => {
       return user.sendEmailVerification();
     }).then(() => {
-      this.router.navigate(['verify-email-address']);
+      this.router.navigate(['verify-email']);
     })
   }
 
@@ -116,7 +134,11 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['willkommen-n'])
+      .then(() => {
+        window.location.reload();
+      });
+
     })
   }
 

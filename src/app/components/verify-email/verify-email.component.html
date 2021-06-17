@@ -1,28 +1,26 @@
 <div class="displayTable">
   <div class="displayTableCell">
-
     <div class="authBlock">
-      <h3>Thank You for Registering</h3>
-
+      <h1>Danke für deine Registrierung.</h1>
       <div class="formGroup" *ngIf="authService.userData as user">
-        <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
-        <p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
+        <p>Wir haben eine Bestätigungs-E-Mail an <strong>{{user.email}}</strong> gesendet.</p>
+        <p>Bitte prüfen Sie Ihre E-Mail und klicken Sie auf den Link, um Ihre E-Mail-Adresse zu verifizieren.</p>
       </div>
-
       <!-- Calling SendVerificationMail() method using authService Api -->
-      <div class="formGroup">
-        <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
-          <i class="fas fa-redo-alt"></i>
-          Resend Verification Email
+      <div class="formGroup button-verify">
+        <button type="button" class="button-secondary" (click)="authService.SendVerificationMail()">
+          <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 2V8H15" stroke="#250C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.4899 13C17.8399 14.8399 16.6094 16.4187 14.984 17.4985C13.3586 18.5783 11.4263 19.1006 9.4783 18.9866C7.53026 18.8726 5.67203 18.1286 4.18363 16.8667C2.69524 15.6047 1.6573 13.8932 1.22625 11.9901C0.795187 10.0869 0.994357 8.09519 1.79374 6.31507C2.59313 4.53495 3.94942 3.06286 5.65823 2.12064C7.36705 1.17841 9.33581 0.817099 11.2678 1.09114C13.1999 1.36518 14.9905 2.25974 16.3699 3.64L20.9999 8" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+          Verifizierungs-E-Mail erneut senden
         </button>
       </div>
-
     </div>
-
     <div class="redirectToLogin">
-      <span>Go back to?<span class="redirect" routerLink="/sign-in"> Sign in</span></span>
+    <p>Zurück zum <span class="redirect" routerLink="/willkommen-n">Login</span></p>
     </div>
 
   </div>
 </div>
-<p>verify-email works!</p>

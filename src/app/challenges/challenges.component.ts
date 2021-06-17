@@ -17,7 +17,7 @@ export class ChallengesComponent implements OnInit {
     .collection('challenge-collection').get().then(querySnapshot => {
       console.log(`Found ${querySnapshot.size} documents.`);
       this.numberChallenges = querySnapshot.size;
-      console.log(this.numberChallenges);
+      //console.log(this.numberChallenges);
       return this.numberChallenges;
    });
   }
@@ -25,7 +25,7 @@ export class ChallengesComponent implements OnInit {
   ngOnInit(): void {
     this.challengeService.getChallengeList().subscribe(res => {
       this.Challenges = res.map( e => {
-        console.log(e.payload.doc.data());
+        //console.log(e.payload.doc.data());
         return {
           id: e.payload.doc.id,
           ...(e.payload.doc.data() as object)

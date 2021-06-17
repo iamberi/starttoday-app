@@ -1,9 +1,3 @@
-<script>
-  function getCategory(){
-  var category = document.getElementById("category-card").innerHTML;
-  console.log(category);
-}
-</script>
 <div class="wrapper-card">
   <div class="intro-wrapper image-gradient">
     <img
@@ -31,7 +25,7 @@
         <p class="p-info name-challengesetter">{{ setterChallenge }}</p>
       </div>
       <p class="location-challenge">
-        {{ locationChallenge }} · <span onclick="getCategory();" class="category-card">{{categoryChallenge}}</span>
+        {{ locationChallenge }} · <span class="category-card-{{categoryChallenge}}">{{categoryChallenge}}</span>
       </p>
       <h3 routerLink="/challenge-detail/{{ id }}" class="titel-challenge">
         {{ titleChallenge }}

@@ -36,8 +36,6 @@
     </div>
   </div>
 </div>
-
-
 <div class="">
   <div class="wrapper-galerie">
     <a href="javascript:history.back()">
@@ -78,12 +76,18 @@
     </div>
   </div>
   <hr />
-
-  <div class="category category-umwelt">
-    <svg aria-hidden="true" focusable="false">
+  <!--onclick="chooseCategory(this)"-->
+  <div class="category-{{ challenge.category }}">
+    <svg class="icon-category-umwelt" aria-hidden="true" focusable="false">
       <use xlink:href="#icon-umwelt" />
     </svg>
-    <p class="category-label">{{ challenge.category }}</p>
+    <svg class="icon-category-vandalismus" aria-hidden="true" focusable="false">
+      <use xlink:href="#icon-vandalismus" />
+    </svg>
+    <svg class="icon-category-barrierefrei" aria-hidden="true" focusable="false">
+      <use xlink:href="#icon-wheelchair" />
+    </svg>
+    <p id="{{ challenge.category }}"  class="category-label">{{ challenge.category }}</p>
   </div>
   <h1 class="headline-problem-detail">{{ challenge.title }}</h1>
   <!--<p id="contactemail"> {{ challenge.contactmail }}</p>-->

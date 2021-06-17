@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute } from '@angular/router';
 import { ChallengeService } from '../../services/challenge.service';
 import { Challenge } from '../../models/challenge.model';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
@@ -45,7 +45,41 @@ export class ChallengesDetailComponent implements OnInit {
     this.challengeService.getChallengeDetail(challengeId).subscribe(challenge => {
       this.challenge = challenge;
     });
+    this.chooseCategory();
   }
+
+  chooseCategory(){
+   var nameCategory = document.getElementById('nattiscategory').innerHTML;
+   console.log(nameCategory);
+
+   if (nameCategory === 'Barrierefreiheit'){
+     document.getElementById('wrapper-category').className = 'category category-barrierefrei';
+   }
+   if (nameCategory === 'Umwelt'){
+     document.getElementById('wrapper-category').className = 'category category-klima';
+   }
+   else{
+     document.getElementById('wrapper-category').className = 'category category-vandalismus';
+   }
+   console.log(nameCategory);
+  }
+
+//Next steps: element per ID aufrufen, Inhalt der ID lesen und je nach ID andere Klasse auslesen
+  chooseCategorybyID(){
+    var nameCategory = document.getElementById('nattiscategory').innerHTML;
+    console.log(nameCategory);
+
+    if (nameCategory === 'Barrierefreiheit'){
+      document.getElementById('wrapper-category').className = 'category category-barrierefrei';
+    }
+    if (nameCategory === 'Umwelt'){
+      document.getElementById('wrapper-category').className = 'category category-klima';
+    }
+    else{
+      document.getElementById('wrapper-category').className = 'category category-vandalismus';
+    }
+  }
+
   upvote(element){
     var res2;
     this.challengeService.getChallengeDog(this.id).subscribe((res) => {
@@ -70,7 +104,6 @@ export class ChallengesDetailComponent implements OnInit {
 
     //console.log("letztes update" + element.target.classList);
     })
-
 
   }
 }

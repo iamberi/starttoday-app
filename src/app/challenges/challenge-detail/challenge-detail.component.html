@@ -14,6 +14,7 @@
         <b>{{ challenge.setter }}</b>
       </p>
       <p>Er wird sich umgehend mit dir in Verbindung setzen</p>
+      <!-- nicht löschen wichtig für die Logik: --><p id="contactemail" style="display:none;"> {{ challenge.contactmail }}</p>
       <a id="sendTeilnehmenMail" onclick="sendMail();" href="">
         <button class="button-primary">Absenden</button>
       </a>
@@ -90,7 +91,7 @@
     <p id="{{ challenge.category }}"  class="category-label">{{ challenge.category }}</p>
   </div>
   <h1 class="headline-problem-detail">{{ challenge.title }}</h1>
-  <!--<p id="contactemail"> {{ challenge.contactmail }}</p>-->
+  
   <div class="wrapper-problem-achievement">
     <button class="button-primary" onclick="teilnehmen();">Teilnehmen</button>
     <div class="achievement" onclick="openExplainSocialPoints()">

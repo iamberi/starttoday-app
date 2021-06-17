@@ -16,6 +16,7 @@ function teilnehmen(){
     var mailto="mailto:" +mail;
 
     var button = document.getElementById("sendTeilnehmenMail");
+    
     button.href=mailto;
   }
 

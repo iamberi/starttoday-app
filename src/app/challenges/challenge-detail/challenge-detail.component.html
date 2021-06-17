@@ -71,7 +71,6 @@
     <label>Datum</label>
   </div>
   <hr />
-  <!--onclick="chooseCategory(this)"-->
   <div class="category-{{ challenge.category }}">
     <svg class="icon-category-umwelt" aria-hidden="true" focusable="false">
       <use xlink:href="#icon-umwelt" />
@@ -82,7 +81,7 @@
     <svg class="icon-category-barrierefrei" aria-hidden="true" focusable="false">
       <use xlink:href="#icon-wheelchair" />
     </svg>
-    <p id="{{ challenge.category }}"  class="category-label">{{ challenge.category }}</p>
+    <p class="category-label">{{ challenge.category }}</p>
   </div>
   <h1 class="headline-problem-detail">{{ challenge.title }}</h1>
 

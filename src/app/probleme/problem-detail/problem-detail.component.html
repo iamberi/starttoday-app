@@ -31,9 +31,15 @@
 
   <img class="img-gallery" alt="" src="{{ problem.downloadURL }}" />
 </div>
-<div class="category category-umwelt">
-  <svg aria-hidden="true" focusable="false">
+<div class="category-{{ problem.category}}">
+  <svg class="icon-category-umwelt" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-umwelt" />
+  </svg>
+  <svg class="icon-category-vandalismus" aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-vandalismus" />
+  </svg>
+  <svg class="icon-category-barrierefrei" aria-hidden="true" focusable="false">
+    <use xlink:href="#icon-wheelchair" />
   </svg>
   <p class="category-label">{{ problem.category }}</p>
 </div>

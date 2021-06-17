@@ -7,7 +7,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { __classPrivateFieldSet } from 'tslib';
 
 
-
 @Component({
   selector: 'app-problem-detail',
   templateUrl: './problem-detail.component.html',
@@ -16,6 +15,7 @@ import { __classPrivateFieldSet } from 'tslib';
 })
 export class ProblemDetailComponent implements OnInit {
   public problem: Problem;
+
 
   showNavigationArrows = true;
   showNavigationIndicators = false;

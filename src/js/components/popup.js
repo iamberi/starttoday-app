@@ -54,3 +54,13 @@ function closeExplainSocialPoints(){
   var status = document.getElementById("socialpoints-popup")
   status.className = "popover-wrapper";
 }
+// Erklärung Social Points
+function openComingSoon() {
+  var status = document.getElementById("coming-soon")
+  status.className = "popover-wrapper-visible";
+}
+
+function closeComingSoon(){
+  var status = document.getElementById("coming-soon")
+  status.className = "popover-wrapper";
+}

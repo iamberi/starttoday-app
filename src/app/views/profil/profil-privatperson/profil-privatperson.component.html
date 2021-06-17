@@ -33,22 +33,29 @@
     </div>
   </div>
 </div>
-
+<div class="wrapper-profile-buttons">
+  <app-button
+    [btntext]="'Unternehmensprofil'"
+    [type]="'button-secondary'"
+    [btnlink]="'/profil'">
+  </app-button>
+  <app-button
+  [btntext]="'Profil für Privatpersonen'"
+  [type]="'button-secondary'"
+  [btnlink]="'/profil/privatperson'">
+  </app-button>
+</div>
   <div class="firstline">
-      <div>
-        <a href="/profil/profil-bearbeiten">
+      <div onclick="openComingSoon()">
         <svg aria-hidden="true" focusable="false" class="edit">
           <use xlink:href="#edit"/>
         </svg>
-        </a>
       </div>
       <div><b>Profil</b></div>
-      <div>
-        <a href="/profil/einstellungen">
-          <svg aria-hidden="true" focusable="false" class="setting">
-        <use xlink:href="#setting"/>
+      <div onclick="openComingSoon()">
+        <svg aria-hidden="true" focusable="false" class="setting">
+          <use xlink:href="#setting"/>
         </svg>
-      </a>
       </div>
   </div>
 
@@ -101,19 +108,19 @@
       -->
       <p ></p>
       <div class="greybox box-color">
-        <a class="link-in-profile" href="/eingereichte-probleme">Eingereichte Probleme</a>
+        <a onclick="openComingSoon()" class="link-in-profile" routerLink="/profil/privatperson">Eingereichte Probleme</a>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
       </div>
       <div class="greybox box-color">
-        <a class="link-in-profile" href="/geloeste-probleme">Gelöste Probleme</a>
+        <a onclick="openComingSoon()" class="link-in-profile" routerLink="/profil/privatperson">Gelöste Probleme</a>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>
       </div>
       <div class="greybox box-color">
-        <a class="link-in-profile" href="/meine-challenges">Challenges, an denen ich teilnehme</a>
+        <a onclick="openComingSoon()" class="link-in-profile" routerLink="/profil/privatperson">Challenges, an denen ich teilnehme</a>
         <svg aria-hidden="true" focusable="false" class="arrow-left-profil">
         <use xlink:href="#arrow-left-profil"/>
         </svg>

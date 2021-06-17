@@ -1,4 +1,4 @@
-import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ProblemService } from './../services/problem.service';
 import { Problem } from './../models/problem.model';
@@ -10,20 +10,12 @@ import { Problem } from './../models/problem.model';
 })
 export class ProblemeComponent implements OnInit {
   Problems: Problem[];
-  numberProblems: number;
+  ProblemCount: any;
 
-  constructor(private problemService: ProblemService, private db: AngularFirestore) {
-    this.db.firestore
-    .collection('problem-collection').get().then(querySnapshot => {
-      console.log(`Found ${querySnapshot.size} documents.`);
-      this.numberProblems = querySnapshot.size;
-      console.log(this.numberProblems);
-      return this.numberProblems;
-   });
+  constructor(public problemService: ProblemService) {
   }
-
-  ngOnInit(): void {
-    this.problemService.getProblemList().subscribe(res => {
+  async ngOnInit(): Promise<void> {
+   await this.problemService.getProblemList().subscribe(res => {
       this.Problems = res.map( e => {
         return {
           id: e.payload.doc.id,
@@ -31,5 +23,10 @@ export class ProblemeComponent implements OnInit {
         } as Problem;
       });
     });
+   this.ProblemCount = await this.problemService.counterProblems();
+    }
   }
-  }
+
+
+
+

@@ -6,12 +6,6 @@
   margin: 0 auto;
   padding: 0 1.25em;
 }
-.text-filter {
-  margin-left: 4%;
-  span {
-    font-weight: 800;
-  }
-}
 
 .outline {
   width: 22em;
@@ -38,32 +32,14 @@
  justify-content: center;
 }
 
-.platzhaltertext {
-  text-align: center;
-  margin-top: 5%;
-}
-
-.button-neueva {
-  display: flex;
-  justify-content: center;
-  margin-top: 14%;
-}
-
 .firstline {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin-top: -2em;
-  margin-bottom: -3em;
 }
 
-.edit {
-  width: 13px;
-  color: #ffffff;
-}
-
-.setting {
+.edit, .setting {
   width: 13px;
   color: #ffffff;
 }
@@ -78,33 +54,6 @@
   width: 60px;
   height: 60px;
   color: #ffffff;
-}
-
-.profiltext {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: -2em;
-}
-
-.name-headline {
-  text-align:center;
-  font-size: 18px;
-  margin-top: 0.5em;
-  margin-bottom: 0em;
-}
-
-.ort {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-
-}
-
-.zeile {
-  max-width: 100%;
-  align-items: baseline;
-  margin-top: 1em;
 }
 
 .arrow-left-profil {

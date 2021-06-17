@@ -34,16 +34,12 @@
   </div>
 </div>
 <div class="wrapper-profile-buttons">
-  <app-button
-    [btntext]="'Unternehmensprofil'"
-    [type]="'button-secondary'"
-    [btnlink]="'/profil'">
-  </app-button>
-  <app-button
-  [btntext]="'Privatprofil'"
-  [type]="'button-secondary'"
-  [btnlink]="'/profil/privatperson'">
-  </app-button>
+  <a href="/profil">
+    <button class="button-secondary button-left">Unternehmen</button>
+  </a>
+  <a href="/profil/privatperson">
+    <button class="button-secondary">Privat</button>
+  </a>
 </div>
   <div class="firstline">
       <div onclick="openComingSoon()">
@@ -74,20 +70,18 @@
   </div>
 
   <div class="profiltext">
-    <div class="zeile" style="font-size: 14px;">
+    <p>
         <svg aria-hidden="true" focusable="false" class="locationnadel">
           <use xlink:href="#locationnadel"/>
         </svg>
       Heilbronn
-    </div>
-    <div>
-      <h3 class="name-headline">
+      </p>
+      <h3>
         {{user.displayName}}
       </h3>
-    </div>
-    <div class="ort" style="padding-top:3px;">
+    <p>
       {{user.email}}<br>
-    </div>
+    </p>
   </div>
 
   <div class="headline-links">

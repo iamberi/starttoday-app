@@ -1,14 +1,10 @@
 <div class="wrapper-profile-buttons">
-  <app-button
-    [btntext]="'Unternehmensprofil'"
-    [type]="'button-secondary'"
-    [btnlink]="'/profil'">
-  </app-button>
-  <app-button
-  [btntext]="'Privatprofil'"
-  [type]="'button-secondary'"
-  [btnlink]="'/profil/privatperson'">
-  </app-button>
+  <a href="/profil">
+    <button class="button-secondary button-left">Unternehmen</button>
+  </a>
+  <a href="/profil/privatperson">
+    <button class="button-secondary">Privat</button>
+  </a>
 </div>
 
 <div class="firstline">
@@ -48,12 +44,10 @@
   </div>
 </div>
 
-<div class="button-neueva">
-  <app-button
-    [btntext]="'+ Neue Challenge'"
-    [type]="'button-primary'"
-    [btnlink]="'/create-challenge'">
-  </app-button>
+<div class="create-callenge-button-wrapper">
+  <a href="/create-challenge">
+    <button class="button-primary">+ Neue Challenge</button>
+  </a>
 </div>
 
 <!-- <div>

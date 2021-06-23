@@ -14,6 +14,7 @@
         <b>{{ challenge.setter }}</b>
       </p>
       <p>Er wird sich umgehend mit dir in Verbindung setzen</p>
+      <p id="contactemail" style="display: none">{{ challenge.contactmail }}</p>
       <a id="sendTeilnehmenMail" onclick="sendMail();" href="">
         <button class="button-primary">Absenden</button>
       </a>
@@ -25,13 +26,24 @@
   <div class="popover-content">
     <div class="popover-content-wrapper">
       <div>
-        <svg aria-hidden="true" focusable="false" onclick="closeExplainSocialPoints();">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          onclick="closeExplainSocialPoints();"
+        >
           <use xlink:href="#icon-close-circle" />
         </svg>
       </div>
       <h2>Was sind Social Points?</h2>
-      <p>Social Points bekommst du von uns als <b>Dankeschön</b>, dass du deine Stadt verbessert hast. Die Zahl sagt, wie viele Social Points du erhalten kannst. Mit den Social Points bekommst du <b>Vergünstigungen</b> bei deinen lokalen Einzelhändlern.</p>
-      <button onclick="closeExplainSocialPoints();" class="button-primary">Verstanden</button>
+      <p>
+        Social Points bekommst du von uns als <b>Dankeschön</b>, dass du deine
+        Stadt verbessert hast. Die Zahl sagt, wie viele Social Points du
+        erhalten kannst. Mit den Social Points bekommst du
+        <b>Vergünstigungen</b> bei deinen lokalen Einzelhändlern.
+      </p>
+      <button onclick="closeExplainSocialPoints();" class="button-primary">
+        Verstanden
+      </button>
     </div>
   </div>
 </div>
@@ -74,7 +86,7 @@
   </div>
 </div>
 <hr />
-<div class="category-{{ challenge.category}}">
+<div class="category-{{ challenge.category }}">
   <svg class="icon-category-umwelt" aria-hidden="true" focusable="false">
     <use xlink:href="#icon-umwelt" />
   </svg>
@@ -87,7 +99,6 @@
   <p class="category-label">{{ challenge.category }}</p>
 </div>
 <h1 class="headline-problem-detail">{{ challenge.title }}</h1>
-<!--<p id="contactemail"> {{ challenge.contactmail }}</p>-->
 <div class="wrapper-problem-achievement">
   <button class="button-primary" onclick="teilnehmen();">Teilnehmen</button>
   <div class="achievement" onclick="openExplainSocialPoints()">
